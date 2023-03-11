@@ -1,12 +1,19 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { Button, Text, View } from 'react-native';
+import { colorIconFooter, colorWhite } from '../../styles';
+import { PerfilUser, NavBar, Label } from './styles';
 
-export function HeaderNavBar(): JSX.Element {
+export function HeaderNavBar(props: any): JSX.Element {
   return (
-    <View style={{ display:'flex', flexDirection: 'row', justifyContent: 'space-between', padding:4 }}>
-      <Button title="menu" />
-      <Button title="icon" />
-    </View>
+    <NavBar>
+      <Button title="    "
+        onPress={() => props.navigation.openDrawer()} />
+      <View>
+        <Text style={{fontSize:15, color:colorIconFooter}}>Bom dia!  👋</Text>
+        <Text style={{fontSize:25, color:colorWhite}}>{props.userName}</Text>
+      </View>
+      <PerfilUser source={require('../../assets/menina.jpeg')} />
+    </NavBar>
   );
 }

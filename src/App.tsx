@@ -24,6 +24,8 @@ import { Stack } from './routes';
 import { HeaderNavBar } from './layout/headerNavBar';
 import { Footer } from './layout/footer';
 import { Drawer } from './routes/Drawer';
+import 'react-native-gesture-handler';
+import { backgroundColor, colorPrimary } from './styles';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -61,7 +63,8 @@ function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? backgroundColor : backgroundColor,
+    // backgroundColor: isDarkMode ? colorPrimary : Colors.lighter,
     flex: 1,
   };
 
@@ -71,16 +74,17 @@ function App(): JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <HeaderNavBar />
       {/* <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={backgroundStyle}
         > */}
       <NavigationContainer>
-        {/* <Stack /> */}
-        <Drawer />
-        {/* <Footer /> */}
+        <Footer />
       </NavigationContainer>
+      {/* <NavigationContainer>
+        <Stack />
+        <Drawer />
+      </NavigationContainer> */}
       {/* </ScrollView> */}
     </SafeAreaView>
   );
