@@ -11,6 +11,17 @@ export const colorWhite = '#FFFF';
 export const backgroundColor = '#0e0f13';
 export const fontePadrao = 'Poppins';
 
+export const stylesGlobal = StyleSheet.create({
+    textTitle: {
+        fontSize: 18,
+        color: colorWhite,
+        fontWeight: 'bold',
+    },
+    textSubTitle: {
+        fontSize: 13,
+        fontWeight: 'bold',
+    },
+});
 
 // export const GlobalStyle = createGlobalStyle`
 // :root{
@@ -26,7 +37,7 @@ export const fontePadrao = 'Poppins';
 //   --fontePadrao:'Poppins';
 //   --white: #FFF;
 //   --text-label: #fff;
- 
+
 //   //variaveis de tamanho
 //   --max-height-button:32px;
 // }

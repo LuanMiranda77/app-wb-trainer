@@ -63,8 +63,8 @@ function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? backgroundColor : backgroundColor,
-    // backgroundColor: isDarkMode ? colorPrimary : Colors.lighter,
+    backgroundColor: colorPrimary,
+    // backgroundColor: isDarkMode ? Colors.darck : Colors.lighter,
     flex: 1,
   };
 

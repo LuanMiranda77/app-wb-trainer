@@ -7,7 +7,7 @@ export const NavBar = styled.View`
   background-color: ${(props) => props.color};
   margin: 10px;
   border-radius: 25px;
-  padding: 5px;
+  padding: 10px;
 `;
 
 export const Label = styled.Text`
