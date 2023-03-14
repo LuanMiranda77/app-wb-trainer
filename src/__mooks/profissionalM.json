@@ -1,0 +1,273 @@
+[
+    {
+        "id": 1,
+        "nome": "Supino inclinado com halteres",
+        "series": 4,
+        "repeticoes": "10-12",
+        "treino": "A",
+        "info": "Exercício para fortalecer os músculos do peito e tríceps.",
+        "titulo": "Peito e Tríceps"
+      },
+      {
+        "id": 2,
+        "nome": "Supino reto com barra",
+        "series": 4,
+        "repeticoes": "10-12",
+        "treino": "A",
+        "info": "Exercício para fortalecer os músculos do peito e tríceps.",
+        "titulo": "Peito e Tríceps"
+      },
+      {
+        "id": 3,
+        "nome": "Peck deck",
+        "series": 4,
+        "repeticoes": "12-15",
+        "treino": "A",
+        "info": "Exercício para fortalecer os músculos do peito e tríceps.",
+        "titulo": "Peito e Tríceps"
+      },
+      {
+        "id": 4,
+        "nome": "Flexão de tríceps na polia",
+        "series": 4,
+        "repeticoes": "12-15",
+        "treino": "A",
+        "info": "Exercício para fortalecer os músculos do peito e tríceps.",
+        "titulo": "Peito e Tríceps"
+      },
+      {
+        "id": 5,
+        "nome": "Tríceps coice com halteres",
+        "series": 4,
+        "repeticoes": "12-15",
+        "treino": "A",
+        "info": "Exercício para fortalecer os músculos do peito e tríceps.",
+        "titulo": "Peito e Tríceps"
+      },
+      {
+        "id": 6,
+        "nome": "Agachamento livre com barra",
+        "series": 4,
+        "repeticoes": "10-12",
+        "treino": "B",
+        "info": "Exercício para fortalecer os músculos das pernas e abdominais.",
+        "titulo": "Pernas e Abdominais"
+      },
+      {
+        "id": 7,
+        "nome": "Cadeira extensora",
+        "series": 4,
+        "repeticoes": "12-15",
+        "treino": "B",
+        "info": "Exercício para fortalecer os músculos das pernas e abdominais.",
+        "titulo": "Pernas e Abdominais"
+      },
+      {
+        "id": 8,
+        "nome": "Mesa flexora",
+        "series": 4,
+        "repeticoes": "12-15",
+        "treino": "B",
+        "info": "Exercício para fortalecer os músculos das pernas e abdominais.",
+        "titulo": "Pernas e Abdominais"
+    },
+    {
+        "id": 9,
+        "nome": "Stiff com barra",
+        "series": 4,
+        "repeticoes": "10-12",
+        "treino": "B",
+        "info": "Treino de pernas com foco no posterior de coxa",
+        "titulo": "Pernas e Abdominais"
+        },
+        {
+        "id": 10,
+        "nome": "Panturrilha no hack",
+        "series": 4,
+        "repeticoes": "12-15",
+        "treino": "B",
+        "info": "Treino de pernas com foco na panturrilha",
+        "titulo": "Pernas e Abdominais"
+        },
+        {
+        "id": 11,
+        "nome": "Abdominais oblíquos no solo",
+        "series": 4,
+        "repeticoes": "12-15",
+        "treino": "B",
+        "info": "Exercício de abdominal oblíquo para fortalecer a região lateral do abdômen",
+        "titulo": "Pernas e Abdominais"
+        },
+        {
+        "id": 12,
+        "nome": "Prancha isométrica lateral",
+        "series": 4,
+        "repeticoes": "60 segundos",
+        "treino": "B",
+        "info": "Exercício de isometria para fortalecer os músculos abdominais e oblíquos",
+        "titulo": "Pernas e Abdominais"
+        },
+        {
+        "id": 13,
+        "nome": "Puxada na polia alta",
+        "series": 4,
+        "repeticoes": "10-12",
+        "treino": "C",
+        "info": "Exercício de puxada para fortalecer a musculatura das costas",
+        "titulo": "Costas e Bíceps"
+        },
+        {
+        "id": 14,
+        "nome": "Remada baixa com barra",
+        "series": 4,
+        "repeticoes": "10-12",
+        "treino": "C",
+        "info": "Exercício de remada para fortalecer a musculatura das costas",
+        "titulo": "Costas e Bíceps"
+        },
+        {
+        "id": 15,
+        "nome": "Pulley inverso",
+        "series": 4,
+        "repeticoes": "12-15",
+        "treino": "C",
+        "info": "Exercício de puxada para fortalecer a musculatura das costas e bíceps",
+        "titulo": "Costas e Bíceps"
+        },
+        {
+        "id": 16,
+        "nome": "Rosca direta com barra",
+        "series": 4,
+        "repeticoes": "12-15",
+        "treino": "C",
+        "info": "Exercício de rosca para fortalecer a musculatura do bíceps",
+        "titulo": "Costas e Bíceps"
+        },
+            {
+            "id": 17,
+            "nome": "Rosca alternada com halteres",
+            "series": 4,
+            "repeticoes": "12-15",
+            "treino": "C",
+            "info": "Exercício de bíceps com halteres alternados",
+            "titulo": "Costas e Bíceps"
+            },
+            {
+            "id": 18,
+            "nome": "Martelo com halteres",
+            "series": 4,
+            "repeticoes": "12-15",
+            "treino": "C",
+            "info": "Exercício de bíceps com halteres em formato de martelo",
+            "titulo": "Costas e Bíceps"
+            },
+            {
+            "id": 19,
+            "nome": "Desenvolvimento com halteres",
+            "series": 4,
+            "repeticoes": "10-12",
+            "treino": "D",
+            "info": "Exercício de ombro com halteres",
+            "titulo": "Ombros e Trapézios"
+            },
+            {
+            "id": 20,
+            "nome": "Elevação lateral com halteres",
+            "series": 4,
+            "repeticoes": "12-15",
+            "treino": "D",
+            "info": "Exercício de ombro com halteres lateral",
+            "titulo": "Ombros e Trapézios"
+            },
+            {
+            "id": 21,
+            "nome": "Elevação frontal com halteres",
+            "series": 4,
+            "repeticoes": "12-15",
+            "treino": "D",
+            "info": "Exercício de ombro com halteres frontal",
+            "titulo": "Ombros e Trapézios"
+            },
+            {
+            "id": 22,
+            "nome": "Remada alta com halteres",
+            "series": 4,
+            "repeticoes": "12-15",
+            "treino": "D",
+            "info": "Exercício de ombro com halteres remada alta",
+            "titulo": "Ombros e Trapézios"
+            },
+            {
+            "id": 23,
+            "nome": "Encolhimento com halteres",
+            "series": 4,
+            "repeticoes": "12-15",
+            "treino": "D",
+            "info": "Exercício de trapézio com halteres encolhimento",
+            "titulo": "Ombros e Trapézios"
+            },
+            {
+            "id": 24,
+            "nome": "Corrida na esteira",
+            "series": "30 min",
+            "repeticoes": "",
+            "treino": "E",
+            "info": "Exercício cardiovasculare e abdominal",
+            "titulo": "Cardio e Abs"
+            },
+            {
+                "id": 25,
+                "nome": "Bicicleta ergométrica",
+                "series": "30 min",
+                "repeticoes": "",
+                "treino": "E",
+                "info": "Exercício cardiovascular e para os músculos abdominais.",
+                "titulo": "Cardio e Abs"
+            },
+            {
+                "id": 26,
+                "nome": "Prancha isométrica lateral",
+                "series": "4 x 60 segundos",
+                "repeticoes": "",
+                "treino": "E",
+                "info": "Exercício para fortalecimento dos músculos abdominais.",
+                "titulo": "Cardio e Abs"
+            },
+            {
+                "id": 27,
+                "nome": "Abdominais no solo",
+                "series": "4 x 15-20",
+                "repeticoes": "",
+                "treino": "E",
+                "info": "Exercício para fortalecimento dos músculos abdominais.",
+                "titulo": "Cardio e Abs"
+            },
+            {
+                "id": 28,
+                "nome": "Agachamento com barra",
+                "series": "4",
+                "repeticoes": "10-12",
+                "treino": "F",
+                "info": "Exercício de treinamento funcional para os músculos das pernas.",
+                "titulo": "Treino Funcional"
+            },
+            {
+                "id": 29,
+                "nome": "Levantamento terra com barra",
+                "series": "4",
+                "repeticoes": "10-12",
+                "treino": "F",
+                "info": "Exercício de treinamento funcional para os músculos das pernas e costas.",
+                "titulo": "Treino Funcional"
+            },
+            {
+                "id": 30,
+                "nome": "Flexão de braços",
+                "series": "4",
+                "repeticoes": "11-12",
+                "treino": "F",
+                "info": "Exercício de treinamento funcional para os músculos dos braços e peito.",
+                "titulo": "Treino Funcional"
+            }
+
+]

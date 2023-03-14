@@ -1,0 +1,272 @@
+[
+    {
+        "id": 1,
+        "nome": "Supino reto com barra",
+        "series": 4,
+        "repeticoes": "8-12",
+        "treino": "A",
+        "info": "Exercício de peitoral que utiliza a barra para realizar a pressão do peso. Excelente para ganhar força e definição muscular.",
+        "titulo": "Peito e Tríceps"
+      },
+      {
+        "id": 2,
+        "nome": "Supino inclinado com halteres",
+        "series": 4,
+        "repeticoes": "8-12",
+        "treino": "A",
+        "info": "Variação do supino que utiliza halteres e um banco inclinado para focar mais na parte superior do peitoral. Ajuda a ganhar força e tamanho muscular.",
+        "titulo": "Peito e Tríceps"
+      },
+      {
+        "id": 3,
+        "nome": "Crossover na polia alta",
+        "series": 4,
+        "repeticoes": "10-15",
+        "treino": "A",
+        "info": "Exercício de peitoral que utiliza a polia alta para cruzar as mãos e trabalhar o músculo de forma isolada. Ótimo para quem deseja definição muscular.",
+        "titulo": "Peito e Tríceps"
+      },
+      {
+        "id": 4,
+        "nome": "Flexão de tríceps na polia",
+        "series": 4,
+        "repeticoes": "10-15",
+        "treino": "A",
+        "info": "Exercício de tríceps que utiliza a polia para trabalhar o músculo de forma isolada. Ajuda a ganhar força e definição muscular nos braços.",
+        "titulo": "Peito e Tríceps"
+      },
+      {
+        "id": 5,
+        "nome": "Extensão de tríceps sentado",
+        "series": 4,
+        "repeticoes": "10-15",
+        "treino": "A",
+        "info": "Exercício de tríceps que utiliza um halter e um banco para trabalhar o músculo de forma isolada. Ajuda a ganhar força e definição muscular nos braços.",
+        "titulo": "Peito e Tríceps"
+      },
+      {
+        "id": 6,
+        "nome": "Agachamento livre com barra",
+        "series": 4,
+        "repeticoes": "8-12",
+        "treino": "B",
+        "info": "Exercício de pernas que utiliza a barra para agachar e levantar o peso. Excelente para ganhar força e definição muscular nas pernas.",
+        "titulo": "Pernas e Abdominais"
+      },
+      {
+        "id": 7,
+        "nome": "Leg press",
+        "series": 4,
+        "repeticoes": "10-15",
+        "treino": "B",
+        "info": "Exercício de fortalecimento para as pernas e glúteos. Executado em uma máquina que simula o movimento de agachamento.",
+        "titulo": "Pernas e Abdominais"
+      },
+      {
+        "id": 8,
+        "nome": "Cadeira extensora",
+        "series": 4,
+        "repeticoes": "10-15",
+        "treino": "B",
+        "info": "Exercício de isolamento para os quadríceps. Executado em uma máquina onde o usuário se senta e levanta pesos com as pernas.",
+        "titulo": "Pernas e Abdominais"
+      },
+      {
+        "id": 9,
+        "nome": "Cadeira flexora",
+        "series": 4,
+        "repeticoes": "10-15",
+        "treino": "B",
+        "info": "Exercício de isolamento para os isquiotibiais. Executado em uma máquina onde o usuário se senta e flexiona as pernas contra uma resistência.",
+        "titulo": "Pernas e Abdominais"
+      },
+      {
+        "id": 10,
+        "nome": "Panturrilha em pé na máquina",
+        "series": 4,
+        "repeticoes": "12-15",
+        "treino": "B",
+        "info": "Exercício de fortalecimento para as panturrilhas. Executado em uma máquina onde o usuário se levanta na ponta dos pés contra uma resistência.",
+        "titulo": "Pernas e Abdominais"
+      },
+      {
+        "id": 11,
+        "nome": "Abdominais superiores no solo",
+        "series": 4,
+        "repeticoes": "15-20",
+        "treino": "B",
+        "info": "Exercício de fortalecimento para os músculos abdominais superiores. Executado no chão com as pernas dobradas e as mãos atrás da cabeça.",
+        "titulo": "Pernas e Abdominais"
+      },
+      {
+        "id": 12,
+        "nome": "Prancha isométrica",
+        "series": 4,
+        "repeticoes": "60 segundos",
+        "treino": "B",
+        "info": "Exercício de fortalecimento para o core. Executado no chão com os antebraços e os dedos dos pés apoiados, mantendo a posição por um tempo determinado.",
+        "titulo": "Pernas e Abdominais"
+      },
+      {
+        "id": 13,
+        "nome": "Remada curvada com barra",
+        "series": 4,
+        "repeticoes": "8-12",
+        "treino": "C",
+        "info": "Exercício para costas que trabalha principalmente o músculo latíssimo do dorso.",
+        "titulo": "Costas e Bíceps"
+        },
+        {
+        "id": 14,
+        "nome": "Puxada na polia alta",
+        "series": 4,
+        "repeticoes": "10-15",
+        "treino": "C",
+        "info": "Exercício de puxada que trabalha principalmente os músculos das costas e bíceps.",
+        "titulo": "Costas e Bíceps"
+        },
+        {
+        "id": 15,
+        "nome": "Barra fixa",
+        "series": 4,
+        "repeticoes": "10-15",
+        "treino": "C",
+        "info": "Exercício de puxada que trabalha principalmente os músculos das costas e bíceps.",
+        "titulo": "Costas e Bíceps"
+        },
+        {
+        "id": 16,
+        "nome": "Rosca direta com barra",
+        "series": 4,
+        "repeticoes": "10-15",
+        "treino": "C",
+        "info": "Exercício de bíceps que trabalha principalmente o músculo braquial.",
+        "titulo": "Costas e Bíceps"
+        },
+        {
+        "id": 17,
+        "nome": "Rosca alternada com halteres",
+        "series": 4,
+        "repeticoes": "10-15",
+        "treino": "C",
+        "info": "Exercício de bíceps que trabalha principalmente o músculo braquial.",
+        "titulo": "Costas e Bíceps"
+        },
+        {
+        "id": 18,
+        "nome": "Martelo com halteres",
+        "series": 4,
+        "repeticoes": "10-15",
+        "treino": "C",
+        "info": "Exercício de bíceps que trabalha principalmente o músculo braquial.",
+        "titulo": "Costas e Bíceps"
+        },
+        {
+        "id": 19,
+        "nome": "Desenvolvimento com barra",
+        "series": 4,
+        "repeticoes": "8-12",
+        "treino": "D",
+        "info": "Exercício de ombro que trabalha principalmente o músculo deltóide.",
+        "titulo": "Ombros e Trapézios"
+        },
+        {
+        "id": 20,
+        "nome": "Elevação lateral com halteres",
+        "series": 4,
+        "repeticoes": "10-15",
+        "treino": "D",
+        "info": "Exercício de ombro que trabalha principalmente o músculo deltóide.",
+        "titulo": "Ombros e Trapézios"
+        },
+        {
+          "id": 21,
+          "nome": "Elevação frontal com halteres",
+          "series": 4,
+          "repeticoes": "10-15",
+          "treino": "D",
+          "info": "Exercício para trabalhar os músculos frontais do ombro, realizado com halteres em posição frontal. Ajuda a aumentar a força e estabilidade dos ombros.",
+          "titulo": "Ombros e Trapézios"
+          },
+          {
+          "id": 22,
+          "nome": "Remada alta com barra",
+          "series": 4,
+          "repeticoes": "10-15",
+          "treino": "D",
+          "info": "Exercício para trabalhar os músculos do trapézio superior, realizado com barra e levantando-a acima da linha dos ombros. Ajuda a melhorar a postura e a estabilidade do ombro.",
+          "titulo": "Ombros e Trapézios"
+          },
+          {
+          "id": 23,
+          "nome": "Encolhimento com halteres",
+          "series": 4,
+          "repeticoes": "10-15",
+          "treino": "D",
+          "info": "Exercício para trabalhar os músculos do trapézio superior, realizado com halteres e levantando-os na direção das orelhas. Ajuda a melhorar a postura e a estabilidade do ombro.",
+          "titulo": "Ombros e Trapézios"
+          },
+          {
+          "id": 24,
+          "nome": "Corrida na esteira",
+          "series": "30 min",
+          "repeticoes": "",
+          "treino": "E",
+          "info": "Exercício de cardio realizado na esteira. Ajuda a melhorar o condicionamento físico e a queima de calorias.",
+          "titulo": "Cardio e Abs"
+          },
+          {
+          "id": 25,
+          "nome": "Bicicleta ergométrica",
+          "series": "30 min",
+          "repeticoes": "",
+          "treino": "E",
+          "info": "Exercício de cardio realizado na bicicleta ergométrica. Ajuda a melhorar o condicionamento físico e a queima de calorias.",
+          "titulo": "Cardio e Abs"
+          },
+          {
+          "id": 26,
+          "nome": "Prancha isométrica lateral",
+          "series": "4 x 60 segundos",
+          "repeticoes": "",
+          "treino": "E",
+          "info": "Exercício para fortalecer os músculos abdominais e do core, realizado em posição de prancha lateral. Ajuda a melhorar a estabilidade do tronco.",
+          "titulo": "Cardio e Abs"
+          },
+          {
+          "id": 27,
+          "nome": "Abdominais no solo",
+          "series": "4 x 15-20",
+          "repeticoes": "",
+          "treino": "E",
+          "info": "Exercício para fortalecer os músculos abdominais, realizado no solo. Ajuda a melhorar a estabilidade do tronco.",
+          "titulo": "Cardio e Abs"
+          },
+            {
+            "id": 28,
+            "nome": "Agachamento com barra",
+            "series": 4,
+            "repeticoes": "8-12",
+            "treino": "F",
+            "info": "Fortalece pernas, glúteos e lombar",
+            "titulo": "Treino Funcional"
+            },
+            {
+            "id": 29,
+            "nome": "Levantamento terra com barra",
+            "series": 4,
+            "repeticoes": "9-12",
+            "treino": "F",
+            "info": "Trabalha pernas, costas e ombros",
+            "titulo": "Treino Funcional"
+            },
+            {
+            "id": 30,
+            "nome": "Flexão de braços",
+            "series": 4,
+            "repeticoes": "11-12",
+            "treino": "F",
+            "info": "Exercício de força para peito, ombros e tríceps",
+            "titulo": "Treino Funcional"
+            }
+]

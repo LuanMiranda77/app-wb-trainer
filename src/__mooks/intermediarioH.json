@@ -1,0 +1,138 @@
+[
+   {
+    "id": 1,
+    "nome": "Agachamento livre com barra",
+    "series": 3,
+    "repeticoes": 10,
+    "treino": "A",
+    "info": "Exercício composto para membros inferiores, envolvendo quadríceps, glúteos e posterior de coxa.",
+    "titulo": "Treino de pernas"
+    },
+    {
+    "id": 2,
+    "nome": "Levantamento terra",
+    "series": 3,
+    "repeticoes": 10,
+    "treino": "A",
+    "info": "Exercício para membros inferiores e posteriores de coxa, além de trabalhar a lombar e o trapézio.",
+    "titulo": "Treino de pernas"
+    },
+    {
+    "id": 3,
+    "nome": "Supino reto com barra",
+    "series": 3,
+    "repeticoes": 10,
+    "treino": "A",
+    "info": "Exercício para o peitoral maior, com ênfase na porção clavicular.",
+    "titulo": "Treino de peito"
+    },
+    {
+    "id": 4,
+    "nome": "Barra fixa",
+    "series": 3,
+    "repeticoes": 10,
+    "treino": "A",
+    "info": "Exercício para dorsais, bíceps e antebraços.",
+    "titulo": "Treino de costas"
+    },
+    {
+    "id": 5,
+    "nome": "Abdominal infra",
+    "series": 3,
+    "repeticoes": 15,
+    "treino": "A",
+    "info": "Exercício para a musculatura abdominal, com ênfase nos músculos reto e oblíquos.",
+    "titulo": "Treino de abdômen"
+    },
+    {
+    "id": 6,
+    "nome": "Agachamento com barra guiada",
+    "series": 3,
+    "repeticoes": 12,
+    "treino": "B",
+    "info": "Exercício para membros inferiores, envolvendo quadríceps, glúteos e posterior de coxa.",
+    "titulo": "Treino de pernas"
+    },
+    {
+    "id": 7,
+    "nome": "Desenvolvimento com halteres",
+    "series": 3,
+    "repeticoes": 10,
+    "treino": "B",
+    "info": "Exercício para ombros, com ênfase no deltóide anterior.",
+    "titulo": "Treino de ombros"
+    },
+    {
+    "id": 8,
+    "nome": "Remada curvada com barra",
+    "series": 3,
+    "repeticoes": 10,
+    "treino": "B",
+    "info": "Exercício para dorsais, trapézio e bíceps.",
+    "titulo": "Treino de costas"
+    },
+    {
+        "id": 9,
+        "nome": "Supino inclinado com barra",
+        "series": 3,
+        "repeticoes": 10,
+        "treino": "B",
+        "titulo": "Peitoral",
+        "info": "Exercício de supino realizado com o banco inclinado em 30-45 graus, visando o desenvolvimento da porção superior do músculo peitoral."
+        },
+        {
+        "id": 10,
+        "nome": "Flexão de braços",
+        "series": 3,
+        "repeticoes": 15,
+        "treino": "B",
+        "titulo": "Tríceps",
+        "info": "Exercício de fortalecimento dos tríceps que pode ser realizado com variações de posição das mãos e superfície de apoio."
+        },
+        {
+        "id": 11,
+        "nome": "Agachamento com barra guiada",
+        "series": 3,
+        "repeticoes": 12,
+        "treino": "C",
+        "titulo": "Pernas",
+        "info": "Exercício que trabalha os músculos dos membros inferiores, especialmente coxas e glúteos, utilizando uma barra guiada para maior estabilidade."
+        },
+        {
+        "id": 12,
+        "nome": "Puxada alta com barra",
+        "series": 3,
+        "repeticoes": 10,
+        "treino": "C",
+        "titulo": "Costas",
+        "info": "Exercício para o fortalecimento da musculatura das costas, principalmente dos músculos latíssimo do dorso e trapézio."
+        },
+        {
+        "id": 13,
+        "nome": "Cadeira extensora",
+        "series": 3,
+        "repeticoes": 12,
+        "treino": "C",
+        "titulo": "Pernas",
+        "info": "Exercício de isolamento para o fortalecimento dos músculos da coxa, especialmente o quadríceps."
+        },
+        {
+        "id": 14,
+        "nome": "Elevação lateral com halteres",
+        "series": 3,
+        "repeticoes": 10,
+        "treino": "C",
+        "titulo": "Ombros",
+        "info": "Exercício para o fortalecimento dos músculos do ombro, principalmente o deltoide lateral."
+        },
+        {
+        "id": 15,
+        "nome": "Abdominal supra",
+        "series": 3,
+        "repeticoes": 15,
+        "treino": "C",
+        "titulo": "Abdômen",
+        "info": "Exercício de fortalecimento dos músculos abdominais, focando principalmente na região superior do abdômen."
+        }
+  ]
+  

@@ -1,31 +1,21 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
 import type { PropsWithChildren } from 'react';
+import React from 'react';
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
+  SafeAreaView, StatusBar,
   StyleSheet,
   Text,
   useColorScheme,
-  View,
+  View
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import { LayoutApp } from './layout';
 import { NavigationContainer } from '@react-navigation/native';
-import { Stack } from './routes';
-import { HeaderNavBar } from './layout/headerNavBar';
-import { Footer } from './layout/footer';
-import { Drawer } from './routes/Drawer';
 import 'react-native-gesture-handler';
-import { backgroundColor, colorPrimary } from './styles';
+import {
+  Colors
+} from 'react-native/Libraries/NewAppScreen';
+import { BottomTabNavigator } from './routes';
+import { colorPrimary } from './styles';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -74,18 +64,9 @@ function App(): JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      {/* <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={backgroundStyle}
-        > */}
       <NavigationContainer>
-        <Footer />
+        <BottomTabNavigator />
       </NavigationContainer>
-      {/* <NavigationContainer>
-        <Stack />
-        <Drawer />
-      </NavigationContainer> */}
-      {/* </ScrollView> */}
     </SafeAreaView>
   );
 }

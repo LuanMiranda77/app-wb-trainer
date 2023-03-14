@@ -1,0 +1,183 @@
+[
+
+    {
+        "id": 1,
+        "nome": "Levantamento terra com barra",
+        "series": 3,
+        "rep": "10-12",
+        "treino": "A",
+        "info": "Exercício de levantamento de peso que trabalha vários grupos musculares, como quadríceps, glúteos, costas, trapézio e bíceps femoral.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+        "id": 2,
+        "nome": "Supino inclinado com halteres",
+        "series": 3,
+        "rep": "10-12",
+        "treino": "A",
+        "info": "Exercício de levantamento de peso que trabalha o peitoral superior, ombros e tríceps.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+        "id": 3,
+        "nome": "Remada curvada com halteres",
+        "series": 3,
+        "rep": "10-12",
+        "treino": "A",
+        "info": "Exercício que trabalha principalmente a musculatura das costas, mas também recruta bíceps e antebraços.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+        "id": 4,
+        "nome": "Elevação lateral com halteres",
+        "series": 3,
+        "rep": "10-12",
+        "treino": "A",
+        "info": "Exercício que trabalha principalmente os músculos deltoides laterais, ombros e tríceps.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+        "id": 5,
+        "nome": "Abdominais (à sua escolha)",
+        "series": 3,
+        "rep": "15-20",
+        "treino": "A",
+        "info": "Exercício para fortalecer a musculatura abdominal, podendo ser feito com diferentes variações e intensidades.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+        "id": 6,
+        "nome": "Agachamento com barra",
+        "series": 4,
+        "rep": "8-10",
+        "treino": "B",
+        "info": "Exercício que trabalha os músculos das pernas, principalmente quadríceps, glúteos e panturrilhas.",
+        "titulo": "Treino Pernas e Glúteos"
+        },
+        {
+        "id": 7,
+        "nome": "Cadeira Extensora",
+        "series": 4,
+        "rep": "10-12",
+        "treino": "B",
+        "info": "Exercício de isolamento que trabalha principalmente os músculos quadríceps.",
+        "titulo": "Treino Pernas e Glúteos"
+        },
+        {
+        "id": 8,
+        "nome": "Cadeira Flexora",
+        "series": 4,
+        "rep": "10-12",
+        "treino": "B",
+        "info": "Exercício de isolamento que trabalha principalmente os músculos isquiotibiais (parte posterior das coxas).",
+        "titulo": "Treino Pernas e Glúteos"
+        },
+        {
+            "id": 9,
+            "nome": "Glúteos 4 apoios c/ caneleira",
+            "series": 4,
+            "rep": "12-15",
+            "treino": "B",
+            "info": "Exercício para glúteos utilizando caneleira. Posicione-se em quatro apoios com as mãos e joelhos apoiados no chão e a caneleira presa na perna. Eleve a perna para trás mantendo a contração dos glúteos.",
+            "titulo": "Treino Pernas e Glúteos"
+            },
+            {
+            "id": 10,
+            "nome": "Elevação pélvica",
+            "series": 4,
+            "rep": "12-15",
+            "treino": "B",
+            "info": "Exercício para glúteos e posterior de coxa. Deite-se de costas com os joelhos flexionados e os pés apoiados no chão. Eleve o quadril contraindo os glúteos e a posterior de coxa.",
+            "titulo": "Treino Pernas e Glúteos"
+            },
+            {
+            "id": 11,
+            "nome": "Supino inclinado com halteres",
+            "series": 4,
+            "rep": "10-12",
+            "treino": "C",
+            "info": "Exercício para peitoral utilizando halteres. Deite-se em um banco inclinado com os halteres posicionados acima do peitoral. Abaixe os halteres até que os cotovelos formem um ângulo de 90 graus e depois eleve novamente.",
+            "titulo": "Treino Peito e Tríceps"
+            },
+            {
+            "id": 12,
+            "nome": "Fly com halteres",
+            "series": 4,
+            "rep": "10-12",
+            "treino": "C",
+            "info": "Exercício para peitoral utilizando halteres. Deite-se em um banco plano com os halteres posicionados acima do peitoral. Abra os braços mantendo uma leve flexão nos cotovelos e depois feche novamente.",
+            "titulo": "Treino Peito e Tríceps"
+            },
+            {
+            "id": 13,
+            "nome": "Supino fechado com halteres",
+            "series": 4,
+            "rep": "10-12",
+            "treino": "C",
+            "info": "Exercício para tríceps utilizando halteres. Deite-se em um banco plano com os halteres posicionados acima do peitoral. Mantenha os cotovelos próximos ao corpo e desça os halteres até que os braços formem um ângulo de 90 graus e depois eleve novamente.",
+            "titulo": "Treino Peito e Tríceps"
+            },
+            {
+                "id": 14,
+                "nome": "Tríceps coice com halteres",
+                "series": 4,
+                "rep": "10-12",
+                "treino": "C",
+                "info": "Exercício de tríceps com halteres realizando extensão do cotovelo para trabalhar a porção longa do tríceps. ",
+                "titulo": "Treino Peito e Tríceps"
+                },
+                {
+                "id": 15,
+                "nome": "Tríceps corda no pulley",
+                "series": 4,
+                "rep": "10-12",
+                "treino": "C",
+                "info": "Exercício de tríceps com a corda do pulley, realizando extensão do cotovelo para trabalhar a porção longa do tríceps. ",
+                "titulo": "Treino Peito e Tríceps"
+                },
+                {
+                "id": 16,
+                "nome": "Remada curvada com halteres",
+                "series": 4,
+                "rep": "10-12",
+                "treino": "D",
+                "info": "Exercício para costas com halteres, executando a remada curvada para trabalhar o latíssimo do dorso.",
+                "titulo": "Treino Costas e Bíceps"
+                },
+                {
+                "id": 17,
+                "nome": "Barra fixa assistida",
+                "series": 4,
+                "rep": "10-12",
+                "treino": "D",
+                "info": "Exercício para costas, executando a barra fixa assistida para trabalhar o latíssimo do dorso e os bíceps.",
+                "titulo": "Treino Costas e Bíceps"
+                },
+                {
+                "id": 18,
+                "nome": "Puxada alta na polia",
+                "series": 4,
+                "rep": "10-12",
+                "treino": "D",
+                "info": "Exercício para costas na polia alta, executando a puxada para trabalhar o latíssimo do dorso.",
+                "titulo": "Treino Costas e Bíceps"
+                },
+                {
+                "id": 19,
+                "nome": "Rosca direta com halteres",
+                "series": 4,
+                "rep": "10-12",
+                "treino": "D",
+                "info": "Exercício de bíceps com halteres, realizando a flexão do cotovelo para trabalhar a porção curta do bíceps.",
+                "titulo": "Treino Costas e Bíceps"
+                },
+                {
+                "id": 20,
+                "nome": "Rosca martelo com halteres",
+                "series": 4,
+                "rep": "10-12",
+                "treino": "D",
+                "info": "Exercício de bíceps com halteres, realizando a flexão do cotovelo para trabalhar a porção externa do bíceps.",
+                "titulo": "Treino Costas e Bíceps"
+                }
+]

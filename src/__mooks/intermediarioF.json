@@ -1,0 +1,182 @@
+[
+    {
+      "id": 1,
+      "nome": "Agachamento com barra",
+      "series": 4,
+      "repeticoes": "8-10",
+      "treino": "A",
+      "info": "Agachamento com barra é um exercício composto que trabalha os músculos das pernas e glúteos.",
+      "titulo": "Treino Full-Body"
+    },
+    {
+      "id": 2,
+      "nome": "Levantamento terra",
+      "series": 4,
+      "repeticoes": "8-10",
+      "treino": "A",
+      "info": "Levantamento terra é um exercício que trabalha principalmente a musculatura das costas e pernas.",
+      "titulo": "Treino Full-Body"
+    },
+    {
+      "id": 3,
+      "nome": "Supino inclinado com barra",
+      "series": 4,
+      "repeticoes": "8-10",
+      "treino": "A",
+      "info": "Supino inclinado com barra é um exercício que trabalha principalmente os músculos do peitoral.",
+      "titulo": "Treino Full-Body"
+    },
+    {
+      "id": 4,
+      "nome": "Remada curvada com barra",
+      "series": 4,
+      "repeticoes": "8-10",
+      "treino": "A",
+      "info": "Remada curvada com barra é um exercício que trabalha principalmente a musculatura das costas.",
+      "titulo": "Treino Full-Body"
+    },
+    {
+      "id": 5,
+      "nome": "Abdominais",
+      "series": 3,
+      "repeticoes": "15",
+      "treino": "A",
+      "info": "Abdominais são exercícios que fortalecem os músculos do abdômen.",
+      "titulo": "Treino Full-Body"
+    },
+    {
+      "id": 6,
+      "nome": "Desenvolvimento com halteres",
+      "series": 4,
+      "repeticoes": "8-10",
+      "treino": "B",
+      "info": "Desenvolvimento com halteres é um exercício que trabalha principalmente os músculos dos ombros.",
+      "titulo": "Treino Full-Body"
+    },
+    {
+      "id": 7,
+      "nome": "Barra fixa",
+      "series": 4,
+      "repeticoes": "8-10",
+      "treino": "B",
+      "info": "Barra fixa é um exercício que trabalha principalmente a musculatura das costas e braços.",
+      "titulo": "Treino Full-Body"
+    },
+    {
+        "id": 8,
+        "nome": "Supino reto com halteres",
+        "series": 4,
+        "repeticoes": "8-10",
+        "treino": "B",
+        "info": "Exercício de peitoral com halteres.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+        "id": 9,
+        "nome": "Puxada alta com barra",
+        "series": 4,
+        "repeticoes": "8-10",
+        "treino": "B",
+        "info": "Exercício de dorsal com barra.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+        "id": 10,
+        "nome": "Abdominais",
+        "series": 3,
+        "repeticoes": "15",
+        "treino": "B",
+        "info": "Exercício para fortalecer a região abdominal.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+        "id": 11,
+        "nome": "Agachamento com barra",
+        "series": 4,
+        "repeticoes": "8-10",
+        "treino": "C",
+        "info": "Exercício para as pernas com barra.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+        "id": 12,
+        "nome": "Levantamento terra",
+        "series": 4,
+        "repeticoes": "8-10",
+        "treino": "C",
+        "info": "Exercício de força para os músculos do corpo inteiro.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+        "id": 13,
+        "nome": "Supino inclinado com barra",
+        "series": 4,
+        "repeticoes": "8-10",
+        "treino": "C",
+        "info": "Exercício para o peitoral com barra inclinada.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+        "id": 14,
+        "nome": "Remada curvada com barra",
+        "series": 4,
+        "repeticoes": "8-10",
+        "treino": "C",
+        "info": "Exercício para a dorsal com barra.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+            "id": 15,
+            "nome": "Abdominais",
+            "series": 3,
+            "repeticoes": 15,
+            "treino": "C",
+            "info": "Fortalece e tonifica os músculos do abdômen.",
+            "titulo": "Treino Full-Body"
+            },
+            {
+            "id": 16,
+            "nome": "Desenvolvimento com halteres",
+            "series": 4,
+            "repeticoes": "8-10",
+            "treino": "D",
+            "info": "Exercício para ombros e tríceps, fortalece e desenvolve a musculatura.",
+            "titulo": "Treino Full-Body"
+            },
+            {
+            "id": 17,
+            "nome": "Barra fixa",
+            "series": 4,
+            "repeticoes": "8-10",
+            "treino": "D",
+            "info": "Exercício para fortalecer e desenvolver a musculatura das costas e braços.",
+            "titulo": "Treino Full-Body"
+            },
+            {
+            "id": 18,
+            "nome": "Supino reto com halteres",
+            "series": 4,
+            "repeticoes": "8-10",
+            "treino": "D",
+            "info": "Exercício para peitoral, fortalece e tonifica os músculos da região.",
+            "titulo": "Treino Full-Body"
+            },
+            {
+            "id": 19,
+            "nome": "Puxada alta com barra",
+            "series": 4,
+            "repeticoes": "8-10",
+            "treino": "D",
+            "info": "Exercício para fortalecer e desenvolver a musculatura das costas e braços.",
+            "titulo": "Treino Full-Body"
+            },
+            {
+            "id": 20,
+            "nome": "Abdominais",
+            "series": 3,
+            "repeticoes": 15,
+            "treino": "D",
+            "info": "Fortalece e tonifica os músculos do abdômen.",
+            "titulo": "Treino Full-Body"
+            }
+  ]

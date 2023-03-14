@@ -22,15 +22,15 @@ import {
 import Icon from 'react-native-vector-icons/AntDesign';
 import IconFire from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-// import h1 from '../../assets/h-1.jpg'
 
-export function CardTreino({ ...props }) {
-  // const { listaTreino, setListaTreino } = useCardTreino();
+export function CardTreino({ navigation }) {
+  const { listaTreino, setListaTreino } = useCardTreino();
   const onPlay = () => {
-    console.warn('test');
+    console.error('test');
   };
   const renderItem = (data) => {
     const { item } = data;
+    // console.warn(item.image);
     return (
       <>
         <Container color={colorFooter}>
@@ -54,7 +54,7 @@ export function CardTreino({ ...props }) {
               <Text style={stylesGlobal.textTitle}>{item.treino}</Text>
               <Text>{item.grupo}</Text>
             </View>
-            <ButtonPlay color={backgroundColor} onPress={onPlay}>
+            <ButtonPlay color={backgroundColor} onPress={()=>{navigation.navigate('Treino',{treino:item.id})}}>
               <Icon
                 name="caretright"
                 size={25}
@@ -106,7 +106,7 @@ export function CardTreino({ ...props }) {
   return (
     <FlatList
       horizontal={true}
-      data={treinos}
+      data={listaTreino}
       renderItem={renderItem}
       // extraData={selectedId}
       // renderItem={({ item }) => <Text>dsds</Text>}

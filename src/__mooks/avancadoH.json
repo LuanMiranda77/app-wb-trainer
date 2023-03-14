@@ -1,0 +1,209 @@
+[
+    {
+        "id": 1,
+        "nome": "Agachamento com barra",
+        "series": 3,
+        "rep": "8-12",
+        "treino": "A",
+        "info": "Exercício para pernas e glúteos que utiliza uma barra nas costas e trabalha os músculos da região inferior do corpo.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+        "id": 2,
+        "nome": "Supino reto com barra",
+        "series": 3,
+        "rep": "8-12",
+        "treino": "A",
+        "info": "Exercício para o peitoral que utiliza uma barra e trabalha os músculos do tórax e dos braços.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+        "id": 3,
+        "nome": "Remada curvada com barra",
+        "series": 3,
+        "rep": "8-12",
+        "treino": "A",
+        "info": "Exercício para as costas que utiliza uma barra e trabalha os músculos das costas e dos braços.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+        "id": 4,
+        "nome": "Desenvolvimento com halteres",
+        "series": 3,
+        "rep": "8-12",
+        "treino": "A",
+        "info": "Exercício para os ombros que utiliza halteres e trabalha os músculos dos ombros e dos braços.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+        "id": 5,
+        "nome": "Curl com halteres",
+        "series": 3,
+        "rep": "8-12",
+        "treino": "A",
+        "info": "Exercício para os braços que utiliza halteres e trabalha os músculos dos braços.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+        "id": 6,
+        "nome": "Tríceps francês com halteres",
+        "series": 3,
+        "rep": "8-12",
+        "treino": "A",
+        "info": "Exercício para os tríceps que utiliza halteres e trabalha os músculos dos braços.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+        "id": 7,
+        "nome": "Abdominais (à sua escolha)",
+        "series": 3,
+        "rep": 15,
+        "treino": "A",
+        "info": "Exercício para o abdômen que pode ser feito com diversos tipos de variações e trabalha os músculos do abdômen.",
+        "titulo": "Treino Full-Body"
+        },
+        {
+        "id": 8,
+        "nome": "Agachamento com barra",
+        "series": 4,
+        "rep": "8-10",
+        "treino": "B",
+        "info": "Exercício para pernas e glúteos que utiliza uma barra nas costas e trabalha os músculos da região inferior do corpo.",
+        "titulo": "Treino Pernas e Glúteos"
+        },
+        {
+            "id": 9,
+            "nome": "Leg Press",
+            "series": 4,
+            "rep": "8-10",
+            "treino": "B",
+            "info": "Exercício de pernas que trabalha quadríceps, glúteos e posterior de coxa. Realizado em uma máquina específica.",
+            "titulo": "Treino Pernas e Glúteos"
+            },
+            {
+            "id": 10,
+            "nome": "Levantamento Terra",
+            "series": 4,
+            "rep": "8-10",
+            "treino": "B",
+            "info": "Exercício composto que trabalha diversos grupos musculares, incluindo pernas, glúteos, costas e braços. Realizado com uma barra e pesos.",
+            "titulo": "Treino Pernas e Glúteos"
+            },
+            {
+            "id": 11,
+            "nome": "Cadeira Extensora",
+            "series": 4,
+            "rep": "10-12",
+            "treino": "B",
+            "info": "Exercício que trabalha exclusivamente o quadríceps. Realizado em uma máquina específica.",
+            "titulo": "Treino Pernas e Glúteos"
+            },
+            {
+            "id": 12,
+            "nome": "Flexora deitado",
+            "series": 4,
+            "rep": "10-12",
+            "treino": "B",
+            "info": "Exercício que trabalha exclusivamente o posterior de coxa. Realizado em uma máquina específica.",
+            "titulo": "Treino Pernas e Glúteos"
+            },
+            {
+            "id": 13,
+            "nome": "Panturrilha no Smith",
+            "series": 4,
+            "rep": "12-15",
+            "treino": "B",
+            "info": "Exercício que trabalha exclusivamente a panturrilha. Realizado em uma máquina específica.",
+            "titulo": "Treino Pernas e Glúteos"
+            },
+            {
+            "id": 14,
+            "nome": "Supino inclinado com barra",
+            "series": 4,
+            "rep": "8-10",
+            "treino": "C",
+            "info": "Exercício que trabalha principalmente o peitoral superior. Realizado com uma barra em um banco inclinado.",
+            "titulo": "Treino Peito e Tríceps"
+            },
+            {
+            "id": 15,
+            "nome": "Voador (ou crucifixo invertido)",
+            "series": 4,
+            "rep": "10-12",
+            "treino": "C",
+            "info": "Exercício que trabalha principalmente o peitoral. Realizado com halteres em posição horizontal.",
+            "titulo": "Treino Peito e Tríceps"
+            },
+            {
+            "id": 16,
+            "nome": "Cross over",
+            "series": 4,
+            "rep": "10-12",
+            "treino": "C",
+            "info": "Exercício que trabalha principalmente o peitoral. Realizado com polias.",
+            "titulo": "Treino Peito e Tríceps"
+            },
+            {
+                "id": 17,
+                "nome": "Paralelas",
+                "series": 4,
+                "rep": "8-10",
+                "treino": "C",
+                "info": "Trabalha o tríceps e o peitoral. Fortalece a região do tórax e dos braços.",
+                "titulo": "Treino Peito e Tríceps"
+                },
+                {
+                "id": 18,
+                "nome": "Tríceps corda no pulley",
+                "series": 4,
+                "rep": "10-12",
+                "treino": "C",
+                "info": "Exercício isolado para o tríceps. Ajuda a definir e tonificar a musculatura dos braços.",
+                "titulo": "Treino Peito e Tríceps"
+                },
+                {
+                "id": 19,
+                "nome": "Puxada alta na polia",
+                "series": 4,
+                "rep": "8-10",
+                "treino": "D",
+                "info": "Trabalha a musculatura das costas e dos braços. Auxilia na melhora da postura e do equilíbrio.",
+                "titulo": "Treino Costas e Bíceps"
+                },
+                {
+                "id": 20,
+                "nome": "Remada cavalinho",
+                "series": 4,
+                "rep": "10-12",
+                "treino": "D",
+                "info": "Exercício para fortalecimento das costas e braços. Melhora a postura e previne lesões na coluna.",
+                "titulo": "Treino Costas e Bíceps"
+                },
+                {
+                "id": 21,
+                "nome": "Barra fixa",
+                "series": 4,
+                "rep": "8-10",
+                "treino": "D",
+                "info": "Exercício para fortalecer as costas e braços. Ajuda a aumentar a resistência e a força muscular.",
+                "titulo": "Treino Costas e Bíceps"
+                },
+                {
+                "id": 22,
+                "nome": "Rosca direta com barra",
+                "series": 4,
+                "rep": "10-12",
+                "treino": "D",
+                "info": "Exercício para tonificar os braços e o bíceps. Ajuda a melhorar a definição muscular.",
+                "titulo": "Treino Costas e Bíceps"
+                },
+                {
+                "id": 23,
+                "nome": "Rosca martelo com halteres",
+                "series": 4,
+                "rep": "10-12",
+                "treino": "D",
+                "info": "Exercício para fortalecer o braço e o antebraço. Auxilia na prevenção de lesões e na melhora da pegada.",
+                "titulo": "Treino Costas e Bíceps"
+                }
+]

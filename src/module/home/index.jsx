@@ -1,21 +1,20 @@
 import React from 'react';
-import { Button, Text, View } from 'react-native';
+import { Button, Text, View, TouchableOpacity, ScrollView } from 'react-native';
 import { backgroundColor, colorPrimary, stylesGlobal } from '../../styles';
 import { Card } from '../../components/card';
 import { HeaderNavBar } from '../../layout/headerNavBar';
 import { CardTreino } from '../../components/cardTreino';
-import { ScrollView } from 'react-native-gesture-handler';
 import { ListaExercicico } from '../../components/listaExercicio';
 
-export function Home(props) {
+export function Home({ navigation }) {
   const array = [
-    {id:1, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
-    {id:2, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
-    {id:3, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
-    {id:4, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
-    {id:5, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
-    {id:6, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
-    {id:7, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
+    { id: 1, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
+    { id: 2, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
+    { id: 3, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
+    { id: 4, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
+    { id: 5, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
+    { id: 6, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
+    { id: 7, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
   ];
   return (
     <View style={{ backgroundColor: backgroundColor, flex: 1 }}>
@@ -40,9 +39,14 @@ export function Home(props) {
           }}
         >
           <Text style={stylesGlobal.textTitle}>Seus treinos</Text>
-          <Text style={{ color: colorPrimary, fontWeight: 'bold' }}>Todos</Text>
+          <TouchableOpacity style={{ color: colorPrimary, fontWeight: 'bold' }}
+            onPress={()=>navigation.navigate('Treino', {treino:0})}>
+            <Text style={{ color: colorPrimary, fontWeight: 'bold' }}>
+              Todos
+            </Text>
+          </TouchableOpacity>
         </View>
-        <CardTreino />
+        <CardTreino navigation={navigation} />
         <View
           style={{
             display: 'flex',
@@ -56,7 +60,7 @@ export function Home(props) {
           <Text style={stylesGlobal.textTitle}>Exercícios do treino</Text>
           <Text style={{ color: colorPrimary, fontWeight: 'bold' }}>Todos</Text>
         </View>
-        <ListaExercicico dataSource={array}/>
+        <ListaExercicico dataSource={array} />
       </ScrollView>
     </View>
   );
