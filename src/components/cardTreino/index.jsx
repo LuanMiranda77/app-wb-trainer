@@ -1,30 +1,17 @@
 import React from 'react';
-import { Dimensions, StyleSheet, Text, View } from 'react-native';
-import { ProgressChart } from 'react-native-chart-kit';
+import { Text, View } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
-import { useCardTreino, treinos } from '../../hooks/useCardTreino';
-import {
-  backgroundColor,
-  colorFooter,
-  colorIconFooter,
-  colorPrimary,
-  colorSecondary,
-  colorWhite,
-  styleGlobal,
-  stylesGlobal,
-} from '../../styles';
-import {
-  ButtonPlay,
-  Container,
-  ContainerDetalhes,
-  ContainerImage,
-} from './styles';
 import Icon from 'react-native-vector-icons/AntDesign';
-import IconFire from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import IconFire from 'react-native-vector-icons/MaterialIcons';
+import { useUserContext } from '../../context/useUserContext';
+import { useCardTreino } from '../../hooks/useCardTreino';
+import { backgroundColor, colorFooter, stylesGlobal } from '../../styles';
+import { ButtonPlay, Container, ContainerDetalhes, ContainerImage } from './styles';
 
 export function CardTreino({ navigation }) {
   const { listaTreino, setListaTreino } = useCardTreino();
+  const { stateUser, dispatch } = useUserContext();
   const onPlay = () => {
     console.error('test');
   };
@@ -33,56 +20,43 @@ export function CardTreino({ navigation }) {
     // console.warn(item.image);
     return (
       <>
-        <Container color={colorFooter}>
-          {item.id == 1 ? (
+        <Container color={colorFooter} onPress={() => dispatch({ type: 'setTreinoAtual', playload: item.treino})}>
+          {item.treino == 'A' ? (
             <ContainerImage source={require('../../assets/h-1.jpg')} />
-          ) : item.id == 2 ? (
+          ) : item.treino == 'B' ? (
             <ContainerImage source={require('../../assets/h-2.jpg')} />
-          ) : item.id == 3 ? (
+          ) : item.treino == 'C' ? (
             <ContainerImage source={require('../../assets/h-3.jpg')} />
-          ) : item.id == 4 ? (
+          ) : item.treino == 'D' ? (
             <ContainerImage source={require('../../assets/h-4.jpg')} />
-          ) : item.id == 5 ? (
+          ) : item.treino == 'E' ? (
             <ContainerImage source={require('../../assets/h-5.jpg')} />
-          ) : item.id == 6 ? (
+          ) : item.treino == 'F' ? (
             <ContainerImage source={require('../../assets/h-6.jpg')} />
           ) : (
             <ContainerImage source={require('../../assets/h-7.jpg')} />
           )}
           <View style={{ padding: 10 }}>
             <View>
-              <Text style={stylesGlobal.textTitle}>{item.treino}</Text>
-              <Text>{item.grupo}</Text>
+              <Text style={stylesGlobal.textTitle}>{`Treino ${item.treino}`}</Text>
+              <Text>{item.titulo}</Text>
             </View>
-            <ButtonPlay color={backgroundColor} onPress={()=>{navigation.navigate('Treino',{treino:item.id})}}>
-              <Icon
-                name="caretright"
-                size={25}
-                color="#f8753d"
-                style={{ marginRight: 5 }}
-              />
+            <ButtonPlay
+              color={backgroundColor}
+              onPress={() => {
+                navigation.navigate('Treino', { treino: item.treino });
+              }}
+            >
+              <Icon name="caretright" size={25} color="#f8753d" style={{ marginRight: 5 }} />
             </ButtonPlay>
             <View style={{ display: 'flex', flexDirection: 'row' }}>
               <ContainerDetalhes color="#32ad0c" background="#31ad0c22">
-                <Icon
-                  name="clockcircleo"
-                  size={15}
-                  color="#32ad0c"
-                  style={{ marginRight: 5 }}
-                />
-                <Text style={{ color: '#32ad0c', fontWeight: 'bold' }}>
-                  {item.tempo} min
-                </Text>
+                <Icon name="clockcircleo" size={12} color="#32ad0c" style={{ marginRight: 5 }} />
+                <Text style={{ color: '#32ad0c', fontWeight: 'bold', fontSize:12 }}>{item.tempo.toFixed(2)} min</Text>
               </ContainerDetalhes>
               <ContainerDetalhes color="#ffb400" background="#ffb30022">
-                <IconFire
-                  name="local-fire-department"
-                  size={16}
-                  color="#ffb400"
-                />
-                <Text style={{ color: '#ffb400', fontWeight: 'bold' }}>
-                  {item.caloria} cal
-                </Text>
+                <IconFire name="local-fire-department" size={12} color="#ffb400" />
+                <Text style={{ color: '#ffb400', fontWeight: 'bold', fontSize:12 }}>{item.calorias.toFixed(2)} cal</Text>
               </ContainerDetalhes>
               <ContainerDetalhes color="#198fb5" background="#198fb522">
                 <Ionicons name="barbell-outline" size={20} color="#198fb5" />
@@ -93,7 +67,7 @@ export function CardTreino({ navigation }) {
                     fontWeight: 'bold',
                   }}
                 >
-                  {item.exercicio} exe
+                  {item.quant} exe
                 </Text>
               </ContainerDetalhes>
             </View>

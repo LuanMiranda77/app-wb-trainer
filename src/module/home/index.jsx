@@ -1,33 +1,32 @@
-import React from 'react';
-import { Button, Text, View, TouchableOpacity, ScrollView } from 'react-native';
-import { backgroundColor, colorPrimary, stylesGlobal } from '../../styles';
+import React, { useMemo, useState } from 'react';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { Card } from '../../components/card';
-import { HeaderNavBar } from '../../layout/headerNavBar';
 import { CardTreino } from '../../components/cardTreino';
 import { ListaExercicico } from '../../components/listaExercicio';
+import { useUserContext } from '../../context/useUserContext';
+import { HeaderNavBar } from '../../layout/headerNavBar';
+import { backgroundColor, colorPrimary, stylesGlobal } from '../../styles';
 
 export function Home({ navigation }) {
-  const array = [
-    { id: 1, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
-    { id: 2, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
-    { id: 3, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
-    { id: 4, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
-    { id: 5, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
-    { id: 6, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
-    { id: 7, image: '', nome: 'Trapezio', tempo: 10, caloria: 120 },
-  ];
+  const { stateUser, dispatch } = useUserContext();
+  const [exercicicos, setExercicios] = useState();
+  const [treinoAtual, setTreinoAtual] = useState();
+  useMemo(() => {
+    let array = stateUser.exercicios.filter((item) => item.treino === stateUser.treinoAtual);
+    let obj = {
+      treino: 'Treino ' + stateUser.treinoAtual,
+      titulo: stateUser.diasTreinos.filter((item) => item.nome === stateUser.treinoAtual)[0].titulo,
+      quant: array.length,
+    };
+    console.log(stateUser.diasTreinos.filter((item) => item.nome === stateUser.treinoAtual));
+    setTreinoAtual({ ...obj });
+    setExercicios([...array]);
+  }, [stateUser.treinoAtual]);
   return (
     <View style={{ backgroundColor: backgroundColor, flex: 1 }}>
-      <HeaderNavBar userName="Julia Ana" />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={{ marginBottom: 0 }}
-      >
-        <Card
-          text1="Treino de Hoje"
-          text2="Peito/Bicepes"
-          exercicio="1/12 completo"
-        />
+      <HeaderNavBar treino={treinoAtual} />
+      <ScrollView contentInsetAdjustmentBehavior="automatic" style={{ marginBottom: 0 }}>
+        <Card text1={treinoAtual?.treino} text2={treinoAtual?.titulo} exercicio={treinoAtual?.quant} feito={Math.floor(Math.random() * (treinoAtual?.quant - 0 + 1)) + 0} />
         <View
           style={{
             display: 'flex',
@@ -39,11 +38,8 @@ export function Home({ navigation }) {
           }}
         >
           <Text style={stylesGlobal.textTitle}>Seus treinos</Text>
-          <TouchableOpacity style={{ color: colorPrimary, fontWeight: 'bold' }}
-            onPress={()=>navigation.navigate('Treino', {treino:0})}>
-            <Text style={{ color: colorPrimary, fontWeight: 'bold' }}>
-              Todos
-            </Text>
+          <TouchableOpacity style={{ color: colorPrimary, fontWeight: 'bold' }} onPress={() => navigation.navigate('Treino', { treino: 0 })}>
+            <Text style={{ color: colorPrimary, fontWeight: 'bold' }}>Todos</Text>
           </TouchableOpacity>
         </View>
         <CardTreino navigation={navigation} />
@@ -60,7 +56,7 @@ export function Home({ navigation }) {
           <Text style={stylesGlobal.textTitle}>Exercícios do treino</Text>
           <Text style={{ color: colorPrimary, fontWeight: 'bold' }}>Todos</Text>
         </View>
-        <ListaExercicico dataSource={array} />
+        <ListaExercicico dataSource={exercicicos} />
       </ScrollView>
     </View>
   );

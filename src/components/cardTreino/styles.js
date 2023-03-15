@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
   background-color: ${(props) => props.color};
   margin: 20px;
   border-radius: 25px;
@@ -24,7 +24,7 @@ export const ContainerDetalhes = styled.View`
   border-radius: 50px;
   width: 84px;
   height: 40px;
-  padding-left: 8px;
+  padding-left: 4px;
   align-items: center;
 `;
 

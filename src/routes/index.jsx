@@ -1,22 +1,15 @@
-import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Home } from '../module/home';
+import React from 'react';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import Icon from 'react-native-vector-icons/AntDesign';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import { Evolute } from '../module/evolute';
 import { Exercise } from '../module/exercise';
+import { Home } from '../module/home';
 import { Settings } from '../module/settings';
 import { Training } from '../module/training';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Button, StyleSheet, View, Text } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import {
-  backgroundColor,
-  colorBase,
-  colorFooter,
-  colorIconFooter,
-  colorPrimary,
-  colorTertiary,
-  colorWhite,
-} from '../styles';
-import { Evolute } from '../module/evolute';
+import { backgroundColor, colorFooter, colorIconFooter, colorPrimary } from '../styles';
 
 export function BottomTabNavigator() {
   const Stack = createNativeStackNavigator();
@@ -31,10 +24,12 @@ export function BottomTabNavigator() {
     },
     headerBackground: ({ focused, color, size }) => {
       return (
-        <View style={style.view}>
-          {/* <Button style={style.button} title="dfdf" /> */}
-          <Text style={style.text}>{route.name}</Text>
-        </View>
+        <>
+          <View style={style.view}>
+            {/* <Button style={style.button} title="dfdf" /> */}
+            <Text style={style.text}>{route.name}</Text>
+          </View>
+        </>
       );
     },
   };
@@ -108,6 +103,11 @@ export function BottomTabNavigator() {
             <View style={style.view}>
               {/* <Button style={style.button} title="dfdf" /> */}
               <Text style={style.text}>{route.name}</Text>
+              {route.name != "Config" || route.name != "HomeStack"  &&
+                <TouchableOpacity>
+                  <Icon name="pluscircleo" size={35} color={backgroundColor} style={{ marginRight: 10 }} />
+                </TouchableOpacity>
+              }
             </View>
           );
         },
@@ -136,7 +136,6 @@ const style = StyleSheet.create({
     width: '20%',
   },
   text: {
-    width: '100%',
     textAlign: 'center',
     // marginRight:30,
     fontSize: 25,

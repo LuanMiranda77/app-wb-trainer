@@ -3,8 +3,8 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
   background-color: ${(props) => props.color};
   display: flex;
-  flex-direction:row;
-  align-items:center;
+  flex-direction: row;
+  align-items: center;
   /* margin: 20px; */
   width: 90%;
   margin-left: 20px;
@@ -36,7 +36,7 @@ export const ContainerDetalhes = styled.View`
 
 export const ButtonPlay = styled.TouchableOpacity`
   position: absolute;
-  left: 120%;
+  left: 210px;
   top: -50%;
   /* background-color: ${(props) => props.color}; */
   height: 50px;
