@@ -52,7 +52,7 @@ export function CardTreino({ navigation }) {
             <View style={{ display: 'flex', flexDirection: 'row' }}>
               <ContainerDetalhes color="#32ad0c" background="#31ad0c22">
                 <Icon name="clockcircleo" size={12} color="#32ad0c" style={{ marginRight: 5 }} />
-                <Text style={{ color: '#32ad0c', fontWeight: 'bold', fontSize:12 }}>{item.tempo.toFixed(2)} min</Text>
+                <Text style={{ color: '#32ad0c', fontWeight: 'bold', fontSize:12 }}>{item.tempo} min</Text>
               </ContainerDetalhes>
               <ContainerDetalhes color="#ffb400" background="#ffb30022">
                 <IconFire name="local-fire-department" size={12} color="#ffb400" />

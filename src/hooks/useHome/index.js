@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useUserContext } from '../../context/useUserContext';
-import { NivelUser } from '../../utils/constants';
+import { NivelUser } from '../../utils/enums';
 import treinos from '../../__mooks/iniciantesM.json';
 
 export function useHome() {

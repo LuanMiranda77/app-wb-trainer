@@ -17,6 +17,7 @@ import {
   stylesGlobal,
 } from '../../styles'
 import {
+  ButtonDetalhes,
   ButtonPlay,
   Container,
   ContainerDetalhes,
@@ -65,14 +66,22 @@ export function ListaExercicico({...props}) {
                     {item.repeticoes}
                   </Text>
                 </ContainerDetalhes>
-                <ButtonPlay color={'#959e9f6f'} onPress={onPlay}>
+                {/* <ButtonPlay color={'#959e9f6f'} onPress={onPlay}>
                   <Icon
                     name="caretright"
                     size={25}
                     color="#f8753d"
                     style={{marginRight: 5}}
                   />
-                </ButtonPlay>
+                </ButtonPlay> */}
+                <ButtonDetalhes color={'#959e9f6f'} onPress={() => props.navigation.navigate('Detalhes exercício', {exercicio:item})}>
+                <Ionicons
+                    name="arrow-redo"
+                    size={28}
+                    color="#f8753d"
+                    style={{ marginRight: 0, marginTop:-4 }}
+                  />
+                </ButtonDetalhes>
               </View>
             </View>
           </Container>

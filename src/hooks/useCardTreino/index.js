@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { useUserContext } from '../../context/useUserContext';
-import { NivelUser } from '../../utils/constants';
+import { NivelUser } from '../../utils/enums';
 // MET:
 // Andar de bicicleta a 16 km/h: 3.0 MET
 // Andar de bicicleta a 20 km/h: 5.5 MET
@@ -23,19 +23,19 @@ export const useCardTreino = () => {
     });
     if (stateUser.experiencia === NivelUser.INICIATE) {
       descanso = quantSeries * 60;
-      tempoExercicio = treino.length * 50;
+      tempoExercicio = treino.length * 200;
     } else if (stateUser.experiencia === NivelUser.INTERMEDIARIO) {
       descanso = quantSeries * 50;
-      tempoExercicio = treino.length * 40;
+      tempoExercicio = treino.length * 300;
     } else if (stateUser.experiencia === NivelUser.AVANCADO) {
       descanso = quantSeries * 40;
-      tempoExercicio = treino.length * 40;
+      tempoExercicio = treino.length * 450;
     } else if (stateUser.experiencia === NivelUser.PROFISSIONAL) {
       descanso = quantSeries * 30;
-      tempoExercicio = treino.length * 30;
+      tempoExercicio = treino.length * 600;
     }
     let minuto = (tempoExercicio + descanso) / 60;
-    return minuto;
+    return minuto.toFixed(0);
   };
 
   const calcCaloriaTreino = (tempo) => {
@@ -50,8 +50,6 @@ export const useCardTreino = () => {
     let treinoD = stateUser.exercicios.filter((item) => item.treino === 'D');
     let treinoE = stateUser.exercicios.filter((item) => item.treino === 'E');
     let treinoF = stateUser.exercicios.filter((item) => item.treino === 'F');
-    // dispatch({ type: 'setTreinos', playload: arrayTreino });
-    // console.log(stateUser.exercicios);
 
     if (treinoA.length > 0) {
       let tempo = calculoTempoTreino(treinoA);

@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useReducer } from 'react';
-import { NivelUser } from '../../utils/constants';
-import arrayTreino from '../../__mooks/iniciantesM.json';
+import { NivelUser } from '../../utils/enums';
+import arrayTreino from '../../__mooks/profissionalM.json';
 
 export const UserContext = createContext({});
 const initialState = {
@@ -17,7 +17,7 @@ const initialState = {
   ],
   objetivo: 'perder peso',
   tipoPlano: 'premium',
-  experiencia: NivelUser.INICIATE,
+  experiencia: NivelUser.PROFISSIONAL,
   personalTrainer: {
     nome: 'Maria Souza',
     experiencia: 8,

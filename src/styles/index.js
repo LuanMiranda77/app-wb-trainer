@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { createGlobalStyle } from 'styled-components';
 
 export const colorPrimary = '#198FB4';
 export const colorSecondary = '#F8753D';
@@ -10,17 +9,18 @@ export const colorBase = '#E1E1E1';
 export const colorWhite = '#FFFF';
 export const backgroundColor = '#0e0f13';
 export const fontePadrao = 'Poppins';
+export const colorSubtitle = '#747c7e';
 
 export const stylesGlobal = StyleSheet.create({
-    textTitle: {
-        fontSize: 18,
-        color: colorWhite,
-        fontWeight: 'bold',
-    },
-    textSubTitle: {
-        fontSize: 13,
-        fontWeight: 'bold',
-    },
+  textTitle: {
+    fontSize: 18,
+    color: colorWhite,
+    fontWeight: 'bold',
+  },
+  textSubTitle: {
+    fontSize: 13,
+    fontWeight: 'bold',
+  },
 });
 
 // export const GlobalStyle = createGlobalStyle`

@@ -6,7 +6,8 @@
         "repeticoes": 10,
         "treino": "A",
         "titulo": "Pernas",
-        "info": "Fortalece os músculos das pernas, principalmente o quadríceps."
+        "info": "Fortalece os músculos das pernas, principalmente o quadríceps.",
+        "image":"agachamento_livre"
         },
         {
         "id": 2,

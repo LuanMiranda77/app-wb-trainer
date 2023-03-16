@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
   background-color: ${(props) => props.color};
   display: flex;
   flex-direction: row;
@@ -14,8 +14,9 @@ export const Container = styled.View`
 `;
 
 export const ContainerImage = styled.Image`
-  max-width: 60px;
-  max-height: 60px;
+  position: absolute;
+  width: 100%;
+  height: 30%;
   border-radius: 8px;
   margin-right: 10px;
 `;
@@ -36,26 +37,29 @@ export const ContainerDetalhes = styled.View`
 
 export const ButtonPlay = styled.TouchableOpacity`
   position: absolute;
-  left: 210px;
+  left: 120%;
   top: -50%;
   /* background-color: ${(props) => props.color}; */
   height: 50px;
   width: 50px;
   padding: 11px;
   border-radius: 50px;
-  border-width: 1px;
-  border-color: ${(props) => props.color};
+  /* border-width: 1px; */
+  /* border-color: ${(props) => props.color}; */
 `;
 
-export const ButtonDetalhes = styled.TouchableOpacity`
-  position: absolute;
-  left: 210px;
-  top: -50%;
-  /* background-color: ${(props) => props.color}; */
+export const Subtitulo = styled.Text`
+  color: ${(props) => props.color};
+  font-size: 17px;
+`;
+export const Titulo = styled.Text`
+  color: ${(props) => props.color};
+  font-size: 21px;
+`;
+
+export const ButtonHeader = styled.TouchableOpacity`
   height: 50px;
   width: 50px;
   padding: 11px;
   border-radius: 50px;
-  border-width: 1px;
-  border-color: ${(props) => props.color};
 `;

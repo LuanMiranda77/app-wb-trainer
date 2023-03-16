@@ -36,8 +36,8 @@ export const ContainerDetalhes = styled.View`
 
 export const ButtonPlay = styled.TouchableOpacity`
   position: absolute;
-  left: 120%;
-  top: -50%;
+  left: 88%;
+  top: 10%;
   /* background-color: ${(props) => props.color}; */
   height: 50px;
   width: 50px;

@@ -150,6 +150,10 @@ android {
 
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
+    implementation('com.facebook.fresco:fresco:2.6.0')
+    // For animated GIF support
+    implementation('com.facebook.fresco:animated-gif:2.6.0')
+
     implementation("com.facebook.react:react-android")
 
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.0.0")
@@ -174,3 +178,4 @@ project.ext.vectoricons = [
 ]
 
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+

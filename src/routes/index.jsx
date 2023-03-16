@@ -4,6 +4,7 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { DetalhesExercicio } from '../module/detalhesExercicio';
 import { Evolute } from '../module/evolute';
 import { Exercise } from '../module/exercise';
 import { Home } from '../module/home';
@@ -15,24 +16,7 @@ export function BottomTabNavigator() {
   const Stack = createNativeStackNavigator();
 
   const Tab = createBottomTabNavigator();
-  const HeaderConfig = {
-    headerStyle: {
-      backgroundColor: backgroundColor,
-    },
-    headerTitleStyle: {
-      color: 'transparent',
-    },
-    headerBackground: ({ focused, color, size }) => {
-      return (
-        <>
-          <View style={style.view}>
-            {/* <Button style={style.button} title="dfdf" /> */}
-            <Text style={style.text}>{route.name}</Text>
-          </View>
-        </>
-      );
-    },
-  };
+
   function HomeStack() {
     return (
       <Stack.Navigator
@@ -44,13 +28,14 @@ export function BottomTabNavigator() {
           headerTitleStyle: {
             color: backgroundColor,
           },
-          headerShown: route.name == 'Home' ? false : true,
+          headerShown: false,
         })}
       >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Exercicio" component={Exercise} />
         <Stack.Screen name="Config" component={Settings} />
         <Stack.Screen name="Treino" component={Training} />
+        <Stack.Screen name="Detalhes exercício" component={DetalhesExercicio} />
       </Stack.Navigator>
     );
   }
@@ -103,7 +88,7 @@ export function BottomTabNavigator() {
             <View style={style.view}>
               {/* <Button style={style.button} title="dfdf" /> */}
               <Text style={style.text}>{route.name}</Text>
-              {route.name != "Config" || route.name != "HomeStack"  &&
+              {route.name != "Config" &&
                 <TouchableOpacity>
                   <Icon name="pluscircleo" size={35} color={backgroundColor} style={{ marginRight: 10 }} />
                 </TouchableOpacity>
