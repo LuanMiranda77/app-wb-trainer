@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import styled from 'styled-components/native';
 
 export const colorPrimary = '#198FB4';
 export const colorSecondary = '#F8753D';
@@ -10,6 +11,10 @@ export const colorWhite = '#FFFF';
 export const backgroundColor = '#0e0f13';
 export const fontePadrao = 'Poppins';
 export const colorSubtitle = '#747c7e';
+export const colorWarning = '#ffb400';
+export const colorError = '#B10000';
+export const colorSuccess = '#32ad0c';
+export const colorInfo = '#246afd';
 
 export const stylesGlobal = StyleSheet.create({
   textTitle: {
@@ -42,3 +47,8 @@ export const stylesGlobal = StyleSheet.create({
 //   --max-height-button:32px;
 // }
 // `;
+
+export const TituloScreen = styled.Text`
+  font-size: 25;
+  color: #fff;
+`;

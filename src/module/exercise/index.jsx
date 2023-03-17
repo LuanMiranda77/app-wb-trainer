@@ -5,17 +5,22 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import IconFire from 'react-native-vector-icons/MaterialIcons';
 import { useExercicioPage } from '../../hooks/useExercicioPage';
 import useImageFind from '../../hooks/useImageFind';
+import { HeaderNavBar } from '../../layout/headerNavBar';
 import { backgroundColor, colorFooter, stylesGlobal } from '../../styles';
 import { ButtonPlay, Container, ContainerDetalhes, ContainerImage } from './styles';
+import imge from '../../assets/h-1.jpg';
 
 export function Exercise({ ...props }) {
   const { listaExercicio, setListaExercicio } = useExercicioPage();
-  const { findImageByName }=useImageFind();
+  const { findImageByName } = useImageFind();
+  console.warn(props.route.name);
   const onPlay = () => {
-    console.warn(props.navigation);
   };
   return (
+
     <View style={{ backgroundColor: backgroundColor, flex: 1 }}>
+     
+      <HeaderNavBar route={props.route} />
       <ScrollView contentInsetAdjustmentBehavior="automatic" style={{ marginBottom: 5 }}>
         {listaExercicio.map((item) => {
           return (

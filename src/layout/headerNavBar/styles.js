@@ -21,3 +21,11 @@ export const PerfilUser = styled.Image`
   max-height: 50px;
   border-radius: 100px;
 `;
+
+export const ContainerImage = styled.Image`
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  border-radius: 8px;
+  margin-right: 10px;
+`;

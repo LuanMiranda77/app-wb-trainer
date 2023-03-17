@@ -4,6 +4,7 @@ export default function useImageFind() {
       case 'agachamento_livre':
         return require('../../assets/grupo_muscular/ex-pernas/agachamento_livre.gif');
 
+      // exercicios masculino
       case 'peitoral-m':
         return require('../../assets/grupo_muscular/peitoral-m.jpg');
       case 'dorsal-m':
@@ -21,6 +22,7 @@ export default function useImageFind() {
       case 'abdomen-m':
         return require('../../assets/grupo_muscular/pernas-m.jpg');
 
+      // exercicios femino 
       case 'peitoral-f':
         return require('../../assets/grupo_muscular/peitoral-f.jpg');
       case 'dorsal-f':

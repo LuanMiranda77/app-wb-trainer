@@ -6,7 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import IconFire from 'react-native-vector-icons/MaterialIcons';
 import { useUserContext } from '../../context/useUserContext';
 import { useCardTreino } from '../../hooks/useCardTreino';
-import { backgroundColor, colorFooter, stylesGlobal } from '../../styles';
+import { backgroundColor, colorFooter, colorPrimary, colorSecondary, stylesGlobal } from '../../styles';
 import { ButtonPlay, Container, ContainerDetalhes, ContainerImage } from './styles';
 
 export function CardTreino({ navigation }) {
@@ -47,7 +47,7 @@ export function CardTreino({ navigation }) {
                 navigation.navigate('Treino', { treino: item.treino });
               }}
             >
-              <Icon name="caretright" size={25} color="#f8753d" style={{ marginRight: 5 }} />
+              <Icon name="caretright" size={25} color={colorSecondary} style={{ marginRight: 5 }} />
             </ButtonPlay>
             <View style={{ display: 'flex', flexDirection: 'row' }}>
               <ContainerDetalhes color="#32ad0c" background="#31ad0c22">
@@ -58,11 +58,11 @@ export function CardTreino({ navigation }) {
                 <IconFire name="local-fire-department" size={12} color="#ffb400" />
                 <Text style={{ color: '#ffb400', fontWeight: 'bold', fontSize:12 }}>{item.calorias.toFixed(2)} cal</Text>
               </ContainerDetalhes>
-              <ContainerDetalhes color="#198fb5" background="#198fb522">
-                <Ionicons name="barbell-outline" size={20} color="#198fb5" />
+              <ContainerDetalhes color={colorPrimary} background="#198fb522">
+                <Ionicons name="barbell-outline" size={20} color={colorPrimary} />
                 <Text
                   style={{
-                    color: '#198fb5',
+                    color: colorPrimary,
                     marginLeft: 5,
                     fontWeight: 'bold',
                   }}

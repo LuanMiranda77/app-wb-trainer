@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useUserContext } from '../../context/useUserContext';
-
+import { getRaelm } from '../../database/realm';
 export const useExercicioPage = () => {
   const { stateUser } = useUserContext();
+  const [exercicio, setExercicio] = useState();
   const arrayM = [
     { id: 1, image: 'peitoral-m', nome: 'Peitoral', tempo: 10, caloria: 120, quant: 10 },
     { id: 2, image: 'ombros-m', nome: 'Ombros', tempo: 10, caloria: 120, quant: 10 },
@@ -25,7 +26,21 @@ export const useExercicioPage = () => {
     { id: 8, image: 'abdomen-f', nome: 'Abdomen', tempo: 10, caloria: 120, quant: 10 },
   ];
   const [listaExercicio, setListaExercicio] = useState(stateUser.sexo === 'M' ? arrayM : arrayF);
-
+  async function handleNewExercicio() {
+    const realm = await getRaelm();
+    try {
+      realm.write(() => {
+        realm.create('Exercicio', exercicio);
+      });
+      realm.close();
+      // Alert.alert('Item cadastrado com sucesso.');
+      console.warn('Item cadastrado com sucesso.');
+    } catch (error) {
+      console.error('Algo deu errado');
+    } finally{
+      realm.close();
+    }
+  }
   return {
     listaExercicio,
     setListaExercicio,

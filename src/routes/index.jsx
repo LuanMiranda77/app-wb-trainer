@@ -83,20 +83,20 @@ export function BottomTabNavigator() {
         headerTitleStyle: {
           color: 'transparent',
         },
-        headerBackground: ({ focused, color, size }) => {
-          return (
-            <View style={style.view}>
-              {/* <Button style={style.button} title="dfdf" /> */}
-              <Text style={style.text}>{route.name}</Text>
-              {route.name != "Config" &&
-                <TouchableOpacity>
-                  <Icon name="pluscircleo" size={35} color={backgroundColor} style={{ marginRight: 10 }} />
-                </TouchableOpacity>
-              }
-            </View>
-          );
-        },
-        headerShown: route.name == 'HomeStack' ? false : true,
+        // headerBackground: ({ focused, color, size }) => {
+        //   return (
+        //     <View style={style.view}>
+        //       {/* <Button style={style.button} title="dfdf" /> */}
+        //       <Text style={style.text}>{route.name}</Text>
+        //       {route.name != "Config" &&
+        //         <TouchableOpacity>
+        //           <Icon name="pluscircleo" size={35} color={backgroundColor} style={{ marginRight: 10 }} />
+        //         </TouchableOpacity>
+        //       }
+        //     </View>
+        //   );
+        // },
+        headerShown:  false,
       })}
     >
       <Tab.Screen name="HomeStack" component={HomeStack} />

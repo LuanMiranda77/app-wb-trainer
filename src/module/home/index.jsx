@@ -7,7 +7,7 @@ import { useUserContext } from '../../context/useUserContext';
 import { HeaderNavBar } from '../../layout/headerNavBar';
 import { backgroundColor, colorPrimary, stylesGlobal } from '../../styles';
 
-export function Home({ navigation }) {
+export function Home({ navigation, route }) {
   const { stateUser, dispatch } = useUserContext();
   const [exercicicos, setExercicios] = useState();
   const [treinoAtual, setTreinoAtual] = useState();
@@ -24,7 +24,7 @@ export function Home({ navigation }) {
   }, [stateUser.treinoAtual]);
   return (
     <View style={{ backgroundColor: backgroundColor, flex: 1 }}>
-      <HeaderNavBar treino={treinoAtual} />
+      <HeaderNavBar treino={treinoAtual} route={route}/>
       <ScrollView contentInsetAdjustmentBehavior="automatic" style={{ marginBottom: 0 }}>
         <Card text1={treinoAtual?.treino} text2={treinoAtual?.titulo} exercicio={treinoAtual?.quant} feito={Math.floor(Math.random() * (treinoAtual?.quant - 0 + 1)) + 0} />
         <View

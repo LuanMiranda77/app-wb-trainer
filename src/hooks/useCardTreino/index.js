@@ -42,7 +42,7 @@ export const useCardTreino = () => {
     return stateUser.peso * 6.0 * (tempo / 60);
   };
 
-  useMemo(() => {
+  const processarTreino = () => {
     let treinos = [];
     let treinoA = stateUser.exercicios.filter((item) => item.treino === 'A');
     let treinoB = stateUser.exercicios.filter((item) => item.treino === 'B');
@@ -130,10 +130,15 @@ export const useCardTreino = () => {
       treinos.push(treino);
     }
     setListaTreino([...treinos]);
+  };
+
+  useMemo(() => {
+    processarTreino();
   }, []);
 
   return {
     listaTreino,
     setListaTreino,
+    processarTreino,
   };
 };

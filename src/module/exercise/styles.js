@@ -1,5 +1,19 @@
 import styled from 'styled-components/native';
 
+export const Header = styled.View`
+  display: flex;
+  flex-direction: row;
+  /* background-color: ${(props) => props.background}; */
+  /* border-width: 1px; */
+  /* border-color: ${(props) => props.color}; */
+  /* border-radius: 50px; */
+  margin: 0px;
+  width: 84px;
+  height: 40px;
+  padding-left: 0px;
+  align-items: center;
+`;
+
 export const Container = styled.TouchableOpacity`
   background-color: ${(props) => props.color};
   display: flex;
@@ -46,3 +60,5 @@ export const ButtonPlay = styled.TouchableOpacity`
   /* border-width: 1px; */
   /* border-color: ${(props) => props.color}; */
 `;
+
+
