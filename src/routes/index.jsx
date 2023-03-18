@@ -7,6 +7,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { DetalhesExercicio } from '../module/detalhesExercicio';
 import { Evolute } from '../module/evolute';
 import { Exercise } from '../module/exercise';
+import { ListExercise } from '../module/exercise/lista';
 import { Home } from '../module/home';
 import { Settings } from '../module/settings';
 import { Training } from '../module/training';
@@ -36,6 +37,20 @@ export function BottomTabNavigator() {
         <Stack.Screen name="Config" component={Settings} />
         <Stack.Screen name="Treino" component={Training} />
         <Stack.Screen name="Detalhes exercício" component={DetalhesExercicio} />
+      </Stack.Navigator>
+    );
+  }
+
+  function ExercicioStack() {
+    return (
+      <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={({ route }) => ({
+          headerShown: false,
+        })}
+      >
+        <Stack.Screen name="Exercicio" component={Exercise} />
+        <Stack.Screen name="Lista Exercicio" component={ListExercise} />
       </Stack.Navigator>
     );
   }
@@ -100,7 +115,7 @@ export function BottomTabNavigator() {
       })}
     >
       <Tab.Screen name="HomeStack" component={HomeStack} />
-      <Tab.Screen name="Exercicio" component={Exercise} />
+      <Tab.Screen name="Exercicio" component={ExercicioStack} />
       <Tab.Screen name="Treino" component={Training} />
       <Tab.Screen name="Evolução" component={Evolute} />
       <Tab.Screen name="Config" component={Settings} />

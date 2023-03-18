@@ -13,6 +13,7 @@ import { NavBar, PerfilUser } from './styles';
 
 export function HeaderNavBar({ ...props }) {
   const { stateUser } = useUserContext();
+
   return (
     <NavBar color={backgroundColor}>
       {props.route.name == 'Home' ? (
@@ -23,37 +24,71 @@ export function HeaderNavBar({ ...props }) {
           </View>
           <PerfilUser source={require('../../assets/menina.jpeg')} />
         </>
+      ) : props.route.name == 'Exercicio' ? (
+        <>
+          {/* <ContainerImage source={imge} /> */}
+
+          <TituloScreen>{props.route.name}</TituloScreen>
+          <ButtonIcon
+            icon="plus"
+            color={colorSecondary}
+            size={30}
+            onPress={() => props.buttonRigth()}
+          />
+        </>
+      ) : props.route.name == 'Treino' ? (
+        <>
+          {/* <ContainerImage source={imge} /> */}
+
+          <TituloScreen>{props.route.name}</TituloScreen>
+          <ButtonIcon
+            icon="plus"
+            color={colorSecondary}
+            size={30}
+            onPress={() => props.buttonRigth()}
+          />
+        </>
+      ) : props.route.name == 'Evolução' ? (
+        <>
+          {/* <ContainerImage source={imge} /> */}
+
+          <TituloScreen>{props.route.name}</TituloScreen>
+          <ButtonIcon
+            icon="plus"
+            color={colorSecondary}
+            size={30}
+            onPress={() => props.buttonRigth()}
+          />
+        </>
+      ) : props.route.name == 'Config' ? (
+        <>
+          {/* <ContainerImage source={imge} /> */}
+
+          <TituloScreen>{props.route.name}</TituloScreen>
+          <ButtonIcon
+            icon="plus"
+            color={colorSecondary}
+            size={30}
+            onPress={() => props.buttonRigth()}
+          />
+        </>
       ) : (
-        props.route.name == 'Exercicio' ? (
+        props.route.name == 'Lista Exercicio' && (
           <>
             {/* <ContainerImage source={imge} /> */}
-
+            <ButtonIcon
+              icon="left"
+              size={30}
+              color="white"
+              onPress={() => props.navigation.goBack()}
+            />
             <TituloScreen>{props.route.name}</TituloScreen>
-            <ButtonIcon icon="plus" color={colorSecondary} size={30} onPress={()=>props.cadExercicio()}/>
-          </>
-        )
-        : props.route.name == 'Treino' ? (
-          <>
-            {/* <ContainerImage source={imge} /> */}
-
-            <TituloScreen>{props.route.name}</TituloScreen>
-            <ButtonIcon icon="plus" color={colorSecondary} size={30} onPress={()=>props.cadExercicio()}/>
-          </>
-        )
-        : props.route.name == 'Evolução' ? (
-          <>
-            {/* <ContainerImage source={imge} /> */}
-
-            <TituloScreen>{props.route.name}</TituloScreen>
-            <ButtonIcon icon="plus" color={colorSecondary} size={30} onPress={()=>props.cadExercicio()}/>
-          </>
-        )
-        : props.route.name == 'Config' && (
-          <>
-            {/* <ContainerImage source={imge} /> */}
-
-            <TituloScreen>{props.route.name}</TituloScreen>
-            <ButtonIcon icon="plus" color={colorSecondary} size={30} onPress={()=>props.cadExercicio()}/>
+            <ButtonIcon
+              icon="plus"
+              color={colorSecondary}
+              size={30}
+              onPress={() => props.buttonRigth()}
+            />
           </>
         )
       )}

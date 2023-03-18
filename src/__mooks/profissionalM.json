@@ -6,6 +6,7 @@
         "repeticoes": "10-12",
         "treino": "A",
         "info": "Exercício para fortalecer os músculos do peito e tríceps.",
+        "image":"",
         "titulo": "Peito e Tríceps"
       },
       {
@@ -15,6 +16,7 @@
         "repeticoes": "10-12",
         "treino": "A",
         "info": "Exercício para fortalecer os músculos do peito e tríceps.",
+        "image":"",
         "titulo": "Peito e Tríceps"
       },
       {
@@ -24,6 +26,7 @@
         "repeticoes": "12-15",
         "treino": "A",
         "info": "Exercício para fortalecer os músculos do peito e tríceps.",
+        "image":"",
         "titulo": "Peito e Tríceps"
       },
       {
@@ -33,6 +36,7 @@
         "repeticoes": "12-15",
         "treino": "A",
         "info": "Exercício para fortalecer os músculos do peito e tríceps.",
+        "image":"",
         "titulo": "Peito e Tríceps"
       },
       {
@@ -42,6 +46,7 @@
         "repeticoes": "12-15",
         "treino": "A",
         "info": "Exercício para fortalecer os músculos do peito e tríceps.",
+        "image":"",
         "titulo": "Peito e Tríceps"
       },
       {
@@ -51,6 +56,7 @@
         "repeticoes": "10-12",
         "treino": "B",
         "info": "Exercício para fortalecer os músculos das pernas e abdominais.",
+        "image":"",
         "titulo": "Pernas e Abdominais"
       },
       {
@@ -60,6 +66,7 @@
         "repeticoes": "12-15",
         "treino": "B",
         "info": "Exercício para fortalecer os músculos das pernas e abdominais.",
+        "image":"",
         "titulo": "Pernas e Abdominais"
       },
       {
@@ -69,6 +76,7 @@
         "repeticoes": "12-15",
         "treino": "B",
         "info": "Exercício para fortalecer os músculos das pernas e abdominais.",
+        "image":"",
         "titulo": "Pernas e Abdominais"
     },
     {
@@ -78,6 +86,7 @@
         "repeticoes": "10-12",
         "treino": "B",
         "info": "Treino de pernas com foco no posterior de coxa",
+        "image":"",
         "titulo": "Pernas e Abdominais"
         },
         {
@@ -87,6 +96,7 @@
         "repeticoes": "12-15",
         "treino": "B",
         "info": "Treino de pernas com foco na panturrilha",
+        "image":"",
         "titulo": "Pernas e Abdominais"
         },
         {
@@ -96,6 +106,7 @@
         "repeticoes": "12-15",
         "treino": "B",
         "info": "Exercício de abdominal oblíquo para fortalecer a região lateral do abdômen",
+        "image":"",
         "titulo": "Pernas e Abdominais"
         },
         {
@@ -105,6 +116,7 @@
         "repeticoes": "60 segundos",
         "treino": "B",
         "info": "Exercício de isometria para fortalecer os músculos abdominais e oblíquos",
+        "image":"",
         "titulo": "Pernas e Abdominais"
         },
         {
@@ -114,6 +126,7 @@
         "repeticoes": "10-12",
         "treino": "C",
         "info": "Exercício de puxada para fortalecer a musculatura das costas",
+        "image":"",
         "titulo": "Costas e Bíceps"
         },
         {
@@ -123,6 +136,7 @@
         "repeticoes": "10-12",
         "treino": "C",
         "info": "Exercício de remada para fortalecer a musculatura das costas",
+        "image":"",
         "titulo": "Costas e Bíceps"
         },
         {
@@ -132,6 +146,7 @@
         "repeticoes": "12-15",
         "treino": "C",
         "info": "Exercício de puxada para fortalecer a musculatura das costas e bíceps",
+        "image":"",
         "titulo": "Costas e Bíceps"
         },
         {
@@ -141,6 +156,7 @@
         "repeticoes": "12-15",
         "treino": "C",
         "info": "Exercício de rosca para fortalecer a musculatura do bíceps",
+        "image":"",
         "titulo": "Costas e Bíceps"
         },
             {
@@ -150,6 +166,7 @@
             "repeticoes": "12-15",
             "treino": "C",
             "info": "Exercício de bíceps com halteres alternados",
+            "image":"",
             "titulo": "Costas e Bíceps"
             },
             {
@@ -159,6 +176,7 @@
             "repeticoes": "12-15",
             "treino": "C",
             "info": "Exercício de bíceps com halteres em formato de martelo",
+            "image":"",
             "titulo": "Costas e Bíceps"
             },
             {
@@ -168,6 +186,7 @@
             "repeticoes": "10-12",
             "treino": "D",
             "info": "Exercício de ombro com halteres",
+            "image":"",
             "titulo": "Ombros e Trapézios"
             },
             {
@@ -177,6 +196,7 @@
             "repeticoes": "12-15",
             "treino": "D",
             "info": "Exercício de ombro com halteres lateral",
+            "image":"",
             "titulo": "Ombros e Trapézios"
             },
             {
@@ -186,6 +206,7 @@
             "repeticoes": "12-15",
             "treino": "D",
             "info": "Exercício de ombro com halteres frontal",
+            "image":"",
             "titulo": "Ombros e Trapézios"
             },
             {
@@ -195,6 +216,7 @@
             "repeticoes": "12-15",
             "treino": "D",
             "info": "Exercício de ombro com halteres remada alta",
+            "image":"",
             "titulo": "Ombros e Trapézios"
             },
             {
@@ -204,6 +226,7 @@
             "repeticoes": "12-15",
             "treino": "D",
             "info": "Exercício de trapézio com halteres encolhimento",
+            "image":"",
             "titulo": "Ombros e Trapézios"
             },
             {
@@ -213,6 +236,7 @@
             "repeticoes": "",
             "treino": "E",
             "info": "Exercício cardiovasculare e abdominal",
+            "image":"",
             "titulo": "Cardio e Abs"
             },
             {
@@ -222,6 +246,7 @@
                 "repeticoes": "",
                 "treino": "E",
                 "info": "Exercício cardiovascular e para os músculos abdominais.",
+                "image":"",
                 "titulo": "Cardio e Abs"
             },
             {
@@ -231,6 +256,7 @@
                 "repeticoes": "",
                 "treino": "E",
                 "info": "Exercício para fortalecimento dos músculos abdominais.",
+                "image":"",
                 "titulo": "Cardio e Abs"
             },
             {
@@ -240,6 +266,7 @@
                 "repeticoes": "",
                 "treino": "E",
                 "info": "Exercício para fortalecimento dos músculos abdominais.",
+                "image":"",
                 "titulo": "Cardio e Abs"
             },
             {
@@ -249,6 +276,7 @@
                 "repeticoes": "10-12",
                 "treino": "F",
                 "info": "Exercício de treinamento funcional para os músculos das pernas.",
+                "image":"",
                 "titulo": "Treino Funcional"
             },
             {
@@ -258,6 +286,7 @@
                 "repeticoes": "10-12",
                 "treino": "F",
                 "info": "Exercício de treinamento funcional para os músculos das pernas e costas.",
+                "image":"",
                 "titulo": "Treino Funcional"
             },
             {
@@ -267,6 +296,7 @@
                 "repeticoes": "11-12",
                 "treino": "F",
                 "info": "Exercício de treinamento funcional para os músculos dos braços e peito.",
+                "image":"",
                 "titulo": "Treino Funcional"
             }
 

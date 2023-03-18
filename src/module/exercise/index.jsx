@@ -1,28 +1,21 @@
 import React from 'react';
 import { ScrollView, Text, View } from 'react-native';
-import Icon from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import IconFire from 'react-native-vector-icons/MaterialIcons';
 import { useExercicioPage } from '../../hooks/useExercicioPage';
 import useImageFind from '../../hooks/useImageFind';
 import { HeaderNavBar } from '../../layout/headerNavBar';
-import { backgroundColor, colorFooter, stylesGlobal } from '../../styles';
+import { backgroundColor, colorFooter, colorSubtitle, stylesGlobal } from '../../styles';
+import Modal from './modal';
 import { ButtonPlay, Container, ContainerDetalhes, ContainerImage } from './styles';
-import imge from '../../assets/h-1.jpg';
 
 export function Exercise({ ...props }) {
-  const { listaExercicio, setListaExercicio } = useExercicioPage();
+  const { showModal, gruposCorpo, handleNew, setShowModal, exercicio, handleSave } = useExercicioPage();
   const { findImageByName } = useImageFind();
-  console.warn(props.route.name);
-  const onPlay = () => {
-  };
   return (
-
     <View style={{ backgroundColor: backgroundColor, flex: 1 }}>
-     
-      <HeaderNavBar route={props.route} />
+      <HeaderNavBar route={props.route} buttonRigth={handleNew} />
       <ScrollView contentInsetAdjustmentBehavior="automatic" style={{ marginBottom: 5 }}>
-        {listaExercicio.map((item) => {
+        {gruposCorpo.map((item) => {
           return (
             <Container key={item.id} color={colorFooter}>
               <ContainerImage source={findImageByName(item.image)} />
@@ -32,42 +25,45 @@ export function Exercise({ ...props }) {
                   style={{
                     display: 'flex',
                     flexDirection: 'row',
-                    // justifyContent: 'space-between',
+                    justifyContent: 'space-between',
                   }}
                 >
                   <ContainerDetalhes>
-                    <Icon
-                      name="clockcircleo"
-                      size={15}
-                      color="#32ad0c"
-                      style={{ marginRight: 5 }}
-                    />
-                    <Text style={{ color: '#32ad0c', fontWeight: 'bold' }}>{item.tempo} min</Text>
-                  </ContainerDetalhes>
-                  <ContainerDetalhes>
-                    <IconFire name="local-fire-department" size={16} color="#ffb400" />
-                    <Text style={{ color: '#ffb400', fontWeight: 'bold' }}>{item.caloria} cal</Text>
-                  </ContainerDetalhes>
-                  <ContainerDetalhes>
-                    <Ionicons name="barbell-outline" size={16} color="#198fb5" />
-                    <Text style={{ color: '#198fb5', fontWeight: 'bold', marginLeft: 3 }}>
-                      {item.quant}
+                    <Text
+                      style={{
+                        color: colorSubtitle,
+                        fontWeight: 'bold',
+                        marginLeft: 3,
+                        width: '120%',
+                      }}
+                    >
+                      {item.titulo}
                     </Text>
                   </ContainerDetalhes>
+                  <ButtonPlay
+                    onPress={() =>
+                      props.navigation.navigate('Lista Exercicio', { grupo: item.nome })
+                    }
+                  >
+                    <Ionicons
+                      name="arrow-redo"
+                      size={32}
+                      color="#f8753d"
+                      style={{ marginTop: -15 }}
+                    />
+                  </ButtonPlay>
                 </View>
-                <ButtonPlay onPress={onPlay}>
-                  <Ionicons
-                    name="arrow-redo"
-                    size={25}
-                    color="#f8753d"
-                    style={{ marginRight: 0 }}
-                  />
-                </ButtonPlay>
               </View>
             </Container>
           );
         })}
       </ScrollView>
+      <Modal
+        showModal={showModal}
+        onCloseModal={() => setShowModal(false)}
+        exercicio={exercicio}
+        actionButton={handleSave}
+      />
     </View>
   );
 }

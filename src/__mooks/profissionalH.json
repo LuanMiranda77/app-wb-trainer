@@ -6,6 +6,7 @@
         "repeticoes": "8-12",
         "treino": "A",
         "info": "Exercício de peitoral que utiliza a barra para realizar a pressão do peso. Excelente para ganhar força e definição muscular.",
+        "image":"",
         "titulo": "Peito e Tríceps"
       },
       {
@@ -15,6 +16,7 @@
         "repeticoes": "8-12",
         "treino": "A",
         "info": "Variação do supino que utiliza halteres e um banco inclinado para focar mais na parte superior do peitoral. Ajuda a ganhar força e tamanho muscular.",
+        "image":"",
         "titulo": "Peito e Tríceps"
       },
       {
@@ -24,6 +26,7 @@
         "repeticoes": "10-15",
         "treino": "A",
         "info": "Exercício de peitoral que utiliza a polia alta para cruzar as mãos e trabalhar o músculo de forma isolada. Ótimo para quem deseja definição muscular.",
+        "image":"",
         "titulo": "Peito e Tríceps"
       },
       {
@@ -33,6 +36,7 @@
         "repeticoes": "10-15",
         "treino": "A",
         "info": "Exercício de tríceps que utiliza a polia para trabalhar o músculo de forma isolada. Ajuda a ganhar força e definição muscular nos braços.",
+        "image":"",
         "titulo": "Peito e Tríceps"
       },
       {
@@ -42,6 +46,7 @@
         "repeticoes": "10-15",
         "treino": "A",
         "info": "Exercício de tríceps que utiliza um halter e um banco para trabalhar o músculo de forma isolada. Ajuda a ganhar força e definição muscular nos braços.",
+        "image":"",
         "titulo": "Peito e Tríceps"
       },
       {
@@ -51,6 +56,7 @@
         "repeticoes": "8-12",
         "treino": "B",
         "info": "Exercício de pernas que utiliza a barra para agachar e levantar o peso. Excelente para ganhar força e definição muscular nas pernas.",
+        "image":"",
         "titulo": "Pernas e Abdominais"
       },
       {
@@ -60,6 +66,7 @@
         "repeticoes": "10-15",
         "treino": "B",
         "info": "Exercício de fortalecimento para as pernas e glúteos. Executado em uma máquina que simula o movimento de agachamento.",
+        "image":"",
         "titulo": "Pernas e Abdominais"
       },
       {
@@ -69,6 +76,7 @@
         "repeticoes": "10-15",
         "treino": "B",
         "info": "Exercício de isolamento para os quadríceps. Executado em uma máquina onde o usuário se senta e levanta pesos com as pernas.",
+        "image":"",
         "titulo": "Pernas e Abdominais"
       },
       {
@@ -78,6 +86,7 @@
         "repeticoes": "10-15",
         "treino": "B",
         "info": "Exercício de isolamento para os isquiotibiais. Executado em uma máquina onde o usuário se senta e flexiona as pernas contra uma resistência.",
+        "image":"",
         "titulo": "Pernas e Abdominais"
       },
       {
@@ -87,6 +96,7 @@
         "repeticoes": "12-15",
         "treino": "B",
         "info": "Exercício de fortalecimento para as panturrilhas. Executado em uma máquina onde o usuário se levanta na ponta dos pés contra uma resistência.",
+        "image":"",
         "titulo": "Pernas e Abdominais"
       },
       {
@@ -96,6 +106,7 @@
         "repeticoes": "15-20",
         "treino": "B",
         "info": "Exercício de fortalecimento para os músculos abdominais superiores. Executado no chão com as pernas dobradas e as mãos atrás da cabeça.",
+        "image":"",
         "titulo": "Pernas e Abdominais"
       },
       {
@@ -105,6 +116,7 @@
         "repeticoes": "60 segundos",
         "treino": "B",
         "info": "Exercício de fortalecimento para o core. Executado no chão com os antebraços e os dedos dos pés apoiados, mantendo a posição por um tempo determinado.",
+        "image":"",
         "titulo": "Pernas e Abdominais"
       },
       {
@@ -114,6 +126,7 @@
         "repeticoes": "8-12",
         "treino": "C",
         "info": "Exercício para costas que trabalha principalmente o músculo latíssimo do dorso.",
+        "image":"",
         "titulo": "Costas e Bíceps"
         },
         {
@@ -123,6 +136,7 @@
         "repeticoes": "10-15",
         "treino": "C",
         "info": "Exercício de puxada que trabalha principalmente os músculos das costas e bíceps.",
+        "image":"",
         "titulo": "Costas e Bíceps"
         },
         {
@@ -132,6 +146,7 @@
         "repeticoes": "10-15",
         "treino": "C",
         "info": "Exercício de puxada que trabalha principalmente os músculos das costas e bíceps.",
+        "image":"",
         "titulo": "Costas e Bíceps"
         },
         {
@@ -141,6 +156,7 @@
         "repeticoes": "10-15",
         "treino": "C",
         "info": "Exercício de bíceps que trabalha principalmente o músculo braquial.",
+        "image":"",
         "titulo": "Costas e Bíceps"
         },
         {
@@ -150,6 +166,7 @@
         "repeticoes": "10-15",
         "treino": "C",
         "info": "Exercício de bíceps que trabalha principalmente o músculo braquial.",
+        "image":"",
         "titulo": "Costas e Bíceps"
         },
         {
@@ -159,6 +176,7 @@
         "repeticoes": "10-15",
         "treino": "C",
         "info": "Exercício de bíceps que trabalha principalmente o músculo braquial.",
+        "image":"",
         "titulo": "Costas e Bíceps"
         },
         {
@@ -168,6 +186,7 @@
         "repeticoes": "8-12",
         "treino": "D",
         "info": "Exercício de ombro que trabalha principalmente o músculo deltóide.",
+        "image":"",
         "titulo": "Ombros e Trapézios"
         },
         {
@@ -177,6 +196,7 @@
         "repeticoes": "10-15",
         "treino": "D",
         "info": "Exercício de ombro que trabalha principalmente o músculo deltóide.",
+        "image":"",
         "titulo": "Ombros e Trapézios"
         },
         {
@@ -186,6 +206,7 @@
           "repeticoes": "10-15",
           "treino": "D",
           "info": "Exercício para trabalhar os músculos frontais do ombro, realizado com halteres em posição frontal. Ajuda a aumentar a força e estabilidade dos ombros.",
+          "image":"",
           "titulo": "Ombros e Trapézios"
           },
           {
@@ -195,6 +216,7 @@
           "repeticoes": "10-15",
           "treino": "D",
           "info": "Exercício para trabalhar os músculos do trapézio superior, realizado com barra e levantando-a acima da linha dos ombros. Ajuda a melhorar a postura e a estabilidade do ombro.",
+          "image":"",
           "titulo": "Ombros e Trapézios"
           },
           {
@@ -204,6 +226,7 @@
           "repeticoes": "10-15",
           "treino": "D",
           "info": "Exercício para trabalhar os músculos do trapézio superior, realizado com halteres e levantando-os na direção das orelhas. Ajuda a melhorar a postura e a estabilidade do ombro.",
+          "image":"",
           "titulo": "Ombros e Trapézios"
           },
           {
@@ -213,6 +236,7 @@
           "repeticoes": "",
           "treino": "E",
           "info": "Exercício de cardio realizado na esteira. Ajuda a melhorar o condicionamento físico e a queima de calorias.",
+          "image":"",
           "titulo": "Cardio e Abs"
           },
           {
@@ -222,6 +246,7 @@
           "repeticoes": "",
           "treino": "E",
           "info": "Exercício de cardio realizado na bicicleta ergométrica. Ajuda a melhorar o condicionamento físico e a queima de calorias.",
+          "image":"",
           "titulo": "Cardio e Abs"
           },
           {
@@ -231,6 +256,7 @@
           "repeticoes": "",
           "treino": "E",
           "info": "Exercício para fortalecer os músculos abdominais e do core, realizado em posição de prancha lateral. Ajuda a melhorar a estabilidade do tronco.",
+          "image":"",
           "titulo": "Cardio e Abs"
           },
           {
@@ -240,6 +266,7 @@
           "repeticoes": "",
           "treino": "E",
           "info": "Exercício para fortalecer os músculos abdominais, realizado no solo. Ajuda a melhorar a estabilidade do tronco.",
+          "image":"",
           "titulo": "Cardio e Abs"
           },
             {
@@ -249,6 +276,7 @@
             "repeticoes": "8-12",
             "treino": "F",
             "info": "Fortalece pernas, glúteos e lombar",
+            "image":"",
             "titulo": "Treino Funcional"
             },
             {
@@ -258,6 +286,7 @@
             "repeticoes": "9-12",
             "treino": "F",
             "info": "Trabalha pernas, costas e ombros",
+            "image":"",
             "titulo": "Treino Funcional"
             },
             {
@@ -267,6 +296,7 @@
             "repeticoes": "11-12",
             "treino": "F",
             "info": "Exercício de força para peito, ombros e tríceps",
+            "image":"",
             "titulo": "Treino Funcional"
             }
 ]

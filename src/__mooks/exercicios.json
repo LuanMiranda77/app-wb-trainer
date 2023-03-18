@@ -2,85 +2,97 @@
     {
         "id": 1,
         "nome": "Flexões de braço",
-        "grupo": "Peito",
+        "grupo": "Peitoral",
         "info": "Exercício que trabalha o tronco superior do corpo",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=IODxDxX7oi4"
       },
       {
         "id": 2,
         "nome": "Supino reto",
-        "grupo": "Peito",
+        "grupo": "Peitoral",
         "info": "Exercício que trabalha o peitoral",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=20-DoTgT1Fw"
       },
       {
         "id": 3,
         "nome": "Supino inclinado",
-        "grupo": "Peito",
+        "grupo": "Peitoral",
         "info": "Exercício que trabalha o peitoral superior",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=FyFsuzaW4NY"
       },
       {
         "id": 4,
         "nome": "Crucifixo",
-        "grupo": "Peito",
+        "grupo": "Peitoral",
         "info": "Exercício que trabalha o peitoral",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=pPwEJik5OxE"
       },
       {
         "id": 5,
         "nome": "Flexões de braço com pegada fechada",
-        "grupo": "Peito",
+        "grupo": "Peitoral",
         "info": "Exercício que trabalha o tronco superior e o tríceps",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=9UZbLHJB1p4"
       },
       {
         "id": 6,
         "nome": "Fly",
-        "grupo": "Peito",
+        "grupo": "Peitoral",
         "info": "Exercício que trabalha o peitoral",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=XZzq3xUWwx0"
       },
       {
         "id": 7,
         "nome": "Pullover",
-        "grupo": "Peito, costas, ombros",
+        "grupo": "Peitoral, costas, ombros",
         "info": "Exercício que trabalha o peitoral inferior e o serrátil anterior",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=YtXu9cJZTt4"
       },
       {
         "id": 8,
         "nome": "Peck deck",
-        "grupo": "Peito",
+        "grupo": "Peitoral",
         "info": "Exercício que trabalha o peitoral",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=ZoG5LOwW8Cg"
       },
       {
         "id": 9,
         "nome": "Crossover",
-        "grupo": "Peito",
+        "grupo": "Peitoral",
         "info": "Exercício que trabalha o peitoral",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=B7Vbu4s0YnU"
       },
       {
         "id": 10,
         "nome": "Remada com barra",
-        "grupo": "Costas",
+        "grupo": "Dorsal",
         "info": "Exercício que trabalha as costas e os ombros",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=yG1C_2QV8uE"
       },
       {
         "id": 11,
         "nome": "Remada unilateral com halteres",
-        "grupo": "Costas",
+        "grupo": "Dorsal",
         "info": "Exercício que trabalha as costas e os bíceps",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=JyCGpVLYaFA"
       },
       {
         "id": 12,
         "nome": "Puxada no pulley",
-        "grupo": "Costas",
+        "grupo": "Dorsal",
         "info": "Exercício que trabalha as costas e os ombros",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=kWRGz6xuUcM"
       },
       {
@@ -88,34 +100,39 @@
         "nome": "Levantamento terra",
         "grupo": "Glúteos, Pernas",
         "info": "Exercício que trabalha as costas, glúteos e pernas",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=ytGaGIn3SjE"
       },
       {
         "id": 14,
         "nome": "Remada curvada com barra",
-        "grupo": "Costas",
+        "grupo": "Dorsal",
         "info": "Exercício que trabalha as costas e os bíceps",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=9efgcAjQe_I"
       },
       {
         "id": 15,
         "nome": "Puxada alta na polia",
-        "grupo": "Costas",
+        "grupo": "Dorsal",
         "info": "Exercício que trabalha as costas e os ombros",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=zQnsvfwKjD8"
       },
       {
         "id": 16,
         "nome": "Puxada fechada na polia",
-        "grupo": "Costas",
+        "grupo": "Dorsal",
         "info": "Exercício que trabalha as costas e os bíceps",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=6AVY1HFn0VY"
       },
       {
         "id": 17,
         "nome": "Remada unilateral na máquina",
-        "grupo": "Costas",
+        "grupo": "Dorsal",
         "info": "Exercício que trabalha as costas e os bíceps",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=nnCtQmrvZyw"
       },
       {
@@ -123,6 +140,7 @@
         "nome": "Desenvolvimento com Barra",
         "grupo": "Ombros",
         "info": "Levante a barra até os ombros e estenda os braços para cima",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=qEwKCR5JCog"
       },
       {
@@ -130,6 +148,7 @@
         "nome": "Elevação Lateral",
         "grupo": "Ombros",
         "info": "Levante os halteres até a altura dos ombros",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=mHj6SguUFLw"
       },
       {
@@ -137,6 +156,7 @@
         "nome": "Elevação Frontal",
         "grupo": "Ombros",
         "info": "Levante os halteres à frente do corpo até a altura dos ombros",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=Q2RuJ4XEY5Y"
       },
       {
@@ -144,6 +164,7 @@
         "nome": "Elevação Frontal com Barra",
         "grupo": "Ombros",
         "info": "Levante a barra à frente do corpo até a altura dos ombros",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=-R0hbe8HznA"
       },
       {
@@ -151,6 +172,7 @@
         "nome": "Remada Alta",
         "grupo": "Trapézio",
         "info": "Levante a barra até o queixo, mantendo os cotovelos elevados",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=XQh-lRkO_d8"
       },
       {
@@ -158,6 +180,7 @@
         "nome": "Desenvolvimento com Halteres",
         "grupo": "Ombros",
         "info": "Levante os halteres até os ombros e estenda os braços para cima",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=1yQGAvf0m9k"
       },
       {
@@ -165,6 +188,7 @@
         "nome": "Desenvolvimento Militar",
         "grupo": "Ombros",
         "info": "Levante os halteres até os ombros e estenda os braços para cima",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=0ef28Fd_mNg"
       },
       {
@@ -172,6 +196,7 @@
         "nome": "Elevação Posterior",
         "grupo": "Ombros",
         "info": "Levante os halteres para trás, mantendo os cotovelos levemente dobrados",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=33B-jp7Zq8I"
       },
       {
@@ -179,19 +204,20 @@
         "nome": "Remada Alta com Halteres",
         "grupo": "Trapézio",
         "info": "Levante os halteres até o queixo, mantendo os cotovelos elevados",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=XQh-lRkO_d8"
       },
       {
         "id": 27,
         "nome": "Agachamento livre",
-        "grupo": "Pernas, Glúteos",
+        "grupo": "Pernas",
         "info": "Posicione a barra no trapézio, em pé, com os pés afastados na largura dos ombros e desça até que as coxas fiquem paralelas ao chão.",
         "link_video": "https://www.youtube.com/watch?v=t2b8UdqmlFs"
       },
       {
         "id": 28,
         "nome": "Leg Press",
-        "grupo": "Pernas, Glúteos",
+        "grupo": "Pernas",
         "info": "Sentado na máquina, empurre a plataforma com os pés até que as pernas estejam completamente estendidas, depois abaixe lentamente.",
         "link_video": "https://www.youtube.com/watch?v=sp8JHbLwPmw"
       },
@@ -380,57 +406,65 @@
     {
         "id": 55,
         "nome": "Corrida",
-        "grupo": "Aeróbicos",
+        "grupo": "Cardío",
         "info": "Um dos exercícios aeróbicos mais populares, a corrida ajuda a melhorar a saúde cardiovascular, queimar calorias e aumentar a resistência.",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=_nVHvTx-3xE"
       },
       {
         "id": 56,
         "nome": "Caminhada",
-        "grupo": "Aeróbicos",
+        "grupo": "Cardío",
         "info": "Uma forma mais suave de exercício aeróbico, a caminhada pode ajudar a melhorar a saúde cardiovascular e reduzir o risco de doenças crônicas.",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=aUaInS6HIGo"
       },
       {
         "id": 57,
         "nome": "Ciclismo",
-        "grupo": "Aeróbicos",
+        "grupo": "Cardío",
         "info": "Outra forma popular de exercício aeróbico, o ciclismo ajuda a melhorar a saúde cardiovascular, fortalecer as pernas e queimar calorias.",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=rVUcm94Z_60"
       },
       {
         "id": 58,
         "nome": "Natação",
-        "grupo": "Aeróbicos",
+        "grupo": "Cardío",
         "info": "A natação é uma forma de exercício aeróbico de baixo impacto que pode ajudar a melhorar a saúde cardiovascular, fortalecer os músculos e reduzir o estresse.",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=zBtGj5n5yCU"
       },
       {
         "id": 59,
         "nome": "Jump",
-        "grupo": "Aeróbicos",
+        "grupo": "Cardío",
         "info": "O jump é um exercício aeróbico de alta intensidade que pode ajudar a melhorar a saúde cardiovascular, queimar calorias e fortalecer as pernas.",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=8RvZf2Lghik"
       },
       {
         "id": 60,
         "nome": "Zumba",
-        "grupo": "Aeróbicos",
+        "grupo": "Cardío",
         "info": "A zumba é uma dança aeróbica que pode ajudar a melhorar a saúde cardiovascular, queimar calorias e melhorar o humor.",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=FD0I6aW8Yv4"
       },
       {
         "id": 61,
         "nome": "Remo",
-        "grupo": "Aeróbicos",
+        "grupo": "Cardío",
         "info": "O remo é um exercício aeróbico de baixo impacto que pode ajudar a melhorar a saúde cardiovascular, fortalecer as costas e os braços e queimar calorias.",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=oBu-pQG6sTY"
       },
       {
         "id": 62,
         "nome": "Pular corda",
-        "grupo": "Aeróbicos",
+        "grupo": "Cardío",
         "info": "A caminhada é um exercício aeróbico de baixo impacto que ajuda a melhorar a saúde cardiovascular e a queimar calorias. Pode ser feita em qualquer lugar, como parques, ruas e esteiras.",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=T9Q5oEkf"
       },
       {
@@ -438,6 +472,7 @@
         "nome": "Alongamento de pernas",
         "grupo": "Alongar",
         "info": "Melhora a flexibilidade e previne lesões musculares.",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=kl4wMuyuUpc"
         },
         {
@@ -445,6 +480,7 @@
         "nome": "Alongamento de braços",
         "grupo": "Alongar",
         "info": "Aumenta a amplitude de movimento dos braços e previne lesões.",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=bMWfX9S0e1g"
         },
         {
@@ -452,6 +488,7 @@
         "nome": "Alongamento de tronco",
         "grupo": "Alongar",
         "info": "Ajuda a aliviar a tensão muscular e a melhorar a postura.",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=-gOw5EJHrsM"
         },
         {
@@ -459,6 +496,7 @@
         "nome": "Alongamento de panturrilhas",
         "grupo": "Alongar",
         "info": "Melhora a flexibilidade das panturrilhas e previne lesões.",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=byXy6aFvJUo"
         },
         {
@@ -466,6 +504,7 @@
         "nome": "Alongamento de quadril",
         "grupo": "Alongar",
         "info": "Melhora a flexibilidade do quadril e previne lesões.",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=4yH4_jaW8HU"
         },
         {
@@ -473,6 +512,7 @@
         "nome": "Alongamento de ombros",
         "grupo": "Alongar",
         "info": "Aumenta a amplitude de movimento dos ombros e previne lesões.",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=EW3qza5vXt8"
         },
         {
@@ -480,6 +520,7 @@
         "nome": "Alongamento de glúteos",
         "grupo": "Alongar",
         "info": "Melhora a flexibilidade dos glúteos e previne lesões.",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=3Q2-8wJlpFE"
         },
         {
@@ -487,6 +528,7 @@
         "nome": "Alongamento de pescoço",
         "grupo": "Alongar",
         "info": "Ajuda a aliviar a tensão muscular no pescoço e a melhorar a postura.",
+        "image":"",
         "linkvideo": "https://www.youtube.com/watch?v=2l5dGBL5R5c"
         }
 ]

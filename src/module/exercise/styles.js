@@ -37,28 +37,34 @@ export const ContainerImage = styled.Image`
 export const ContainerDetalhes = styled.View`
   display: flex;
   flex-direction: row;
-  /* background-color: ${(props) => props.background}; */
-  /* border-width: 1px; */
-  /* border-color: ${(props) => props.color}; */
-  /* border-radius: 50px; */
   margin: 0px;
-  width: 84px;
   height: 40px;
   padding-left: 0px;
   align-items: center;
+  width: 65%;
+`;
+
+export const EditeExercicio = styled.View`
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  height: 40px;
+  padding-left: 0px;
+  align-items: center;
+  width: 65%;
 `;
 
 export const ButtonPlay = styled.TouchableOpacity`
-  position: absolute;
-  left: 88%;
-  top: 10%;
-  /* background-color: ${(props) => props.color}; */
   height: 50px;
   width: 50px;
   padding: 11px;
   border-radius: 50px;
-  /* border-width: 1px; */
-  /* border-color: ${(props) => props.color}; */
 `;
-
-
+export const ButtonEdit = styled.TouchableOpacity`
+  position: absolute;
+  left: 88%;
+  height: 50px;
+  width: 50px;
+  padding: 11px;
+  border-radius: 50px;
+`;

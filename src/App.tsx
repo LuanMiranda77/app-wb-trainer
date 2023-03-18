@@ -1,9 +1,9 @@
-/* eslint-disable prettier/prettier */
 import type { PropsWithChildren } from 'react';
 import React from 'react';
 import { SafeAreaView, StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
+import { NativeBaseProvider } from 'native-base';
 import 'react-native-gesture-handler';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { UserProvider } from './context/useUserContext';
@@ -52,14 +52,19 @@ function App(): JSX.Element {
   };
 
   return (
-    <UserProvider>
-      <SafeAreaView style={backgroundStyle}>
-        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} backgroundColor={backgroundStyle.backgroundColor} />
-        <NavigationContainer>
-          <BottomTabNavigator />
-        </NavigationContainer>
-      </SafeAreaView>
-    </UserProvider>
+    <NativeBaseProvider>
+      <UserProvider>
+        <SafeAreaView style={backgroundStyle}>
+          <StatusBar
+            barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+            backgroundColor={backgroundStyle.backgroundColor}
+          />
+          <NavigationContainer>
+            <BottomTabNavigator />
+          </NavigationContainer>
+        </SafeAreaView>
+      </UserProvider>
+    </NativeBaseProvider>
   );
 }
 

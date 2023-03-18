@@ -6,7 +6,16 @@ import { backgroundColor } from '../../../styles';
 
 export default function ButtonIcon({ ...props }) {
   return (
-    <TouchableOpacity style={{ borderRadius: 30, backgroundColor: backgroundColor, width: 50, height: 50, padding: 8 }} onPress={props?.onPress}>
+    <TouchableOpacity
+      style={{
+        borderRadius: 30,
+        backgroundColor: backgroundColor,
+        width: 50,
+        height: 50,
+        padding: 8,
+      }}
+      onPress={props?.onPress}
+    >
       <Icon name={props?.icon} size={props?.size} color={props?.color} style={props?.style} />
     </TouchableOpacity>
   );
