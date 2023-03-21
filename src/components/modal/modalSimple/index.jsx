@@ -1,5 +1,7 @@
-import { Button, Modal } from 'native-base';
+import { Modal, ScrollView, View } from 'native-base';
 import React from 'react';
+import { backgroundColor, colorFooter } from '../../../styles';
+import ButtonSimple from '../../Buttons/ButtonSimple';
 
 export default function ModalSimple(props) {
   // const initialRef = React.useRef(null);
@@ -11,12 +13,20 @@ export default function ModalSimple(props) {
         onClose={props.onCloseModal}
         // initialFocusRef={initialRef}
         // finalFocusRef={finalRef}
+        size="full"
       >
-        <Modal.Content {...styles['top']}>
+        <Modal.Content {...styles['bottom']}>
           <Modal.CloseButton />
-          <Modal.Header>{props.title}</Modal.Header>
-          <Modal.Body>{props.children}</Modal.Body>
-          <Modal.Footer>
+          {/* <Modal.Header>{props.title}</Modal.Header> */}
+
+          <Modal.Body>
+            <ScrollView h="100%">{props.children}</ScrollView>
+          </Modal.Body>
+          <View style={{ padding: 20 }}>
+            {/* <Button style={{borderRadius:50}} onPress={() => props.actionButton()}>{props.labelButton}</Button> */}
+            <ButtonSimple label={props.labelButton} />
+          </View>
+          {/* <Modal.Footer>
             <Button.Group space={2}>
               <Button
                 variant="ghost"
@@ -29,7 +39,7 @@ export default function ModalSimple(props) {
               </Button>
               <Button onPress={() => props.actionButton()}>{props.labelButton}</Button>
             </Button.Group>
-          </Modal.Footer>
+          </Modal.Footer> */}
         </Modal.Content>
       </Modal>
     </>
@@ -39,11 +49,23 @@ export default function ModalSimple(props) {
 const styles = {
   top: {
     marginBottom: 'auto',
-    marginTop: 20,
+    marginTop: '60px',
+    // width: '100%',
+    // height: '100%',
+    flex: 1,
+    background: colorFooter,
+    // borderRadius: '30px',
+    borderTopRightRadius: '30px',
+    borderTopLeftRadius: '30px',
   },
   bottom: {
     marginBottom: 0,
+    flex: 1,
     marginTop: 'auto',
+    background: colorFooter,
+    // borderRadius: '30px',
+    borderTopRightRadius: '30px',
+    borderTopLeftRadius: '30px',
   },
   left: {
     marginLeft: 0,

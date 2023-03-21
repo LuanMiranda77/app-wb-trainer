@@ -36,7 +36,14 @@ export const useExercicioPage = () => {
   async function handleDeleteExercicio() {}
 
   async function handlefindExercicios(grupoCorpo) {
-    let array = exercicios.filter((item) => item.grupo == grupoCorpo);
+    let array = [];
+    if (grupoCorpo === 'Braço') {
+      array = exercicios.filter(
+        (item) => item.grupo == 'Bíceps' || item.grupo == 'Tríceps' || item.grupo == 'Antebranço'
+      );
+    } else {
+      array = exercicios.filter((item) => item.grupo == grupoCorpo);
+    }
     console.log(array);
     setListaExercicio([...array]);
   }

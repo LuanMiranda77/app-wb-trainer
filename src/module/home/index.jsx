@@ -11,6 +11,7 @@ export function Home({ navigation, route }) {
   const { stateUser, dispatch } = useUserContext();
   const [exercicicos, setExercicios] = useState();
   const [treinoAtual, setTreinoAtual] = useState();
+
   useMemo(() => {
     let array = stateUser.exercicios.filter((item) => item.treino === stateUser.treinoAtual);
     let obj = {
@@ -18,7 +19,7 @@ export function Home({ navigation, route }) {
       titulo: stateUser.diasTreinos.filter((item) => item.nome === stateUser.treinoAtual)[0].titulo,
       quant: array.length,
     };
-    console.log(stateUser.diasTreinos.filter((item) => item.nome === stateUser.treinoAtual));
+    console.log(stateUser.diasTreinos.filter((item) => item.nome == stateUser.treinoAtual), stateUser.diasTreinos);
     setTreinoAtual({ ...obj });
     setExercicios([...array]);
   }, [stateUser.treinoAtual]);

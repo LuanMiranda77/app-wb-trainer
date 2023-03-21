@@ -9,7 +9,8 @@ import Modal from './modal';
 import { ButtonPlay, Container, ContainerDetalhes, ContainerImage } from './styles';
 
 export function Exercise({ ...props }) {
-  const { showModal, gruposCorpo, handleNew, setShowModal, exercicio, handleSave } = useExercicioPage();
+  const { showModal, gruposCorpo, handleNew, setShowModal, exercicio, handleSave, setExercicio } =
+    useExercicioPage();
   const { findImageByName } = useImageFind();
   return (
     <View style={{ backgroundColor: backgroundColor, flex: 1 }}>
@@ -20,7 +21,7 @@ export function Exercise({ ...props }) {
             <Container key={item.id} color={colorFooter}>
               <ContainerImage source={findImageByName(item.image)} />
               <View style={{ marginTop: 10 }}>
-                <Text style={stylesGlobal.textTitle}>{item.nome}</Text>
+                <Text style={stylesGlobal.textTitle}>{item.label}</Text>
                 <View
                   style={{
                     display: 'flex',
@@ -42,7 +43,7 @@ export function Exercise({ ...props }) {
                   </ContainerDetalhes>
                   <ButtonPlay
                     onPress={() =>
-                      props.navigation.navigate('Lista Exercicio', { grupo: item.nome })
+                      props.navigation.navigate('Lista Exercicio', { grupo: item.value })
                     }
                   >
                     <Ionicons
@@ -62,7 +63,9 @@ export function Exercise({ ...props }) {
         showModal={showModal}
         onCloseModal={() => setShowModal(false)}
         exercicio={exercicio}
+        setExercicio={setExercicio}
         actionButton={handleSave}
+        type="new"
       />
     </View>
   );

@@ -77,7 +77,7 @@ export function HeaderNavBar({ ...props }) {
           <>
             {/* <ContainerImage source={imge} /> */}
             <ButtonIcon
-              icon="left"
+              icon="arrowleft"
               size={30}
               color="white"
               onPress={() => props.navigation.goBack()}

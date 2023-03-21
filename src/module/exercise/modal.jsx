@@ -1,4 +1,4 @@
-import { FormControl } from 'native-base';
+import { FormControl, Text } from 'native-base';
 import React from 'react';
 import InputSimple from '../../components/input';
 import ModalSimple from '../../components/modal/modalSimple';
@@ -11,23 +11,35 @@ export default function Modal(props) {
       showModal={props.showModal}
       onCloseModal={props.onCloseModal}
       title={props.type === 'new' ? 'Cadastro de Exercicio' : 'Editar Exercicio'}
-      labelButton="Salvar"
+      labelButton={props.type === 'new' ? 'Adicionar' : 'Salvar'}
       actionButton={props.actionButton}
       safeAreaTop={true}
     >
-      <FormControl mt="3">
-        <FormControl.Label>Nome</FormControl.Label>
-        <InputSimple
-          placeholder="Nome do exercicio"
-          value={props.exercicio.nome}
-          onChangeText={(e) => props.setExercicio({ nome: e })}
-        />
-        <FormControl.Label>Descrição</FormControl.Label>
-        <InputSimple
-          placeholder="Descrição"
-          value={props.exercicio.info}
-          onChangeText={(e) => props.setExercicio({ info: e })}
-        />
+      <FormControl mt="5">
+      <FormControl.Label>Nome <Text style={{color:'red'}}>*</Text></FormControl.Label>
+          <InputSimple
+            placeholder="Nome do exercicio"
+            value={exercicio.nome}
+            onChangeText={(e) => setExercicio({ ...exercicio, nome: e })}
+          />
+          <FormControl.Label>Descrição</FormControl.Label>
+          <InputSimple
+            placeholder="Descrição"
+            value={exercicio.info}
+            onChangeText={(e) => setExercicio({ ...exercicio, info: e })}
+          />
+          <FormControl.Label>Imagem</FormControl.Label>
+          <InputSimple
+            placeholder="Descrição"
+            value={exercicio.info}
+            onChangeText={(e) => setExercicio({ ...exercicio, info: e })}
+          />
+          <FormControl.Label>Descrição</FormControl.Label>
+          <InputSimple
+            placeholder="Descrição"
+            value={exercicio.info}
+            onChangeText={(e) => setExercicio({ ...exercicio, info: e })}
+          />
       </FormControl>
     </ModalSimple>
   );

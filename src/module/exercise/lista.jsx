@@ -1,6 +1,10 @@
+import { FormControl } from 'native-base';
 import React, { useMemo } from 'react';
 import { ScrollView, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
+import InputSimple from '../../components/input';
+import ModalSimple from '../../components/modal/modalSimple';
+import SelectSimple from '../../components/select';
 import { useExercicioPage } from '../../hooks/useExercicioPage';
 import useImageFind from '../../hooks/useImageFind';
 import { HeaderNavBar } from '../../layout/headerNavBar';
@@ -12,7 +16,6 @@ import {
   colorSubtitle,
   colorWhite,
 } from '../../styles';
-import Modal from './modal';
 import { ButtonEdit, Container, ContainerImage, EditeExercicio } from './styles';
 
 export function ListExercise(props) {
@@ -26,6 +29,8 @@ export function ListExercise(props) {
     handleNew,
     typeModal,
     setTypeModal,
+    handleSave,
+    gruposCorpo,
   } = useExercicioPage();
   const { findImageByName } = useImageFind();
   const img = '../../assets/h-1.jpg';
@@ -34,93 +39,108 @@ export function ListExercise(props) {
     handlefindExercicios(props.route.params.grupo);
   }, []);
   return (
-    <View style={{ backgroundColor: backgroundColor, flex: 1 }}>
-      <HeaderNavBar route={props.route} navigation={props.navigation} buttonRigth={handleNew} />
-      <ScrollView contentInsetAdjustmentBehavior="automatic" style={{ marginBottom: 5 }}>
-        {listaExercicio.map((item) => {
-          return (
-            <Container key={item.id} color={colorFooter}>
-              <ContainerImage
-                source={item.image == '' ? require(img) : findImageByName(item.image)}
-              />
-              <View style={{ marginTop: 10 }}>
-                <Text
-                  style={{
-                    fontSize: 18,
-                    fontWeight: 'bold',
-                    color: colorWhite,
-                    width: '70%',
-                  }}
-                >
-                  {item.nome}
-                </Text>
-                <View
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <EditeExercicio>
-                    <Text
-                      style={{
-                        color: colorSubtitle,
-                        fontWeight: 'bold',
-                        marginLeft: 3,
-                        width: '120%',
-                      }}
-                    >
-                      {item.grupo}
-                    </Text>
-                  </EditeExercicio>
-                </View>
-              </View>
-              <ButtonEdit onPress={() => {}}>
-                <Icon
-                  name="edit"
-                  size={30}
-                  color={colorSecondary}
-                  style={{ marginTop: -1 }}
-                  onPress={() => {
-                    setExercicio(item);
-                    setTypeModal('edit');
-                    setShowModal(true);
-                  }}
+    <>
+      <View style={{ backgroundColor: backgroundColor, flex: 1 }}>
+        <HeaderNavBar route={props.route} navigation={props.navigation} buttonRigth={handleNew} />
+        <ScrollView contentInsetAdjustmentBehavior="automatic" style={{ marginBottom: 5 }}>
+          {listaExercicio.map((item) => {
+            return (
+              <Container key={item.id} color={colorFooter}>
+                <ContainerImage
+                  source={item.image == '' ? require(img) : findImageByName(item.image)}
                 />
-              </ButtonEdit>
-            </Container>
-          );
-        })}
-      </ScrollView>
-      {/* <ModalSimple
+                <View style={{ marginTop: 10 }}>
+                  <Text
+                    style={{
+                      fontSize: 18,
+                      fontWeight: 'bold',
+                      color: colorWhite,
+                      width: '70%',
+                    }}
+                  >
+                    {item.nome}
+                  </Text>
+                  <View
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                    }}
+                  >
+                    <EditeExercicio>
+                      <Text
+                        style={{
+                          color: colorSubtitle,
+                          fontWeight: 'bold',
+                          marginLeft: 3,
+                          width: '120%',
+                        }}
+                      >
+                        {item.grupo}
+                      </Text>
+                    </EditeExercicio>
+                  </View>
+                </View>
+                <ButtonEdit onPress={() => {}}>
+                  <Icon
+                    name="edit"
+                    size={30}
+                    color={colorSecondary}
+                    style={{ marginTop: -1 }}
+                    onPress={() => {
+                      setExercicio(item);
+                      setTypeModal('edit');
+                      setShowModal(true);
+                    }}
+                  />
+                </ButtonEdit>
+              </Container>
+            );
+          })}
+        </ScrollView>
+      </View>
+      <ModalSimple
         showModal={showModal}
         onCloseModal={() => setShowModal(false)}
         title="Exercicio"
-        labelButton="Salvar"
+        labelButton="Adicionar"
       >
-        <FormControl mt="3">
-          <FormControl.Label>Nome</FormControl.Label>
+        <FormControl mt="5">
+          <FormControl.Label>
+            Nome <Text style={{ color: 'red' }}>*</Text>
+          </FormControl.Label>
           <InputSimple
             placeholder="Nome do exercicio"
             value={exercicio.nome}
-            onChangeText={(e) => setExercicio({ nome: e })}
+            onChangeText={(e) => setExercicio({ ...exercicio, nome: e })}
           />
           <FormControl.Label>Descrição</FormControl.Label>
           <InputSimple
             placeholder="Descrição"
             value={exercicio.info}
-            onChangeText={(e) => setExercicio({ info: e })}
+            onChangeText={(e) => setExercicio({ ...exercicio, info: e })}
+          />
+          <FormControl.Label>Imagem</FormControl.Label>
+          <InputSimple
+            placeholder="Descrição"
+            value={exercicio.info}
+            onChangeText={(e) => setExercicio({ ...exercicio, info: e })}
+          />
+          <FormControl.Label>Músculo alvo</FormControl.Label>
+          <SelectSimple
+            dataSource={gruposCorpo}
+            onChange={(e) => setExercicio({ ...exercicio, titulo: e })}
           />
         </FormControl>
-      </ModalSimple> */}
-      <Modal
+      </ModalSimple>
+      {/* <Modal
         showModal={showModal}
         onCloseModal={() => setShowModal(false)}
-        type={typeModal}
         exercicio={exercicio}
-        setExercicio={setExercicio}
-        actionButton={handleNew}
-      />
-    </View>
+        setExercicio={''}
+        actionButton={handleSave}
+        type={typeModal}
+      /> */}
+    </>
   );
 }

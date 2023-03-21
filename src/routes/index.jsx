@@ -1,8 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import Icon from 'react-native-vector-icons/AntDesign';
+import { StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { DetalhesExercicio } from '../module/detalhesExercicio';
 import { Evolute } from '../module/evolute';
@@ -44,12 +43,12 @@ export function BottomTabNavigator() {
   function ExercicioStack() {
     return (
       <Stack.Navigator
-        initialRouteName="Home"
+        initialRouteName="Exercicios"
         screenOptions={({ route }) => ({
           headerShown: false,
         })}
       >
-        <Stack.Screen name="Exercicio" component={Exercise} />
+        <Stack.Screen name="Exercicios" component={Exercise} />
         <Stack.Screen name="Lista Exercicio" component={ListExercise} />
       </Stack.Navigator>
     );
@@ -111,10 +110,10 @@ export function BottomTabNavigator() {
         //     </View>
         //   );
         // },
-        headerShown:  false,
+        headerShown: false,
       })}
     >
-      <Tab.Screen name="HomeStack" component={HomeStack} />
+      <Tab.Screen name="HomeStack" component={Home} />
       <Tab.Screen name="Exercicio" component={ExercicioStack} />
       <Tab.Screen name="Treino" component={Training} />
       <Tab.Screen name="Evolução" component={Evolute} />
