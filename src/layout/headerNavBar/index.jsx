@@ -16,7 +16,7 @@ export function HeaderNavBar({ ...props }) {
 
   return (
     <NavBar color={backgroundColor}>
-      {props.route.name == 'Home' ? (
+      {props.route.name == 'Homes' ? (
         <>
           <View>
             <Text style={{ fontSize: 15, color: colorIconFooter }}>Ola! Vamos treinar 👋</Text>
@@ -24,11 +24,11 @@ export function HeaderNavBar({ ...props }) {
           </View>
           <PerfilUser source={require('../../assets/menina.jpeg')} />
         </>
-      ) : props.route.name == 'Exercicio' ? (
+      ) : props.route.name == 'Exercicios' ? (
         <>
           {/* <ContainerImage source={imge} /> */}
 
-          <TituloScreen>{props.route.name}</TituloScreen>
+          <TituloScreen>Grupo Muscular</TituloScreen>
           <ButtonIcon
             icon="plus"
             color={colorSecondary}

@@ -15,7 +15,7 @@ export default function ButtonSimple(props) {
         justifyContent: 'center',
         alignItems: 'center',
       }}
-      onPress={props?.onPress}
+      onPress={()=>props.onPress()}
     >
       <Text style={{ color: '#fff', fontSize: 16, fontWeight: 'bold' }}>{props.label}</Text>
     </TouchableOpacity>

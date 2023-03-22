@@ -34,7 +34,11 @@ export function ListExercise(props) {
   } = useExercicioPage();
   const { findImageByName } = useImageFind();
   const img = '../../assets/h-1.jpg';
-  console.log(props.route.params.grupo);
+  console.log(
+    exercicio,
+    'teste',
+    gruposCorpo.find((item) => item.value == exercicio.grupo)
+  );
   useMemo(() => {
     handlefindExercicios(props.route.params.grupo);
   }, []);
@@ -88,7 +92,14 @@ export function ListExercise(props) {
                     color={colorSecondary}
                     style={{ marginTop: -1 }}
                     onPress={() => {
-                      setExercicio(item);
+                      setExercicio({
+                        ...exercicio,
+                        nome: item.nome,
+                        titulo: item.titulo,
+                        image: item.image,
+                        grupo: item.grupo,
+                        info: item.info,
+                      });
                       setTypeModal('edit');
                       setShowModal(true);
                     }}
@@ -104,32 +115,36 @@ export function ListExercise(props) {
         onCloseModal={() => setShowModal(false)}
         title="Exercicio"
         labelButton="Adicionar"
+        actionButton={handleSave}
       >
         <FormControl mt="5">
           <FormControl.Label>
             Nome <Text style={{ color: 'red' }}>*</Text>
           </FormControl.Label>
           <InputSimple
-            placeholder="Nome do exercicio"
+            placeholder="Digite o nome exercicio"
             value={exercicio.nome}
             onChangeText={(e) => setExercicio({ ...exercicio, nome: e })}
           />
           <FormControl.Label>Descrição</FormControl.Label>
           <InputSimple
-            placeholder="Descrição"
+            placeholder="Digite uma descrição"
             value={exercicio.info}
             onChangeText={(e) => setExercicio({ ...exercicio, info: e })}
           />
-          <FormControl.Label>Imagem</FormControl.Label>
+          <FormControl.Label>Titulo</FormControl.Label>
           <InputSimple
-            placeholder="Descrição"
-            value={exercicio.info}
-            onChangeText={(e) => setExercicio({ ...exercicio, info: e })}
+            placeholder="Digite um titulo"
+            value={exercicio.titulo}
+            onChangeText={(e) => setExercicio({ ...exercicio, titulo: e })}
           />
-          <FormControl.Label>Músculo alvo</FormControl.Label>
+          <FormControl.Label>
+            Músculo alvo <Text style={{ color: 'red' }}>*</Text>
+          </FormControl.Label>
           <SelectSimple
             dataSource={gruposCorpo}
-            onChange={(e) => setExercicio({ ...exercicio, titulo: e })}
+            onChange={(e) => setExercicio({ ...exercicio, grupo: e })}
+            value={exercicio.grupo}
           />
         </FormControl>
       </ModalSimple>

@@ -1,7 +1,6 @@
-import { Modal, ScrollView, View } from 'native-base';
+import { Button, Modal, ScrollView, Text, View } from 'native-base';
 import React from 'react';
-import { backgroundColor, colorFooter } from '../../../styles';
-import ButtonSimple from '../../Buttons/ButtonSimple';
+import { colorFooter } from '../../../styles';
 
 export default function ModalSimple(props) {
   // const initialRef = React.useRef(null);
@@ -23,8 +22,11 @@ export default function ModalSimple(props) {
             <ScrollView h="100%">{props.children}</ScrollView>
           </Modal.Body>
           <View style={{ padding: 20 }}>
-            {/* <Button style={{borderRadius:50}} onPress={() => props.actionButton()}>{props.labelButton}</Button> */}
-            <ButtonSimple label={props.labelButton} />
+            <Button style={{ borderRadius: 50 }} onPress={() => props.actionButton()}>
+              <Text style={{ color: '#fff', fontSize: 16, fontWeight: 'bold' }}>
+                {props.labelButton}
+              </Text>
+            </Button>
           </View>
           {/* <Modal.Footer>
             <Button.Group space={2}>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Toast from '../../components/toast';
 import { useUserContext } from '../../context/useUserContext';
 import { getRaelm } from '../../database/realm';
 import { ExercicioInitial } from '../../database/schemas/ExercicioSchema';
@@ -18,18 +19,28 @@ export const useExercicioPage = () => {
     setTypeModal('new');
     setShowModal(true);
   };
+  const {toastError, toastSucess} = Toast();
 
   async function handleSave() {
+    console.log("aqui", exercicio)
+    if(exercicio.nome==''){
+      toastError('Nome é obrigatorio');
+      return
+    }
+    else if(exercicio.grupo==''){
+      toastError('Grupo é obrigatorio');
+      return
+    }
     const realm = await getRaelm();
     try {
       realm.write(() => {
         realm.create('Exercicio', exercicio);
       });
       realm.close();
-      // Alert.alert('Item cadastrado com sucesso.');
-      console.warn('Item cadastrado com sucesso.');
+      toastSucess('Item cadastrado com sucesso.');
     } catch (error) {
-      console.error('Algo deu errado');
+      console.error(error)
+      toastError('Algo deu errado ao salvar');
       realm.close();
     }
   }
@@ -44,7 +55,6 @@ export const useExercicioPage = () => {
     } else {
       array = exercicios.filter((item) => item.grupo == grupoCorpo);
     }
-    console.log(array);
     setListaExercicio([...array]);
   }
 
@@ -61,5 +71,6 @@ export const useExercicioPage = () => {
     handleNew,
     typeModal,
     setTypeModal,
+    handleSave
   };
 };

@@ -20,7 +20,7 @@ export function BottomTabNavigator() {
   function HomeStack() {
     return (
       <Stack.Navigator
-        initialRouteName="Home"
+        initialRouteName="Homes"
         screenOptions={({ route }) => ({
           headerStyle: {
             backgroundColor: colorPrimary,
@@ -31,7 +31,7 @@ export function BottomTabNavigator() {
           headerShown: false,
         })}
       >
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Homes" component={Home} />
         <Stack.Screen name="Exercicio" component={Exercise} />
         <Stack.Screen name="Config" component={Settings} />
         <Stack.Screen name="Treino" component={Training} />
@@ -56,13 +56,13 @@ export function BottomTabNavigator() {
 
   return (
     <Tab.Navigator
-      initialRouteName="HomeStack"
+      initialRouteName="Home"
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
 
           switch (route.name) {
-            case 'HomeStack':
+            case 'Home':
               iconName = focused ? 'grid' : 'grid-outline';
               break;
 
@@ -113,7 +113,7 @@ export function BottomTabNavigator() {
         headerShown: false,
       })}
     >
-      <Tab.Screen name="HomeStack" component={Home} />
+      <Tab.Screen name="Home" component={HomeStack} />
       <Tab.Screen name="Exercicio" component={ExercicioStack} />
       <Tab.Screen name="Treino" component={Training} />
       <Tab.Screen name="Evolução" component={Evolute} />

@@ -11,6 +11,7 @@ export const ExercicioSchema = {
     info: 'string',
     titulo: 'string',
     image: 'string',
+    grupo:'string',
   },
   primaryKey: '_id',
 };
@@ -24,4 +25,5 @@ export const ExercicioInitial = {
   info: '',
   titulo: '',
   image: '',
+  grupo:'',
 };
