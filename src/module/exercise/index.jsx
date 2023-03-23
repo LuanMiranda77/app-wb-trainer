@@ -9,7 +9,7 @@ import Modal from './modal';
 import { ButtonPlay, Container, ContainerDetalhes, ContainerImage } from './styles';
 
 export function Exercise({ ...props }) {
-  const { showModal, gruposCorpo, handleNew, setShowModal, exercicio, handleSave, setExercicio } =
+  const { showModal, gruposCorpo, handleNew, setShowModal, exercicio, handleSave, setExercicio, handleDeleteExercicio } =
     useExercicioPage();
   const { findImageByName } = useImageFind();
   return (
@@ -38,7 +38,7 @@ export function Exercise({ ...props }) {
                         width: '120%',
                       }}
                     >
-                      {item.titulo}
+                      {item.info}
                     </Text>
                   </ContainerDetalhes>
                   <ButtonPlay
@@ -64,7 +64,7 @@ export function Exercise({ ...props }) {
         onCloseModal={() => setShowModal(false)}
         exercicio={exercicio}
         setExercicio={setExercicio}
-        actionButton={handleSave}
+        actionButton={handleDeleteExercicio}
         type="new"
       />
     </View>

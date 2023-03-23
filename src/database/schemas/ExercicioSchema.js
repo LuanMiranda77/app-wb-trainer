@@ -1,9 +1,9 @@
 import uuid from 'react-native-uuid';
 
 export const ExercicioSchema = {
-  name: 'Exercicio',
+  name: 'Exercicios',
   properties: {
-    _id: 'int',
+    _id: 'string',
     nome: 'string',
     series: 'int',
     repeticoes: 'string',
@@ -19,7 +19,7 @@ export const ExercicioSchema = {
 export const ExercicioInitial = {
   _id: uuid.v4(),
   nome: '',
-  series: '',
+  series: 0,
   repeticoes: '',
   treino: '',
   info: '',

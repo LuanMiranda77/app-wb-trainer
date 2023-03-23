@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { File } from 'react-native';
 import Toast from '../../components/toast';
 import { useUserContext } from '../../context/useUserContext';
 import { getRaelm } from '../../database/realm';
 import { ExercicioInitial } from '../../database/schemas/ExercicioSchema';
 import exercicios from '../../__mooks/exercicios.json';
 import { arrayF, arrayM } from './grupoExercicios';
+import Realm from 'realm';
 
 export const useExercicioPage = () => {
   const { stateUser } = useUserContext();
@@ -34,7 +36,7 @@ export const useExercicioPage = () => {
     const realm = await getRaelm();
     try {
       realm.write(() => {
-        realm.create('Exercicio', exercicio);
+        realm.create('Exercicios', exercicio);
       });
       realm.close();
       toastSucess('Item cadastrado com sucesso.');
@@ -44,7 +46,15 @@ export const useExercicioPage = () => {
       realm.close();
     }
   }
-  async function handleDeleteExercicio() {}
+  async function handleDeleteExercicio() {
+    const realmPath = '/path/to/wbtrainer-app.realm';
+    try {
+      await Realm.deleteFile({ path: realmPath });
+      console.log(`Successfully deleted ${realmPath}`);
+  } catch (error) {
+      console.error(`Failed to delete ${realmPath}:`, error);
+  }
+  }
 
   async function handlefindExercicios(grupoCorpo) {
     let array = [];
@@ -63,7 +73,6 @@ export const useExercicioPage = () => {
     setListaExercicio,
     gruposCorpo,
     setGruposCorpo,
-    handlefindExercicios,
     showModal,
     setShowModal,
     exercicio,
@@ -71,6 +80,8 @@ export const useExercicioPage = () => {
     handleNew,
     typeModal,
     setTypeModal,
-    handleSave
+    handleSave,
+    handlefindExercicios,
+    handleDeleteExercicio,
   };
 };

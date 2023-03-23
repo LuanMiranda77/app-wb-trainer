@@ -1,5 +1,4 @@
-import type { PropsWithChildren } from 'react';
-import React from 'react';
+import React, { PropsWithChildren, useEffect } from 'react';
 import { SafeAreaView, StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -7,42 +6,43 @@ import { NativeBaseProvider } from 'native-base';
 import 'react-native-gesture-handler';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { UserProvider } from './context/useUserContext';
+import { getRaelm } from './database/realm';
 import { BottomTabNavigator } from './routes';
 import { colorPrimary } from './styles';
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
+// type SectionProps = PropsWithChildren<{
+//   title: string,
+// }>;
 
-function Section({ children, title }: SectionProps): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}
-      >
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}
-      >
-        {children}
-      </Text>
-    </View>
-  );
-}
+// function Section({ children, title }{
+//   const isDarkMode = useColorScheme() === 'dark';
+//   return (
+//     <View style={styles.sectionContainer}>
+//       <Text
+//         style={[
+//           styles.sectionTitle,
+//           {
+//             color: isDarkMode ? Colors.white : Colors.black,
+//           },
+//         ]}
+//       >
+//         {title}
+//       </Text>
+//       <Text
+//         style={[
+//           styles.sectionDescription,
+//           {
+//             color: isDarkMode ? Colors.light : Colors.dark,
+//           },
+//         ]}
+//       >
+//         {children}
+//       </Text>
+//     </View>
+//   );
+// }
 
-function App(): JSX.Element {
+function App(){
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -50,6 +50,12 @@ function App(): JSX.Element {
     // backgroundColor: isDarkMode ? Colors.darck : Colors.lighter,
     flex: 1,
   };
+
+  // useEffect(() => {
+  //   const realm = getRaelm();
+  //   realm.close();
+  //   console.log('Migration completed successfully.');
+  // }, []);
 
   return (
     <NativeBaseProvider>

@@ -1,7 +1,7 @@
 import uuid from 'react-native-uuid';
 
 export const TreinoSchema = {
-  name: 'Treino',
+  name: 'Treinos',
   properties: {
     _id: 'string',
     treino: 'string',
