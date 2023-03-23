@@ -12,12 +12,13 @@ export const ExercicioSchema = {
     titulo: 'string',
     image: 'string',
     grupo:'string',
+    linkVideo:'string',
   },
   primaryKey: '_id',
 };
 
 export const ExercicioInitial = {
-  _id: uuid.v4(),
+  // _id: uuid.v4(),
   nome: '',
   series: 0,
   repeticoes: '',
@@ -26,4 +27,5 @@ export const ExercicioInitial = {
   titulo: '',
   image: '',
   grupo:'',
+  linkVideo:'',
 };

@@ -14,7 +14,7 @@ export function Training({ navigation, route }) {
         {route?.params?.treino ? (
           <ListaExercicico dataSource={route?.params?.treino == 0 ? stateUser.exercicios : stateUser.exercicios.filter((item) => item.treino === route?.params?.treino)} />
         ) : (
-          <ListaExercicico dataSource={stateUser.diasTreinos} />
+          <ListaExercicico dataSource={[]} />
         )}
       </ScrollView>
     </View>

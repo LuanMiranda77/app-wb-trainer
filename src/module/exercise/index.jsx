@@ -1,6 +1,7 @@
 import React from 'react';
 import { ScrollView, Text, View } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import InputSearch from '../../components/inputs/inputSearch';
 import { useExercicioPage } from '../../hooks/useExercicioPage';
 import useImageFind from '../../hooks/useImageFind';
 import { HeaderNavBar } from '../../layout/headerNavBar';
@@ -15,6 +16,7 @@ export function Exercise({ ...props }) {
   return (
     <View style={{ backgroundColor: backgroundColor, flex: 1 }}>
       <HeaderNavBar route={props.route} buttonRigth={handleNew} />
+      <InputSearch/>
       <ScrollView contentInsetAdjustmentBehavior="automatic" style={{ marginBottom: 5 }}>
         {gruposCorpo.map((item) => {
           return (

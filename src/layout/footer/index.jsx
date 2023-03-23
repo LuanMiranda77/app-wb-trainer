@@ -102,7 +102,7 @@ const style = StyleSheet.create({
     width: '100%',
     textAlign: 'center',
     // marginRight:30,
-    fontSize: 25,
+    // fontSize: '25px',
     fontWeight: 'bold',
   },
 });

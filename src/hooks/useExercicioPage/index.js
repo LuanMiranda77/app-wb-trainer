@@ -1,12 +1,11 @@
 import { useState } from 'react';
-import { File } from 'react-native';
+import Realm from 'realm';
 import Toast from '../../components/toast';
 import { useUserContext } from '../../context/useUserContext';
 import { getRaelm } from '../../database/realm';
 import { ExercicioInitial } from '../../database/schemas/ExercicioSchema';
 import exercicios from '../../__mooks/exercicios.json';
 import { arrayF, arrayM } from './grupoExercicios';
-import Realm from 'realm';
 
 export const useExercicioPage = () => {
   const { stateUser } = useUserContext();
@@ -21,17 +20,16 @@ export const useExercicioPage = () => {
     setTypeModal('new');
     setShowModal(true);
   };
-  const {toastError, toastSucess} = Toast();
+  const { toastError, toastSucess } = Toast();
 
   async function handleSave() {
-    console.log("aqui", exercicio)
-    if(exercicio.nome==''){
+    console.log('aqui', exercicio);
+    if (exercicio.nome == '') {
       toastError('Nome é obrigatorio');
-      return
-    }
-    else if(exercicio.grupo==''){
+      return;
+    } else if (exercicio.grupo == '') {
       toastError('Grupo é obrigatorio');
-      return
+      return;
     }
     const realm = await getRaelm();
     try {
@@ -41,7 +39,7 @@ export const useExercicioPage = () => {
       realm.close();
       toastSucess('Item cadastrado com sucesso.');
     } catch (error) {
-      console.error(error)
+      console.error(error);
       toastError('Algo deu errado ao salvar');
       realm.close();
     }
@@ -51,9 +49,9 @@ export const useExercicioPage = () => {
     try {
       await Realm.deleteFile({ path: realmPath });
       console.log(`Successfully deleted ${realmPath}`);
-  } catch (error) {
+    } catch (error) {
       console.error(`Failed to delete ${realmPath}:`, error);
-  }
+    }
   }
 
   async function handlefindExercicios(grupoCorpo) {
@@ -62,6 +60,13 @@ export const useExercicioPage = () => {
       array = exercicios.filter(
         (item) => item.grupo == 'Bíceps' || item.grupo == 'Tríceps' || item.grupo == 'Antebranço'
       );
+    } else if (grupoCorpo === 'Pernas') {
+      array = exercicios.filter(
+        (item) =>
+          item.grupo == 'Quadríceps' || item.grupo == 'Posterior' || item.grupo == 'Panturilha'
+      );
+    } else if (grupoCorpo === 'Dorsal') {
+      array = exercicios.filter((item) => item.grupo == 'Dorsal' || item.grupo == 'Trapézio');
     } else {
       array = exercicios.filter((item) => item.grupo == grupoCorpo);
     }

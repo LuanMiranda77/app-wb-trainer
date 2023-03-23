@@ -2,7 +2,7 @@ import { FormControl } from 'native-base';
 import React, { useMemo } from 'react';
 import { ScrollView, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
-import InputSimple from '../../components/input';
+import InputSimple from '../../components/inputs/inputSimple';
 import ModalSimple from '../../components/modal/modalSimple';
 import SelectSimple from '../../components/select';
 import { useExercicioPage } from '../../hooks/useExercicioPage';
@@ -17,6 +17,7 @@ import {
   colorWhite,
 } from '../../styles';
 import { ButtonEdit, Container, ContainerImage, EditeExercicio } from './styles';
+import grupoMuscular from '../../__mooks/grupoMuscular.json'
 
 export function ListExercise(props) {
   const {
@@ -34,14 +35,11 @@ export function ListExercise(props) {
   } = useExercicioPage();
   const { findImageByName } = useImageFind();
   const img = '../../assets/h-1.jpg';
-  console.log(
-    exercicio,
-    'teste',
-    gruposCorpo.find((item) => item.value == exercicio.grupo)
-  );
+
   useMemo(() => {
     handlefindExercicios(props.route.params.grupo);
   }, []);
+
   return (
     <>
       <View style={{ backgroundColor: backgroundColor, flex: 1 }}>
@@ -142,7 +140,7 @@ export function ListExercise(props) {
             Músculo alvo <Text style={{ color: 'red' }}>*</Text>
           </FormControl.Label>
           <SelectSimple
-            dataSource={gruposCorpo}
+            dataSource={grupoMuscular}
             onChange={(e) => setExercicio({ ...exercicio, grupo: e })}
             value={exercicio.grupo}
           />

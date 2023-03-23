@@ -11,8 +11,6 @@ import { ContainerImage, Subtitulo, Titulo } from './styles';
 
 export function DetalhesExercicio({ ...props }) {
   const { params } = props.route;
-  // console.warn(props);
-
   const { listaExercicio, setListaExercicio } = useExercicioPage();
   const { stateUser } = useUserContext();
   const { findImageByName } = useImageFind();

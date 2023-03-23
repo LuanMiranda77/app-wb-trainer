@@ -16,10 +16,9 @@ export function Home({ navigation, route }) {
     let array = stateUser.exercicios.filter((item) => item.treino === stateUser.treinoAtual);
     let obj = {
       treino: 'Treino ' + stateUser.treinoAtual,
-      titulo: stateUser.diasTreinos.filter((item) => item.nome === stateUser.treinoAtual)[0].titulo,
+      // titulo: stateUser.diasTreinos.filter((item) => item.nome === stateUser.treinoAtual)[0].titulo,
       quant: array.length,
     };
-    console.log(stateUser.diasTreinos.filter((item) => item.nome == stateUser.treinoAtual), stateUser.diasTreinos);
     setTreinoAtual({ ...obj });
     setExercicios([...array]);
   }, [stateUser.treinoAtual]);

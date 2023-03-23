@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "label": "Peitoral",
+    "value": "Peitoral"
+  },
+  {
+    "id": 2,
+    "label": "Ombros",
+    "value": "Ombros"
+  },
+  {
+    "id": 3,
+    "label": "Dorsal",
+    "value": "Dorsal"
+  },
+  {
+    "id": 4,
+    "label": "Tríceps",
+    "value": "Tríceps"
+  },
+  {
+    "id": 5,
+    "label": "Bíceps",
+    "value": "Bíceps"
+  },
+  {
+    "id": 6,
+    "label": "Antebraço",
+    "value": "Antebraço"
+  },
+  {
+    "id": 7,
+    "label": "Quadríceps",
+    "value": "Quadríceps"
+  },
+  {
+    "id": 8,
+    "label": "Posterior",
+    "value": "Posterior"
+  },
+  {
+    "id": 9,
+    "label": "Panturilha",
+    "value": "Panturilha"
+  },
+  {
+    "id": 10,
+    "label": "Glúteos",
+    "value": "Glúteos"
+  },
+  {
+    "id": 11,
+    "label": "Cardío",
+    "value": "Cardío"
+  },
+  {
+    "id": 12,
+    "label": "Abdominais",
+    "value": "Abdominais"
+  },
+  {
+    "id": 13,
+    "label": "Trapézio",
+    "value": "Trapézio"
+  }
+]

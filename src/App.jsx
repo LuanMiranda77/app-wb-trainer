@@ -1,14 +1,12 @@
-import React, { PropsWithChildren, useEffect } from 'react';
-import { SafeAreaView, StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
+import React from 'react';
+import { SafeAreaView, StatusBar, StyleSheet, useColorScheme } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
-import { NativeBaseProvider } from 'native-base';
+import { extendTheme, NativeBaseProvider } from 'native-base';
 import 'react-native-gesture-handler';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { UserProvider } from './context/useUserContext';
-import { getRaelm } from './database/realm';
 import { BottomTabNavigator } from './routes';
-import { colorPrimary } from './styles';
 
 // type SectionProps = PropsWithChildren<{
 //   title: string,
@@ -42,12 +40,12 @@ import { colorPrimary } from './styles';
 //   );
 // }
 
-function App(){
+function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: colorPrimary,
-    // backgroundColor: isDarkMode ? Colors.darck : Colors.lighter,
+    // backgroundColor: colorPrimary,
+    backgroundColor: isDarkMode ? Colors.darck : Colors.lighter,
     flex: 1,
   };
 
@@ -56,9 +54,21 @@ function App(){
   //   realm.close();
   //   console.log('Migration completed successfully.');
   // }, []);
+  const theme = extendTheme({
+    components: {
+      Heading: {
+        baseStyle: (props) => {
+          return {
+            _light: { color: 'red.300' },
+            _dark: { color: 'white.300' },
+          };
+        },
+      },
+    },
+  });
 
   return (
-    <NativeBaseProvider>
+    <NativeBaseProvider theme={theme}>
       <UserProvider>
         <SafeAreaView style={backgroundStyle}>
           <StatusBar

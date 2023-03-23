@@ -49,6 +49,6 @@ export const stylesGlobal = StyleSheet.create({
 // `;
 
 export const TituloScreen = styled.Text`
-  font-size: 25;
+  font-size: 25px;
   color: #fff;
 `;

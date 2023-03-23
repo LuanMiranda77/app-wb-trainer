@@ -1,6 +1,9 @@
 import Realm from 'realm';
+import { EvolucaoSchema } from './schemas/EvolucaoSchema';
 import { ExercicioSchema } from './schemas/ExercicioSchema';
 import { TreinoSchema } from './schemas/TreinoSchema';
+import { Treino_ExercicioSchema } from './schemas/Treino_ExercicioSchema';
+import { UsuarioSchema } from './schemas/UsuarioSchema';
 
 const schemaVersion = 1;
 
@@ -30,13 +33,13 @@ const migration = (oldRealm, newRealm) => {
       newTreino.novo_id = oldTreino._id;
       // set the new primary key
       newTreino._id = oldTreino._id.toString();
-    //   const newTreino = newRealm.create('Treino',
-    //     {
-          
-    //       _id: oldTreino._id.toString(),
-    //     },
-    //     true
-    //   );
+      //   const newTreino = newRealm.create('Treino',
+      //     {
+
+      //       _id: oldTreino._id.toString(),
+      //     },
+      //     true
+      //   );
     }
   }
 };
@@ -45,8 +48,8 @@ export const getRaelm = async () =>
   await Realm.open({
     path: 'wbtrainer-app',
     schemaVersion,
-    schema: [ExercicioSchema],
-    migration,
+    schema: [ExercicioSchema, TreinoSchema, Treino_ExercicioSchema, EvolucaoSchema, UsuarioSchema],
+    // migration,
     // deleteRealmIfMigrationNeeded: true,
   });
-  // await Realm.open({ schema: [ExercicioSchema,TreinoSchema], deleteRealmIfMigrationNeeded: true, })
+// await Realm.open({ schema: [ExercicioSchema,TreinoSchema], deleteRealmIfMigrationNeeded: true, })

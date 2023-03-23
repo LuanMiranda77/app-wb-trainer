@@ -20,7 +20,13 @@ export const arrayM = [
     value: 'Dorsal',
     info: 'Treino para costas e trapézio',
   },
-  { id: 3, image: 'braco-m', label: 'Braço', value: 'Braço', info: 'Treino de Biceps e triceps' },
+  {
+    id: 3,
+    image: 'braco-m',
+    label: 'Braço',
+    value: 'Braço',
+    info: 'Treino de biceps, tríceps, antebranço',
+  },
   {
     id: 4,
     image: 'pernas-m',
@@ -35,7 +41,7 @@ export const arrayM = [
     value: 'Glúteos',
     info: 'Trabalhar a musculatura do bumbum',
   },
-  { id: 6, image: 'cardio-m', label: 'Cardío', value: 'Cardío', info: 'Exercicios misto para' },
+  { id: 6, image: 'cardio-m', label: 'Cardío', value: 'Cardío', info: 'Exercicios misto' },
   {
     id: 8,
     image: 'abdomen-m',
@@ -72,7 +78,7 @@ export const arrayF = [
     image: 'braco-f',
     label: 'Braço',
     value: 'Braço',
-    info: 'Treino de Biceps e triceps',
+    info: 'Treino de biceps, tríceps, antebranço',
   },
   {
     id: 4,
@@ -88,7 +94,7 @@ export const arrayF = [
     value: 'Glúteos',
     info: 'Trabalhar a musculatura do bumbum',
   },
-  { id: 6, image: 'cardio-f', label: 'Cardío', value: 'Peitoral', info: 'Exercicios misto para' },
+  { id: 6, image: 'cardio-f', label: 'Cardío', value: 'Peitoral', info: 'Exercicios misto' },
   {
     id: 8,
     image: 'abdomen-f',

@@ -9,15 +9,17 @@ export const TreinoSchema = {
     quant: 'int',
     tempo: 'int',
     calorias: 'float',
+    grupo:'string',
   },
   primaryKey: '_id',
 };
 
 export const TreinoInitial = {
-  _id: uuid.v4(),
+  // _id: uuid.v4(),
   treino: '',
   titulo: '',
   quant: 0,
   tempo: 0,
   calorias: 0,
+  grupo:'',
 };

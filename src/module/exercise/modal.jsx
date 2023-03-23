@@ -1,6 +1,6 @@
 import { FormControl, Text } from 'native-base';
 import React from 'react';
-import InputSimple from '../../components/input';
+import InputSimple from '../../components/inputs/inputSimple';
 import ModalSimple from '../../components/modal/modalSimple';
 import SelectSimple from '../../components/select';
 import { useExercicioPage } from '../../hooks/useExercicioPage';
