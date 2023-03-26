@@ -6,10 +6,10 @@ export default function InputSimple(props) {
     <View style={{ marginBottom: 20 }}>
       <Input
         variant="underlined"
-        {...props}
         color="#fff"
         cursorColor="#F8753D"
         borderBottomColor="red"
+        {...props}
       />
     </View>
   );

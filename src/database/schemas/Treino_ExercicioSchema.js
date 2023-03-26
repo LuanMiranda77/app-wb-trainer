@@ -15,7 +15,7 @@ export const Treino_ExercicioSchema = {
   primaryKey: '_id',
 };
 
-export const Treino_ExercicioInitial = {
+export const TreinoExercicioInitial = {
   // _id: uuid.v4(),
   treino: '',
   idExercicio: '',

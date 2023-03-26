@@ -25,6 +25,7 @@ export const stylesGlobal = StyleSheet.create({
   textSubTitle: {
     fontSize: 13,
     fontWeight: 'bold',
+    color: '#fff',
   },
 });
 

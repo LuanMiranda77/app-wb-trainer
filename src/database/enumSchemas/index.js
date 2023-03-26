@@ -1,5 +1,5 @@
 export const enumSchemas = {
-    EXERCICIO:'Exercicios',
+    EXERCICIO:'Exercise',
     TREINO:'Treinos',
     USER:'Usuario',
     PERSONAL:'Personal',

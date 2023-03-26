@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
   background-color: ${(props) => props.color};
   display: flex;
   flex-direction: row;
@@ -59,3 +59,23 @@ export const ButtonDetalhes = styled.TouchableOpacity`
   border-width: 1px;
   border-color: ${(props) => props.color};
 `;
+
+export const ButtonEdit = styled.TouchableOpacity`
+  position: absolute;
+  left: 100%;
+  height: 50px;
+  width: 50px;
+  padding: 11px;
+  border-radius: 50px;
+`;
+
+export const EditeExercicio = styled.View`
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  height: 40px;
+  padding-left: 0px;
+  align-items: center;
+  width: 65%;
+`;
+

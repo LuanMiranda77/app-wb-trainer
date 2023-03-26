@@ -68,3 +68,12 @@ export const ButtonEdit = styled.TouchableOpacity`
   padding: 11px;
   border-radius: 50px;
 `;
+export const ButtonTreino = styled.TouchableOpacity`
+  background-color: ${(props) => props.color};
+  margin-top:12px;
+  align-items: center;
+  justify-content:center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+`;

@@ -16,7 +16,7 @@ export function Home({ navigation, route }) {
     let array = stateUser.exercicios.filter((item) => item.treino === stateUser.treinoAtual);
     let obj = {
       treino: 'Treino ' + stateUser.treinoAtual,
-      // titulo: stateUser.diasTreinos.filter((item) => item.nome === stateUser.treinoAtual)[0].titulo,
+      titulo: stateUser.exercicios.filter((item) => item.treino === stateUser.treinoAtual)[0].titulo,
       quant: array.length,
     };
     setTreinoAtual({ ...obj });
@@ -56,7 +56,7 @@ export function Home({ navigation, route }) {
           <Text style={stylesGlobal.textTitle}>Exercícios do treino</Text>
           <Text style={{ color: colorPrimary, fontWeight: 'bold' }}>Todos</Text>
         </View>
-        <ListaExercicico dataSource={exercicicos} navigation={navigation} />
+        <ListaExercicico dataSource={exercicicos} actionButton={(item)=>navigation.navigate('Detalhes exercício', { exercicio: item })} />
       </ScrollView>
     </View>
   );

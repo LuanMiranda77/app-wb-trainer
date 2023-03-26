@@ -30,7 +30,7 @@ export function DetalhesExercicio({ ...props }) {
           marginTop: '10%',
         }}
       >
-        <ButtonIcon icon="left" size={30} color="white" onPress={() => props.navigation.goBack()} />
+        <ButtonIcon icon="arrowleft" size={30} color="white" onPress={() => props.navigation.goBack()} />
         <ButtonIcon icon="edit" size={30} color="#ffb400" />
       </View>
       <View
@@ -75,7 +75,7 @@ export function DetalhesExercicio({ ...props }) {
             </Titulo>
           </View>
           <View
-            style={{ borderRightWidth: 1, borderColor: '#959e9f6f', width: '33%', left: '40%' }}
+            style={{ borderRightWidth: 1, borderColor: '#959e9f6f', width: '22%', left: '40%' }}
           >
             <Subtitulo color={colorSubtitle}>Séries</Subtitulo>
             <Titulo color={colorWhite}>{params?.exercicio.series}</Titulo>
@@ -86,7 +86,7 @@ export function DetalhesExercicio({ ...props }) {
           </View>
         </View>
         <Image
-          style={{ marginTop: 10, height: '59%', borderRadius: 10 }}
+          style={{ marginTop: 10, height: '48%', borderRadius: 10, width:'100%'}}
           source={findImageByName(params.exercicio.image)}
         />
       </View>

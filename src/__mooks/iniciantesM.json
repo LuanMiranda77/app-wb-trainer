@@ -3,7 +3,7 @@
         "id": 1,
         "nome": "Agachamento livre com barra",
         "series": 3,
-        "repeticoes": 10,
+        "repeticoes": "10",
         "treino": "A",
         "titulo": "Pernas",
         "info": "Fortalece os músculos das pernas, principalmente o quadríceps.",
@@ -13,7 +13,7 @@
         "id": 2,
         "nome": "Levantamento terra",
         "series": 3,
-        "repeticoes": 10,
+        "repeticoes": "10",
         "treino": "A",
         "titulo": "Costas e Pernas",
         "info": "Trabalha principalmente os músculos das costas e das pernas, incluindo o quadríceps, glúteos e isquiotibiais."
@@ -22,7 +22,7 @@
         "id": 3,
         "nome": "Supino inclinado com halteres",
         "series": 3,
-        "repeticoes": 10,
+        "repeticoes": "10",
         "treino": "A",
         "titulo": "Peitoral",
         "info": "Foca no desenvolvimento dos músculos do peitoral superior."
@@ -31,7 +31,7 @@
         "id": 4,
         "nome": "Remada curvada com halteres",
         "series": 3,
-        "repeticoes": 10,
+        "repeticoes": "10",
         "treino": "A",
         "titulo": "Costas",
         "info": "Fortalece os músculos das costas, incluindo os trapézios e os músculos da região lombar."
@@ -49,7 +49,7 @@
         "id": 6,
         "nome": "Agachamento livre com barra",
         "series": 3,
-        "repeticoes": 10,
+        "repeticoes": "10",
         "treino": "B",
         "titulo": "Pernas",
         "info": "Fortalece os músculos das pernas, principalmente o quadríceps."
@@ -58,7 +58,7 @@
         "id": 7,
         "nome": "Desenvolvimento com halteres",
         "series": 3,
-        "repeticoes": 10,
+        "repeticoes": "10",
         "treino": "B",
         "titulo": "Ombros",
         "info": "Foca no desenvolvimento dos músculos dos ombros."
@@ -67,7 +67,7 @@
         "id": 8,
         "nome": "Barra fixa",
         "series": 3,
-        "repeticoes": 10,
+        "repeticoes": "10",
         "treino": "B",
         "titulo": "Costas e Braços",
         "info": "Trabalha os músculos das costas, incluindo os trapézios, latíssimos do dorso, além dos bíceps e antebraços."
@@ -76,7 +76,7 @@
             "id": 9,
             "nome": "Supino reto com halteres",
             "series": 3,
-            "repeticoes": 10,
+            "repeticoes": "10",
             "treino": "B",
             "titulo": "Peitoral",
             "info": "Exercício para o desenvolvimento do peitoral. Utiliza halteres para maior estabilidade e independência de cada lado."
@@ -94,7 +94,7 @@
             "id": 11,
             "nome": "Agachamento livre com barra",
             "series": 3,
-            "repeticoes": 10,
+            "repeticoes": "10",
             "treino": "C",
             "titulo": "Pernas",
             "info": "Exercício para o desenvolvimento dos músculos das pernas. Utiliza barra livre para maior estabilidade e equilíbrio no movimento."
@@ -103,7 +103,7 @@
             "id": 12,
             "nome": "Puxada alta com barra",
             "series": 3,
-            "repeticoes": 10,
+            "repeticoes": "10",
             "treino": "C",
             "titulo": "Costas",
             "info": "Exercício para o desenvolvimento dos músculos das costas. Utiliza barra para atração com a pega mais afastada que a largura dos ombros."
@@ -112,7 +112,7 @@
             "id": 13,
             "nome": "Abdução de quadril na máquina",
             "series": 3,
-            "repeticoes": 12,
+            "repeticoes": "12",
             "treino": "C",
             "titulo": "Glúteos",
             "info": "Exercício para o fortalecimento dos músculos glúteos. Utiliza uma máquina específica para abdução do quadril."
@@ -121,7 +121,7 @@
             "id": 14,
             "nome": "Flexão de braços",
             "series": 3,
-            "repeticoes": 10,
+            "repeticoes": "10",
             "treino": "C",
             "titulo": "Peitoral",
             "info": "Exercício para o fortalecimento do peitoral. Utiliza o peso do corpo para o movimento de flexão dos braços."

@@ -1,19 +1,25 @@
 import { useState } from 'react';
+import uuid from 'react-native-uuid';
 import Realm from 'realm';
 import Toast from '../../components/toast';
 import { useUserContext } from '../../context/useUserContext';
+import { enumSchemas } from '../../database/enumSchemas';
 import { getRaelm } from '../../database/realm';
 import { ExercicioInitial } from '../../database/schemas/ExercicioSchema';
+import { TreinoExercicioInitial } from '../../database/schemas/Treino_ExercicioSchema';
+import { NivelUser } from '../../utils/enums';
 import exercicios from '../../__mooks/exercicios.json';
 import { arrayF, arrayM } from './grupoExercicios';
 
 export const useExercicioPage = () => {
   const { stateUser } = useUserContext();
   const [exercicio, setExercicio] = useState(ExercicioInitial);
+  const [treinoExercicio, setTreinoExercicio] = useState(TreinoExercicioInitial);
   const [listaExercicio, setListaExercicio] = useState([]);
   const [gruposCorpo, setGruposCorpo] = useState(stateUser.sexo === 'M' ? arrayM : arrayF);
   const [showModal, setShowModal] = useState(false);
   const [typeModal, setTypeModal] = useState('new');
+  const [showModalAdd, setShowModalAdd] = useState(false);
 
   const handleNew = () => {
     setExercicio(ExercicioInitial);
@@ -34,7 +40,7 @@ export const useExercicioPage = () => {
     const realm = await getRaelm();
     try {
       realm.write(() => {
-        realm.create('Exercicios', exercicio);
+        realm.create(enumSchemas.EXERCICIO, exercicio);
       });
       realm.close();
       toastSucess('Item cadastrado com sucesso.');
@@ -73,6 +79,77 @@ export const useExercicioPage = () => {
     setListaExercicio([...array]);
   }
 
+  async function handlefindExerciciosSearch(searchRequest) {
+    let array = exercicios.filter(
+      (item) =>
+        item.nome.toLowerCase().includes(searchRequest) ||
+        item.grupo.toLowerCase().includes(searchRequest)
+    );
+    setListaExercicio([...array]);
+  }
+
+  async function handleAddExercicioByTreino() {
+    if (treinoExercicio.treino === '') {
+      toastError('Selecione um dia de treino!');
+      return;
+    } else if (treinoExercicio.repeticoes === '') {
+      toastError('Digite as repetições!');
+      return;
+    } else if (treinoExercicio.series === 0) {
+      toastError('Digite o número de series!');
+      return;
+    } else if (treinoExercicio.descanso === 0) {
+      toastError('Selecione o tempo de descanso!');
+      return;
+    }
+    const tempo = calculoTempoExercicio(treinoExercicio);
+    const calorias = calculoCaloriasExercicio(tempo);
+
+    let exercicioSalvo = {...treinoExercicio}
+
+    exercicioSalvo._id = uuid.v4();
+    exercicioSalvo.tempo = parseInt(tempo);
+    exercicioSalvo.calorias = parseFloat(calorias);
+
+    const realm = await getRaelm();
+    try {
+      realm.write(() => {
+        realm.create(enumSchemas.TREINO_EXERCIC, exercicioSalvo);
+      });
+      realm.close();
+      setShowModalAdd(false);
+      toastSucess('Exercicio adicionado com sucesso.');
+    } catch (error) {
+      realm.close();
+      setShowModalAdd(false);
+      console.error(error);
+      toastError('Algo deu errado ao salvar');
+    }
+  }
+
+  const calculoTempoExercicio = (treinoExercicio) => {
+    console.log(treinoExercicio);
+    let tempoExercicio = 0;
+    let descanso = 0;
+
+    if (stateUser.experiencia === NivelUser.INICIATE) {
+      descanso = treinoExercicio.series * treinoExercicio.descanso;
+      tempoExercicio = 1 * 200;
+    } else if (stateUser.experiencia === NivelUser.INTERMEDIARIO) {
+      descanso = treinoExercicio.series * treinoExercicio.descanso;
+      tempoExercicio = 1 * 300;
+    } else {
+      descanso = treinoExercicio.series * treinoExercicio.descanso;
+      tempoExercicio = 1 * 450;
+    }
+
+    let minuto = (tempoExercicio + descanso) / 60;
+    return minuto.toFixed(0);
+  };
+  const calculoCaloriasExercicio = (tempo) => {
+    return stateUser.peso * 6.0 * (tempo / 60);
+  };
+
   return {
     listaExercicio,
     setListaExercicio,
@@ -85,8 +162,14 @@ export const useExercicioPage = () => {
     handleNew,
     typeModal,
     setTypeModal,
+    showModalAdd,
+    setShowModalAdd,
+    treinoExercicio,
+    setTreinoExercicio,
     handleSave,
     handlefindExercicios,
     handleDeleteExercicio,
+    handlefindExerciciosSearch,
+    handleAddExercicioByTreino,
   };
 };

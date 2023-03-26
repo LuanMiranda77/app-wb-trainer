@@ -17,7 +17,6 @@ export default function ModalSimple(props) {
         <Modal.Content {...styles['bottom']}>
           <Modal.CloseButton />
           {/* <Modal.Header>{props.title}</Modal.Header> */}
-
           <Modal.Body>
             <ScrollView h="100%">{props.children}</ScrollView>
           </Modal.Body>
@@ -28,20 +27,6 @@ export default function ModalSimple(props) {
               </Text>
             </Button>
           </View>
-          {/* <Modal.Footer>
-            <Button.Group space={2}>
-              <Button
-                variant="ghost"
-                colorScheme="blueGray"
-                onPress={() => {
-                  props.onCloseModal(false);
-                }}
-              >
-                Cancelar
-              </Button>
-              <Button onPress={() => props.actionButton()}>{props.labelButton}</Button>
-            </Button.Group>
-          </Modal.Footer> */}
         </Modal.Content>
       </Modal>
     </>

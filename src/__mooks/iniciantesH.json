@@ -4,7 +4,7 @@
     "treino": "A",
     "nome": "Agachamento com barra",
     "series": 3,
-    "repeticoes": 10,
+    "repeticoes": "10",
     "titulo": "Treino de Pernas",
     "info": "Exercício composto que trabalha quadríceps, glúteos e isquiotibiais. Importante para aumentar força e hipertrofia das pernas."
     },
@@ -13,7 +13,7 @@
     "treino": "A",
     "nome": "Levantamento terra",
     "series": 3,
-    "repeticoes": 10,
+    "repeticoes": "10",
     "titulo": "Treino de Costas",
     "info": "Exercício composto que trabalha toda a musculatura das costas, além de quadríceps, glúteos e isquiotibiais. Importante para aumentar força e hipertrofia das costas."
     },
@@ -22,7 +22,7 @@
     "treino": "A",
     "nome": "Supino reto com barra",
     "series": 3,
-    "repeticoes": 10,
+    "repeticoes": "10",
     "titulo": "Treino de Peito",
     "info": "Exercício básico que trabalha principalmente o peitoral maior e tríceps. Importante para aumentar força e hipertrofia do peito."
     },
@@ -31,7 +31,7 @@
     "treino": "A",
     "nome": "Remada com barra",
     "series": 3,
-    "repeticoes": 10,
+    "repeticoes": "10",
     "titulo": "Treino de Costas",
     "info": "Exercício composto que trabalha principalmente os músculos do dorso, deltoides posteriores e bíceps. Importante para aumentar força e hipertrofia das costas."
     },
@@ -40,7 +40,7 @@
     "treino": "A",
     "nome": "Abdominais",
     "series": 3,
-    "repeticoes": 15,
+    "repeticoes": "15",
     "titulo": "Treino de Abdômen",
     "info": "Exercício que trabalha os músculos abdominais, importante para estabilização da coluna vertebral e melhora do desempenho esportivo."
     },
@@ -49,7 +49,7 @@
     "treino": "B",
     "nome": "Agachamento com barra",
     "series": 3,
-    "repeticoes": 10,
+    "repeticoes": "10",
     "titulo": "Treino de Pernas",
     "info": "Exercício composto que trabalha quadríceps, glúteos e isquiotibiais. Importante para aumentar força e hipertrofia das pernas."
     },
@@ -58,7 +58,7 @@
     "treino": "B",
     "nome": "Desenvolvimento com barra",
     "series": 3,
-    "repeticoes": 10,
+    "repeticoes": "10",
     "titulo": "Treino de Ombros",
     "info": "Exercício básico que trabalha principalmente os deltoides e tríceps. Importante para aumentar força e hipertrofia dos ombros."
     },
@@ -77,7 +77,7 @@
             "treino": "B",
             "nome": "Supino inclinado com halteres",
             "series": 3,
-            "repeticoes": 10,
+            "repeticoes": "10",
             "titulo": "Peitoral",
             "info": "Exercício para fortalecimento da musculatura do peitoral, executado com halteres e inclinação."
             },
@@ -86,7 +86,7 @@
             "treino": "B",
             "nome": "Abdominais",
             "series": 3,
-            "repeticoes": 15,
+            "repeticoes": "15",
             "titulo": "Abdômen",
             "info": "Exercício para fortalecimento da musculatura do abdômen, executado com movimentos de flexão."
             },
@@ -95,7 +95,7 @@
             "treino": "C",
             "nome": "Agachamento com barra",
             "series": 3,
-            "repeticoes": 10,
+            "repeticoes": "10",
             "titulo": "Pernas",
             "info": "Exercício para fortalecimento da musculatura das pernas, executado com barra nas costas e agachamento."
             },
@@ -104,7 +104,7 @@
             "treino": "C",
             "nome": "Puxada alta com barra",
             "series": 3,
-            "repeticoes": 10,
+            "repeticoes": "10",
             "titulo": "Costas e tríceps",
             "info": "Exercício para fortalecimento da musculatura das costas e tríceps, executado com barra e puxada alta."
             },
@@ -113,7 +113,7 @@
             "treino": "C",
             "nome": "Pressão de pernas",
             "series": 3,
-            "repeticoes": 10,
+            "repeticoes": "10",
             "titulo": "Pernas",
             "info": "Exercício para fortalecimento da musculatura das pernas, executado com movimentos de pressão."
             },
@@ -122,7 +122,7 @@
             "treino": "C",
             "nome": "Flexão de braços",
             "series": 3,
-            "repeticoes": 10,
+            "repeticoes": "10",
             "titulo": "Tríceps e peitoral",
             "info": "Exercício para fortalecimento da musculatura do tríceps e peitoral, executado com movimentos de flexão."
             },
@@ -131,7 +131,7 @@
             "treino": "C",
             "nome": "Abdominais",
             "series": 3,
-            "repeticoes": 15,
+            "repeticoes": "15",
             "titulo": "Abdômen",
             "info": "Exercício para fortalecimento da musculatura do abdômen, executado com movimentos de flexão."
             }

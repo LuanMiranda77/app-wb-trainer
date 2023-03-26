@@ -129,7 +129,7 @@
             "id": 15,
             "nome": "Abdominais",
             "series": 3,
-            "repeticoes": 15,
+            "repeticoes": "15",
             "treino": "C",
             "info": "Fortalece e tonifica os músculos do abdômen.",
             "titulo": "Treino Full-Body"
@@ -174,7 +174,7 @@
             "id": 20,
             "nome": "Abdominais",
             "series": 3,
-            "repeticoes": 15,
+            "repeticoes": "15",
             "treino": "D",
             "info": "Fortalece e tonifica os músculos do abdômen.",
             "titulo": "Treino Full-Body"

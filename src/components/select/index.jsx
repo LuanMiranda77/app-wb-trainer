@@ -5,17 +5,17 @@ export default function SelectSimple(props) {
   return (
     <Select
       selectedValue={props.value}
-      minWidth="200"
-      accessibilityLabel="Choose Service"
+      accessibilityLabel="Selecione..."
       placeholder="Selecione..."
       _selectedItem={{
         bg: 'teal.600',
         endIcon: <CheckIcon size="5" />,
       }}
-      mt={1}
+      // mt={1}
       variant="underlined"
       onValueChange={props.onChange}
       color='#ffff'
+      {...props}
     >
       {props.dataSource.map((item) => {
         return <Select.Item key={item.id} label={item.label} value={item.value} />;

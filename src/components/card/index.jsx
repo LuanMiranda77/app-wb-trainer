@@ -50,13 +50,14 @@ const style = StyleSheet.create({
     fontWeight: 'bold',
   },
   text2: {
-    fontSize: 30,
+    fontSize: 17,
     color: colorSecondary,
     fontWeight: 'bold',
   },
   small: {
-    marginTop: 10,
+    marginTop: 30,
     fontSize: 15,
     color: colorWhite,
+
   },
 });
