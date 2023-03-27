@@ -3,18 +3,18 @@ import React from 'react';
 import InputSimple from '../../components/inputs/inputSimple';
 import ModalSimple from '../../components/modal/modalSimple';
 import SelectSimple from '../../components/select';
-import { useExercicioPage } from '../../hooks/useExercicioPage';
+import grupoMuscular from '../../__mooks/grupoMuscular.json';
 
 export default function Modal(props) {
-  const { exercicio, setExercicio, gruposCorpo } = useExercicioPage();
+  // const { exercicio, setExercicio, gruposCorpo } = useExercicioPage();
   return (
     <ModalSimple
       showModal={props.showModal}
       onCloseModal={props.onCloseModal}
       title={props.type === 'new' ? 'Cadastro de Exercicio' : 'Editar Exercicio'}
-      labelButton={props.type === 'new' ? 'Adicionar' : 'Salvar'}
+      labelButton={'Salvar'}
       actionButton={props.actionButton}
-      safeAreaTop={true}
+      // safeAreaTop={true}
     >
       <FormControl mt="5">
         <FormControl.Label>
@@ -41,7 +41,7 @@ export default function Modal(props) {
           Músculo alvo <Text style={{ color: 'red' }}>*</Text>
         </FormControl.Label>
         <SelectSimple
-          dataSource={gruposCorpo}
+          dataSource={grupoMuscular}
           onChange={(e) => props.setExercicio({ ...props.exercicio, grupo: e })}
           value={props.exercicio.grupo}
         />

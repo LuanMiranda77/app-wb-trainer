@@ -1,6 +1,8 @@
 import { Button, Modal, ScrollView, Text, View } from 'native-base';
 import React from 'react';
-import { colorFooter } from '../../../styles';
+import Icon from 'react-native-vector-icons/AntDesign';
+import { colorFooter, colorPrimary, colorWhite, stylesGlobal } from '../../../styles';
+import { ButtonSet } from './styles';
 
 export default function ModalSimple(props) {
   // const initialRef = React.useRef(null);
@@ -13,10 +15,27 @@ export default function ModalSimple(props) {
         // initialFocusRef={initialRef}
         // finalFocusRef={finalRef}
         size="full"
+        // maxH="1000"
+        style={{ flex: 1 }}
       >
-        <Modal.Content {...styles['bottom']}>
-          <Modal.CloseButton />
-          {/* <Modal.Header>{props.title}</Modal.Header> */}
+        <View {...styles['bottom']}>
+          {/* <Modal.CloseButton style={{color:colorWhite}}/> */}
+          <Modal.Header
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              backgroundColor: colorPrimary,
+              borderTopRightRadius: 15,
+              borderTopLeftRadius: 15,
+            }}
+          >
+            <Text style={stylesGlobal.textTitle}>{props.title}</Text>
+            <ButtonSet onPress={props.onCloseModal}>
+              <Icon name="close" size={22} color={colorWhite} />
+            </ButtonSet>
+          </Modal.Header>
           <Modal.Body>
             <ScrollView h="100%">{props.children}</ScrollView>
           </Modal.Body>
@@ -27,40 +46,18 @@ export default function ModalSimple(props) {
               </Text>
             </Button>
           </View>
-        </Modal.Content>
+        </View>
       </Modal>
     </>
   );
 }
 
 const styles = {
-  top: {
-    marginBottom: 'auto',
-    marginTop: '60px',
-    // width: '100%',
-    // height: '100%',
-    flex: 1,
-    background: colorFooter,
-    // borderRadius: '30px',
-    borderTopRightRadius: '30px',
-    borderTopLeftRadius: '30px',
-  },
   bottom: {
     marginBottom: 0,
-    flex: 1,
-    marginTop: 'auto',
+    marginTop: '18%',
     background: colorFooter,
-    // borderRadius: '30px',
-    borderTopRightRadius: '30px',
-    borderTopLeftRadius: '30px',
+    width: '100%',
+    height: '90%',
   },
-  left: {
-    marginLeft: 0,
-    marginRight: 'auto',
-  },
-  right: {
-    marginLeft: 'auto',
-    marginRight: 0,
-  },
-  center: {},
 };

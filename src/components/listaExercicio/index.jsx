@@ -24,7 +24,7 @@ export function ListaExercicico({ ...props }) {
         {props.dataSource.map((item) => {
           return (
             <Container
-              key={item.id}
+              key={item._id}
               color={colorFooter}
               onPress={() => (props.onClickItem ? props.onClickItem(item) : () => {})}
             >

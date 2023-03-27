@@ -1,6 +1,7 @@
 import { FormControl } from 'native-base';
 import React, { useState } from 'react';
 import { Text, View } from 'react-native';
+import InputIncrement from '../../components/inputs/inputIncrement';
 import InputSimple from '../../components/inputs/inputSimple';
 import ModalSimple from '../../components/modal/modalSimple';
 import SelectSimple from '../../components/select';
@@ -19,7 +20,6 @@ function ModalAddTreino({ exercicio, showModal, onCloseModal }) {
   const [colorTreinoD, setColorTreinoD] = useState(false);
   const [colorTreinoE, setColorTreinoE] = useState(false);
   const [colorTreinoF, setColorTreinoF] = useState(false);
-  const [diaTreino, setDiaTreino] = useState('');
 
   const { treinoExercicio, setTreinoExercicio, handleAddExercicioByTreino } = useExercicioPage();
   const { stateUser } = useUserContext();
@@ -86,6 +86,7 @@ function ModalAddTreino({ exercicio, showModal, onCloseModal }) {
     <ModalSimple
       showModal={showModal}
       onCloseModal={() => onCloseModal(false)}
+      title={'Adicione o exercício'}
       labelButton="Adicionar ao treino"
       actionButton={() => handleAddExercicioByTreino()}
     >
@@ -102,7 +103,6 @@ function ModalAddTreino({ exercicio, showModal, onCloseModal }) {
         </View>
         <FormControl.Label style={{ marginTop: 10 }}>Informações:</FormControl.Label>
         <Text style={stylesGlobal.textTitle}>{exercicio.info}</Text>
-
         <View style={{ display: 'flex', flexDirection: 'row', marginTop: 10 }}>
           <View style={{ width: '20%', marginRight: 20 }}>
             <FormControl.Label>

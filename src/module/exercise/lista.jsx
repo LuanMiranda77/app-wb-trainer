@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { View } from 'react-native';
 import { ListaExercicico } from '../../components/listaExercicio';
+import { ExercicioInitial } from '../../database/schemas/ExercicioSchema';
 import { useExercicioPage } from '../../hooks/useExercicioPage';
 import { HeaderNavBar } from '../../layout/headerNavBar';
 
@@ -31,7 +32,10 @@ export function ListExercise(props) {
   return (
     <>
       <View style={{ backgroundColor: backgroundColor, flex: 1 }}>
-        <HeaderNavBar route={props.route} navigation={props.navigation} buttonRigth={handleNew} />
+        <HeaderNavBar route={props.route} navigation={props.navigation} buttonRigth={()=>{
+          handleNew();
+          setExercicio({...ExercicioInitial, grupo:props.route.params.grupo});
+        }} />
         <ListaExercicico
           dataSource={listaExercicio}
           typeList="1"
@@ -40,14 +44,7 @@ export function ListExercise(props) {
             setShowModalAdd(true);
           }}
           actionButton={(item) => {
-            setExercicio({
-              ...exercicio,
-              nome: item.nome,
-              titulo: item.titulo,
-              image: item.image,
-              grupo: item.grupo,
-              info: item.info,
-            });
+            setExercicio({...item});
             setTypeModal('edit');
             setShowModal(true);
           }}

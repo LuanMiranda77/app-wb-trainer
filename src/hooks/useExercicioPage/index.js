@@ -8,10 +8,11 @@ import { getRaelm } from '../../database/realm';
 import { ExercicioInitial } from '../../database/schemas/ExercicioSchema';
 import { TreinoExercicioInitial } from '../../database/schemas/Treino_ExercicioSchema';
 import { NivelUser } from '../../utils/enums';
-import exercicios from '../../__mooks/exercicios.json';
+// import exercicios from '../../__mooks/exercicios.json';
 import { arrayF, arrayM } from './grupoExercicios';
 
 export const useExercicioPage = () => {
+  const [loading, setLoading] = useState(false);
   const { stateUser } = useUserContext();
   const [exercicio, setExercicio] = useState(ExercicioInitial);
   const [treinoExercicio, setTreinoExercicio] = useState(TreinoExercicioInitial);
@@ -20,16 +21,15 @@ export const useExercicioPage = () => {
   const [showModal, setShowModal] = useState(false);
   const [typeModal, setTypeModal] = useState('new');
   const [showModalAdd, setShowModalAdd] = useState(false);
+  const { toastError, toastSucess } = Toast();
 
   const handleNew = () => {
     setExercicio(ExercicioInitial);
     setTypeModal('new');
     setShowModal(true);
   };
-  const { toastError, toastSucess } = Toast();
 
   async function handleSave() {
-    console.log('aqui', exercicio);
     if (exercicio.nome == '') {
       toastError('Nome é obrigatorio');
       return;
@@ -37,17 +37,41 @@ export const useExercicioPage = () => {
       toastError('Grupo é obrigatorio');
       return;
     }
+
+    setLoading(true);
+
     const realm = await getRaelm();
     try {
-      realm.write(() => {
-        realm.create(enumSchemas.EXERCICIO, exercicio);
-      });
-      realm.close();
-      toastSucess('Item cadastrado com sucesso.');
+      console.log(exercicio);
+      if (typeModal == 'new') {
+        realm.write(() => {
+          let exercicioNew = { ...exercicio };
+          exercicioNew._id = uuid.v4();
+          realm.create(enumSchemas.EXERCICIO, exercicioNew);
+        });
+        toastSucess('Cadastrado com sucesso.');
+        realm.close();
+      } else {
+        let object = realm.objectForPrimaryKey(enumSchemas.EXERCICIO, exercicio._id);
+        realm.write(() => {
+          object.nome = exercicio.nome;
+          object.titulo = exercicio.titulo;
+          object.image = exercicio.image;
+          object.grupo = exercicio.grupo;
+          object.info = exercicio.info;
+          object.linkVideo = exercicio.linkVideo;
+        });
+        toastSucess('Atualizado com sucesso.');
+      }
+      setLoading(false);
+      setShowModal(false);
+      handlefindExercicios(exercicio.grupo);
     } catch (error) {
       console.error(error);
       toastError('Algo deu errado ao salvar');
       realm.close();
+      setLoading(false);
+      setShowModal(false);
     }
   }
   async function handleDeleteExercicio() {
@@ -61,30 +85,69 @@ export const useExercicioPage = () => {
   }
 
   async function handlefindExercicios(grupoCorpo) {
-    let array = [];
-    if (grupoCorpo === 'Braço') {
-      array = exercicios.filter(
-        (item) => item.grupo == 'Bíceps' || item.grupo == 'Tríceps' || item.grupo == 'Antebranço'
-      );
-    } else if (grupoCorpo === 'Pernas') {
-      array = exercicios.filter(
-        (item) =>
-          item.grupo == 'Quadríceps' || item.grupo == 'Posterior' || item.grupo == 'Panturilha'
-      );
-    } else if (grupoCorpo === 'Dorsal') {
-      array = exercicios.filter((item) => item.grupo == 'Dorsal' || item.grupo == 'Trapézio');
-    } else {
-      array = exercicios.filter((item) => item.grupo == grupoCorpo);
+    let exercicios = [];
+    const realm = await getRaelm();
+    try {
+      if (
+        grupoCorpo === 'Braço' ||
+        grupoCorpo === 'Bíceps' ||
+        grupoCorpo === 'Tríceps' ||
+        grupoCorpo === 'Antebraço'
+      ) {
+        exercicios = realm
+          .objects(enumSchemas.EXERCICIO)
+          .filtered('grupo == "Bíceps" OR grupo == "Tríceps" OR grupo == "Antebraço"')
+          .sorted('nome')
+          .toJSON();
+      } else if (
+        grupoCorpo === 'Pernas' ||
+        grupoCorpo === 'Quadríceps' ||
+        grupoCorpo === 'Posterior' ||
+        grupoCorpo === 'Panturilha'
+      ) {
+        exercicios = realm
+          .objects(enumSchemas.EXERCICIO)
+          .filtered('grupo == "Quadríceps" OR grupo == "Posterior" OR grupo == "Panturilha"')
+          .sorted('nome')
+          .toJSON();
+      } else if (grupoCorpo === 'Dorsal' || grupoCorpo === 'Dorsal' || grupoCorpo === 'Trapézio') {
+        exercicios = realm
+          .objects(enumSchemas.EXERCICIO)
+          .filtered('grupo == "Dorsal" OR grupo == "Trapézio"')
+          .sorted('nome')
+          .toJSON();
+      } else {
+        exercicios = realm
+          .objects(enumSchemas.EXERCICIO)
+          .filtered(`grupo == '${grupoCorpo}'`)
+          .sorted('nome')
+          .toJSON();
+      }
+      setListaExercicio([...exercicios]);
+      realm.close();
+    } catch (error) {
+      console.error(error);
+      toastError('Algo deu errado...');
+      realm.close();
     }
-    setListaExercicio([...array]);
   }
 
   async function handlefindExerciciosSearch(searchRequest) {
-    let array = exercicios.filter(
-      (item) =>
-        item.nome.toLowerCase().includes(searchRequest) ||
-        item.grupo.toLowerCase().includes(searchRequest)
-    );
+    const realm = await getRaelm();
+    let array = realm
+      .objects(enumSchemas.EXERCICIO)
+      .filtered(
+        `nome CONTAINS[c] "${searchRequest.toLowerCase()}" OR grupo CONTAINS[c] "${searchRequest.toLowerCase()}"`
+      )
+      .sorted('nome')
+      .toJSON();
+    realm.close();
+
+    // let array = listaExercicio.filter(
+    //   (item) =>
+    //     item.nome.toLowerCase().includes(searchRequest.toLowerCase()) ||
+    //     item.grupo.toLowerCase().includes(searchRequest.toLowerCase())
+    // );
     setListaExercicio([...array]);
   }
 
@@ -105,7 +168,7 @@ export const useExercicioPage = () => {
     const tempo = calculoTempoExercicio(treinoExercicio);
     const calorias = calculoCaloriasExercicio(tempo);
 
-    let exercicioSalvo = {...treinoExercicio}
+    let exercicioSalvo = { ...treinoExercicio };
 
     exercicioSalvo._id = uuid.v4();
     exercicioSalvo.tempo = parseInt(tempo);

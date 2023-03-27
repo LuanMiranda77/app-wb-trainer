@@ -25,6 +25,7 @@ export function Exercise({ ...props }) {
     setTypeModal,
     handleDeleteExercicio,
     handlefindExerciciosSearch,
+    handleSave,
   } = useExercicioPage();
   const { findImageByName } = useImageFind();
   const [search, setSearch] = useState('');
@@ -36,9 +37,9 @@ export function Exercise({ ...props }) {
         value={search}
         onChangeText={(e) => {
           setSearch(e);
-          if (e.length >= 3) {
+          // if (e.length >= 3) {
             handlefindExerciciosSearch(e);
-          }
+          // }
         }}
       />
       {search === '' ? (
@@ -96,14 +97,7 @@ export function Exercise({ ...props }) {
               setShowModalAdd(true);
             }}
             actionButton={(item) => {
-              setExercicio({
-                ...exercicio,
-                nome: item.nome,
-                titulo: item.titulo,
-                image: item.image,
-                grupo: item.grupo,
-                info: item.info,
-              });
+              setExercicio({...item});
               setTypeModal('edit');
               setShowModal(true);
             }}
@@ -116,7 +110,7 @@ export function Exercise({ ...props }) {
         onCloseModal={() => setShowModal(false)}
         exercicio={exercicio}
         setExercicio={setExercicio}
-        actionButton={handleDeleteExercicio}
+        actionButton={handleSave}
         type="new"
       />
       
