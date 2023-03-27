@@ -56,7 +56,7 @@ export function Home({ navigation, route }) {
           <Text style={stylesGlobal.textTitle}>Exercícios do treino</Text>
           <Text style={{ color: colorPrimary, fontWeight: 'bold' }}>Todos</Text>
         </View>
-        <ListaExercicico dataSource={exercicicos} actionButton={(item)=>navigation.navigate('Detalhes exercício', { exercicio: item })} />
+        <ListaExercicico dataSource={[]} actionButton={(item)=>navigation.navigate('Detalhes exercício', { exercicio: item })} />
       </ScrollView>
     </View>
   );

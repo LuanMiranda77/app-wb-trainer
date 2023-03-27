@@ -142,12 +142,6 @@ export const useExercicioPage = () => {
       .sorted('nome')
       .toJSON();
     realm.close();
-
-    // let array = listaExercicio.filter(
-    //   (item) =>
-    //     item.nome.toLowerCase().includes(searchRequest.toLowerCase()) ||
-    //     item.grupo.toLowerCase().includes(searchRequest.toLowerCase())
-    // );
     setListaExercicio([...array]);
   }
 

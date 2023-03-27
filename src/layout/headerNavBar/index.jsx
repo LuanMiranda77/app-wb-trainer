@@ -72,8 +72,25 @@ export function HeaderNavBar({ ...props }) {
             onPress={() => props.buttonRigth()}
           />
         </>
+      ) : props.route.name == 'Lista Exercicio' ? (
+        <>
+          {/* <ContainerImage source={imge} /> */}
+          <ButtonIcon
+            icon="arrowleft"
+            size={30}
+            color="white"
+            onPress={() => props.navigation.goBack()}
+          />
+          <TituloScreen>{props.route.name}</TituloScreen>
+          <ButtonIcon
+            icon="plus"
+            color={colorSecondary}
+            size={30}
+            onPress={() => props.buttonRigth()}
+          />
+        </>
       ) : (
-        props.route.name == 'Lista Exercicio' && (
+        props.route.name == 'Detalhes do treino' && (
           <>
             {/* <ContainerImage source={imge} /> */}
             <ButtonIcon
@@ -83,12 +100,6 @@ export function HeaderNavBar({ ...props }) {
               onPress={() => props.navigation.goBack()}
             />
             <TituloScreen>{props.route.name}</TituloScreen>
-            <ButtonIcon
-              icon="plus"
-              color={colorSecondary}
-              size={30}
-              onPress={() => props.buttonRigth()}
-            />
           </>
         )
       )}

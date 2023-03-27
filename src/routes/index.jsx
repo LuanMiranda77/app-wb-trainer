@@ -10,6 +10,7 @@ import { ListExercise } from '../module/exercise/lista';
 import { Home } from '../module/home';
 import { Settings } from '../module/settings';
 import { Training } from '../module/training';
+import { TrainerDetalhes } from '../module/training/trainerdetalhes';
 import { backgroundColor, colorFooter, colorIconFooter, colorPrimary } from '../styles';
 
 export function BottomTabNavigator() {
@@ -50,6 +51,20 @@ export function BottomTabNavigator() {
       >
         <Stack.Screen name="Exercicios" component={Exercise} />
         <Stack.Screen name="Lista Exercicio" component={ListExercise} />
+      </Stack.Navigator>
+    );
+  }
+
+  function TreinoStack() {
+    return (
+      <Stack.Navigator
+        initialRouteName="Treino"
+        screenOptions={({ route }) => ({
+          headerShown: false,
+        })}
+      >
+        <Stack.Screen name="Treino" component={Training} />
+        <Stack.Screen name="Detalhes do treino" component={TrainerDetalhes} />
       </Stack.Navigator>
     );
   }
@@ -115,7 +130,7 @@ export function BottomTabNavigator() {
     >
       <Tab.Screen name="Home" component={HomeStack} />
       <Tab.Screen name="Exercicio" component={ExercicioStack} />
-      <Tab.Screen name="Treino" component={Training} />
+      <Tab.Screen name="Treino" component={TreinoStack} />
       <Tab.Screen name="Evolução" component={Evolute} />
       <Tab.Screen name="Config" component={Settings} />
     </Tab.Navigator>
