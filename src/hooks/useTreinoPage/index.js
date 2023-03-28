@@ -14,8 +14,11 @@ export function useTreinoPage() {
   const [showModal, setShowModal] = useState(false);
   const [typeModal, setTypeModal] = useState('new');
   const [showModalAdd, setShowModalAdd] = useState(false);
+  const [showModalExcluir, setShowModaExcluir] = useState(false);
   const { stateUser, dispatch } = useUserContext();
   const { toastError, toastSucess } = Toast();
+
+  const options = [{ id: 1, label: '', onPress: () => setShowModal(true) }];
 
   useEffect(() => {
     handleListTrainer();
@@ -72,21 +75,43 @@ export function useTreinoPage() {
       setShowModal(false);
     }
   };
+
+  const handleDelete = async () => {
+    const realm = await getRaelm();
+    let object = realm.objectForPrimaryKey(enumSchemas.TREINO, treino._id);
+    try {
+      realm.write(() => {
+        realm.delete(object);
+      });
+      let array = realm.objects(enumSchemas.TREINO_EXERCIC).filtered(`treino == '${treino.treino}'`);
+      array.length > 0 &&
+        realm.write(() => {
+          realm.delete(array);
+        });
+      setShowModaExcluir(false);  
+      toastSucess('Excluido com sucesso!');
+      handleListTrainer();
+    } catch (error) {
+      console.error(error);
+      toastError('Algo deu errado ao salvar');
+      realm.close();
+    }
+  };
+
   const handleListTrainer = async () => {
     const realm = await getRaelm();
     let array = realm.objects(enumSchemas.TREINO).sorted('treino').toJSON();
-    realm.close();
-    console.log(array)
+    console.log(array);
     setListaTreino([...array]);
   };
 
   const handleListExercicioByTrainer = async (treino) => {
     const realm = await getRaelm();
     let array = realm
-    .objects(enumSchemas.TREINO_EXERCIC)
-    .filtered(`treino == '${treino}'`)
-    // .sorted('nome')
-    .toJSON();
+      .objects(enumSchemas.TREINO_EXERCIC)
+      .filtered(`treino == '${treino}'`)
+      // .sorted('nome')
+      .toJSON();
     setListaTreinoExercicio([...array]);
   };
 
@@ -97,15 +122,18 @@ export function useTreinoPage() {
     setTypeModal,
     showModalAdd,
     setShowModalAdd,
+    showModalExcluir, 
+    setShowModaExcluir,
     treino,
     setTreino,
     listaTreino,
     setListaTreino,
-    listaTreinoExercicio, 
+    listaTreinoExercicio,
     setListaTreinoExercicio,
     handleNew,
     handleSave,
     handleListTrainer,
     handleListExercicioByTrainer,
+    handleDelete,
   };
 }

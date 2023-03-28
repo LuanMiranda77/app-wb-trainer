@@ -1,7 +1,8 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import React from 'react';
-import { StyleSheet } from 'react-native';
+import { useColorMode } from 'native-base';
+import React, {useEffect} from 'react';
+import { StyleSheet, useColorScheme } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { DetalhesExercicio } from '../module/detalhesExercicio';
 import { Evolute } from '../module/evolute';
@@ -15,6 +16,12 @@ import { backgroundColor, colorFooter, colorIconFooter, colorPrimary } from '../
 
 export function BottomTabNavigator() {
   const Stack = createNativeStackNavigator();
+  const { colorMode, toggleColorMode } = useColorMode();
+  const isDarkMode = useColorScheme() === 'dark';
+
+  useEffect(()=>{
+    isDarkMode ? toggleColorMode() : ()=>{}
+  }, []);
 
   const Tab = createBottomTabNavigator();
 
@@ -65,6 +72,8 @@ export function BottomTabNavigator() {
       >
         <Stack.Screen name="Treino" component={Training} />
         <Stack.Screen name="Detalhes do treino" component={TrainerDetalhes} />
+        <Stack.Screen name="Exercicios" component={Exercise} />
+        <Stack.Screen name="Lista Exercicio" component={ListExercise} />
       </Stack.Navigator>
     );
   }

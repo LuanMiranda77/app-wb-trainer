@@ -25,7 +25,7 @@ const initialState = {
   quadril: 100,
   peito: 100,
   gorduraCorporal: 20,
-  treinoAtual: 'A',
+  treinoAtual: 'D',
   exercicios: [...arrayTreino],
 };
 

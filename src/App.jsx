@@ -59,8 +59,8 @@ function App() {
       Heading: {
         baseStyle: (props) => {
           return {
-            _light: { color: 'red.300' },
-            _dark: { color: 'white.300' },
+            _light: { color: 'warmGray.50' },
+            _dark: { color: 'coolGray.800' },
           };
         },
       },

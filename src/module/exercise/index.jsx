@@ -29,8 +29,9 @@ export function Exercise({ ...props }) {
   } = useExercicioPage();
   const { findImageByName } = useImageFind();
   const [search, setSearch] = useState('');
-
+  console.log(props.route);
   return (
+   
     <View style={{ backgroundColor: backgroundColor, flex: 1 }}>
       <HeaderNavBar route={props.route} buttonRigth={handleNew} />
       <InputSearch

@@ -1,4 +1,4 @@
-import { Button, Modal, ScrollView, Text, View } from 'native-base';
+import { Button, Modal, Text, View } from 'native-base';
 import React from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
 import { colorFooter, colorPrimary, colorWhite, stylesGlobal } from '../../../styles';
@@ -9,17 +9,8 @@ export default function ModalSimple(props) {
   // const finalRef = React.useRef(null);
   return (
     <>
-      <Modal
-        isOpen={props.showModal}
-        onClose={props.onCloseModal}
-        // initialFocusRef={initialRef}
-        // finalFocusRef={finalRef}
-        size="full"
-        // maxH="1000"
-        style={{ flex: 1 }}
-      >
+      <Modal isOpen={props.showModal} onClose={props.onCloseModal} size="full" style={{ flex: 1 }}>
         <View {...styles['bottom']}>
-          {/* <Modal.CloseButton style={{color:colorWhite}}/> */}
           <Modal.Header
             style={{
               display: 'flex',
@@ -36,16 +27,20 @@ export default function ModalSimple(props) {
               <Icon name="close" size={22} color={colorWhite} />
             </ButtonSet>
           </Modal.Header>
-          <Modal.Body>
-            <ScrollView h="100%">{props.children}</ScrollView>
-          </Modal.Body>
-          <View style={{ padding: 20 }}>
-            <Button style={{ borderRadius: 50 }} onPress={() => props.actionButton()}>
-              <Text style={{ color: '#fff', fontSize: 16, fontWeight: 'bold' }}>
-                {props.labelButton}
-              </Text>
-            </Button>
-          </View>
+          {props.labelButton ? (
+            <Modal.Body>{props.children}</Modal.Body>
+          ) : (
+            <View h='100%'>{props.children}</View>
+          )}
+          {props.labelButton && (
+            <View style={{ padding: 20 }}>
+              <Button style={{ borderRadius: 50 }} onPress={() => props.actionButton()}>
+                <Text style={{ color: '#fff', fontSize: 16, fontWeight: 'bold' }}>
+                  {props.labelButton}
+                </Text>
+              </Button>
+            </View>
+          )}
         </View>
       </Modal>
     </>
@@ -54,7 +49,7 @@ export default function ModalSimple(props) {
 
 const styles = {
   bottom: {
-    marginBottom: 0,
+    marginBottom: -2,
     marginTop: '18%',
     background: colorFooter,
     width: '100%',

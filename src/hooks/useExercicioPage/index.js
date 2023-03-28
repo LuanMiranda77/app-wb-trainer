@@ -173,6 +173,18 @@ export const useExercicioPage = () => {
       realm.write(() => {
         realm.create(enumSchemas.TREINO_EXERCIC, exercicioSalvo);
       });
+      let treino = realm
+        .objects(enumSchemas.TREINO)
+        .filtered(`treino == '${exercicioSalvo.treino}'`)
+        .toJSON();
+
+      let object = realm.objectForPrimaryKey(enumSchemas.TREINO, treino._id);
+      realm.write(() => {
+        object.quant = object.quant + 1;
+        object.tempo = object.tempo + exercicioSalvo.tempo;
+        object.calorias = object.tempo + exercicioSalvo.calorias;
+      });
+
       realm.close();
       setShowModalAdd(false);
       toastSucess('Exercicio adicionado com sucesso.');

@@ -16,7 +16,7 @@ export function HeaderNavBar({ ...props }) {
 
   return (
     <NavBar color={backgroundColor}>
-      {props.route.name == 'Homes' ? (
+      {props.route?.name == 'Homes' ? (
         <>
           <View>
             <Text style={{ fontSize: 15, color: colorIconFooter }}>Ola! Vamos treinar 👋</Text>
@@ -24,7 +24,7 @@ export function HeaderNavBar({ ...props }) {
           </View>
           <PerfilUser source={require('../../assets/menina.jpeg')} />
         </>
-      ) : props.route.name == 'Exercicios' ? (
+      ) : props.route?.name == 'Exercicios' ? (
         <>
           {/* <ContainerImage source={imge} /> */}
 
@@ -36,11 +36,11 @@ export function HeaderNavBar({ ...props }) {
             onPress={() => props.buttonRigth()}
           />
         </>
-      ) : props.route.name == 'Treino' ? (
+      ) : props.route?.name == 'Treino' ? (
         <>
           {/* <ContainerImage source={imge} /> */}
 
-          <TituloScreen>{props.route.name}</TituloScreen>
+          <TituloScreen>{props.route?.name}</TituloScreen>
           <ButtonIcon
             icon="plus"
             color={colorSecondary}
@@ -48,11 +48,11 @@ export function HeaderNavBar({ ...props }) {
             onPress={() => props.buttonRigth()}
           />
         </>
-      ) : props.route.name == 'Evolução' ? (
+      ) : props.route?.name == 'Evolução' ? (
         <>
           {/* <ContainerImage source={imge} /> */}
 
-          <TituloScreen>{props.route.name}</TituloScreen>
+          <TituloScreen>{props.route?.name}</TituloScreen>
           <ButtonIcon
             icon="plus"
             color={colorSecondary}
@@ -60,11 +60,11 @@ export function HeaderNavBar({ ...props }) {
             onPress={() => props.buttonRigth()}
           />
         </>
-      ) : props.route.name == 'Config' ? (
+      ) : props.route?.name == 'Config' ? (
         <>
           {/* <ContainerImage source={imge} /> */}
 
-          <TituloScreen>{props.route.name}</TituloScreen>
+          <TituloScreen>{props.route?.name}</TituloScreen>
           <ButtonIcon
             icon="plus"
             color={colorSecondary}
@@ -72,7 +72,7 @@ export function HeaderNavBar({ ...props }) {
             onPress={() => props.buttonRigth()}
           />
         </>
-      ) : props.route.name == 'Lista Exercicio' ? (
+      ) : props.route?.name == 'Lista Exercicio' ? (
         <>
           {/* <ContainerImage source={imge} /> */}
           <ButtonIcon
@@ -81,7 +81,7 @@ export function HeaderNavBar({ ...props }) {
             color="white"
             onPress={() => props.navigation.goBack()}
           />
-          <TituloScreen>{props.route.name}</TituloScreen>
+          <TituloScreen>{props.route?.name}</TituloScreen>
           <ButtonIcon
             icon="plus"
             color={colorSecondary}
@@ -90,7 +90,7 @@ export function HeaderNavBar({ ...props }) {
           />
         </>
       ) : (
-        props.route.name == 'Detalhes do treino' && (
+        props.route?.name == 'Detalhes do treino' && (
           <>
             {/* <ContainerImage source={imge} /> */}
             <ButtonIcon
@@ -99,7 +99,7 @@ export function HeaderNavBar({ ...props }) {
               color="white"
               onPress={() => props.navigation.goBack()}
             />
-            <TituloScreen>{props.route.name}</TituloScreen>
+            <TituloScreen>{props.route?.name}</TituloScreen>
           </>
         )
       )}

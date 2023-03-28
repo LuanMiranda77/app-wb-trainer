@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { colorIconFooter, colorPrimary } from '../../styles';
 
 export const Header = styled.View`
   display: flex;
@@ -78,12 +79,19 @@ export const ButtonTreino = styled.TouchableOpacity`
   border-radius: 50px;
 `;
 
-export const ButtonDetalhes = styled.TouchableOpacity`
+export const ButtonDetalhes = styled.View`
   position: absolute;
-  left: 90%;
-  top: -90%;
-  height: 50px;
-  width: 50px;
-  padding: 11px;
+  left: 92%;
+  top: -98%;
+`;
+
+export const DiaSemana = styled.View`
+  background-color: ${(props) => props.color ? props.color:colorIconFooter};  
+  width: 60px;
+  height: 60px;
+  align-items:center;
+  justify-content:center;
+  border-radius: 50px;
+  margin-right: 10px;
 `;
 
