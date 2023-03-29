@@ -6,6 +6,7 @@ import { enumSchemas } from '../../database/enumSchemas';
 import { getRaelm } from '../../database/realm';
 import { TreinoInitial } from '../../database/schemas/TreinoSchema';
 
+
 export function useTreinoPage() {
   const [loading, setLoading] = useState(false);
   const [treino, setTreino] = useState(TreinoInitial);
@@ -47,14 +48,14 @@ export function useTreinoPage() {
   const handleSave = async () => {
     const realm = await getRaelm();
     try {
-      console.log(treino);
       if (typeModal == 'new') {
+        let treinoNew = treino;
         realm.write(() => {
-          let treinoNew = { ...treino };
           treinoNew._id = uuid.v4();
           realm.create(enumSchemas.TREINO, treinoNew);
         });
         toastSucess('Cadastrado com sucesso.');
+        dispatch({type:'addDiaTreinos', payload: treinoNew.treino});
         realm.close();
       } else {
         let object = realm.objectForPrimaryKey(enumSchemas.TREINO, treino._id);
@@ -101,7 +102,6 @@ export function useTreinoPage() {
   const handleListTrainer = async () => {
     const realm = await getRaelm();
     let array = realm.objects(enumSchemas.TREINO).sorted('treino').toJSON();
-    console.log(array);
     setListaTreino([...array]);
   };
 

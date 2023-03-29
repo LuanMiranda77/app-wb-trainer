@@ -4,7 +4,6 @@ import { NivelUser } from './enums';
 const { stateUser } = useUserContext();
 
 export const calculoTempoExercicio = (treinoExercicio) => {
-    console.log(treinoExercicio)
   let tempoExercicio = 0;
   let descanso = 0;
   

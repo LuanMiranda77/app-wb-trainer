@@ -36,7 +36,7 @@ export function HeaderNavBar({ ...props }) {
             onPress={() => props.buttonRigth()}
           />
         </>
-      ) : props.route?.name == 'Treino' ? (
+      ) : props.route?.name == 'Treinos' ? (
         <>
           {/* <ContainerImage source={imge} /> */}
 

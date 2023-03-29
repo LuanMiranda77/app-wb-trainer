@@ -16,7 +16,8 @@ export function Home({ navigation, route }) {
     let array = stateUser.exercicios.filter((item) => item.treino === stateUser.treinoAtual);
     let obj = {
       treino: 'Treino ' + stateUser.treinoAtual,
-      titulo: stateUser.exercicios.filter((item) => item.treino === stateUser.treinoAtual)[0].titulo,
+      titulo:'',
+      // titulo: stateUser.exercicios.filter((item) => item.treino === stateUser.treinoAtual)[0].titulo,
       quant: array.length,
     };
     setTreinoAtual({ ...obj });
@@ -26,7 +27,7 @@ export function Home({ navigation, route }) {
     <View style={{ backgroundColor: backgroundColor, flex: 1 }}>
       <HeaderNavBar treino={treinoAtual} route={route}/>
       <ScrollView contentInsetAdjustmentBehavior="automatic" style={{ marginBottom: 0 }}>
-        <Card text1={treinoAtual?.treino} text2={treinoAtual?.titulo} exercicio={treinoAtual?.quant} feito={Math.floor(Math.random() * (treinoAtual?.quant - 0 + 1)) + 0} />
+        <Card text1={'Status semanal'} text2={treinoAtual?.titulo} exercicio={stateUser.exercicios.length} feito={Math.floor(Math.random() * (stateUser.exercicios.length - 0 + 1)) + 0} />
         <View
           style={{
             display: 'flex',

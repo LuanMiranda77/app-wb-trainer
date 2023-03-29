@@ -11,7 +11,6 @@ import InputSimple from '../../components/inputs/inputSimple';
 import ModalSimple from '../../components/modal/modalSimple';
 import SelectSimple from '../../components/select';
 import { useUserContext } from '../../context/useUserContext';
-import useImageFind from '../../hooks/useImageFind';
 import { useTreinoPage } from '../../hooks/useTreinoPage';
 import { HeaderNavBar } from '../../layout/headerNavBar';
 import {
@@ -65,7 +64,7 @@ export function Training({ ...props }) {
                       : item.treino == 'D'
                       ? 'Qui'
                       : item.treino == 'E'
-                      ? 'Sexta'
+                      ? 'Sex'
                       : 'Sab'}
                   </Text>
                 </DiaSemana>
@@ -133,10 +132,12 @@ export function Training({ ...props }) {
                         >
                           <Text style={stylesGlobal.textTitle}>Editar</Text>
                         </Menu.Item>
-                        <Menu.Item onPress={() => {
-                          setShowModaExcluir(true);
-                          setTreino({ ...item });
-                        }}>
+                        <Menu.Item
+                          onPress={() => {
+                            setShowModaExcluir(true);
+                            setTreino({ ...item });
+                          }}
+                        >
                           <Text style={stylesGlobal.textTitle}>Excluir</Text>
                         </Menu.Item>
                       </ButtonDropdown>

@@ -1,5 +1,8 @@
 import { useMemo, useState } from 'react';
+import Toast from '../../components/toast';
 import { useUserContext } from '../../context/useUserContext';
+import { enumSchemas } from '../../database/enumSchemas';
+import { getRaelm } from '../../database/realm';
 import { NivelUser } from '../../utils/enums';
 // MET:
 // Andar de bicicleta a 16 km/h: 3.0 MET
@@ -12,6 +15,7 @@ import { NivelUser } from '../../utils/enums';
 export const useCardTreino = () => {
   const [listaTreino, setListaTreino] = useState([]);
   const { stateUser, dispatch } = useUserContext();
+  const { toastError, toastSucess } = Toast();
   // setListaTreino(treinos);
 
   const calculoTempoTreino = (treino) => {
@@ -42,94 +46,109 @@ export const useCardTreino = () => {
     return stateUser.peso * 6.0 * (tempo / 60);
   };
 
-  const processarTreino = () => {
+  const processarTreino = async () => {
     let treinos = [];
-    let treinoA = stateUser.exercicios.filter((item) => item.treino === 'A');
-    let treinoB = stateUser.exercicios.filter((item) => item.treino === 'B');
-    let treinoC = stateUser.exercicios.filter((item) => item.treino === 'C');
-    let treinoD = stateUser.exercicios.filter((item) => item.treino === 'D');
-    let treinoE = stateUser.exercicios.filter((item) => item.treino === 'E');
-    let treinoF = stateUser.exercicios.filter((item) => item.treino === 'F');
+    // let treinoA = stateUser.exercicios.filter((item) => item.treino === 'A');
+    // let treinoB = stateUser.exercicios.filter((item) => item.treino === 'B');
+    // let treinoC = stateUser.exercicios.filter((item) => item.treino === 'C');
+    // let treinoD = stateUser.exercicios.filter((item) => item.treino === 'D');
+    // let treinoE = stateUser.exercicios.filter((item) => item.treino === 'E');
+    // let treinoF = stateUser.exercicios.filter((item) => item.treino === 'F');
 
-    if (treinoA.length > 0) {
-      let tempo = calculoTempoTreino(treinoA);
-      let calorias = calcCaloriaTreino(tempo);
-      let treino = {
-        id: 1,
-        treino: treinoA[0].treino,
-        titulo: treinoA[0].titulo,
-        quant: treinoA.length,
-        tempo: tempo,
-        calorias: calorias,
-      };
-      treinos.push(treino);
+    // if (treinoA.length > 0) {
+    //   let tempo = calculoTempoTreino(treinoA);
+    //   let calorias = calcCaloriaTreino(tempo);
+    //   let treino = {
+    //     id: 1,
+    //     treino: treinoA[0].treino,
+    //     titulo: treinoA[0].titulo,
+    //     quant: treinoA.length,
+    //     tempo: tempo,
+    //     calorias: calorias,
+    //   };
+    //   treinos.push(treino);
+    // }
+    // if (treinoB.length > 0) {
+    //   let tempo = calculoTempoTreino(treinoB);
+    //   let calorias = calcCaloriaTreino(tempo);
+    //   let treino = {
+    //     id: 2,
+    //     treino: treinoB[0].treino,
+    //     titulo: treinoB[0].titulo,
+    //     quant: treinoB.length,
+    //     tempo: tempo,
+    //     calorias: calorias,
+    //   };
+    //   treinos.push(treino);
+    // }
+    // if (treinoC.length > 0) {
+    //   let tempo = calculoTempoTreino(treinoC);
+    //   let calorias = calcCaloriaTreino(tempo);
+    //   let treino = {
+    //     id: 3,
+    //     treino: treinoC[0].treino,
+    //     titulo: treinoC[0].titulo,
+    //     quant: treinoC.length,
+    //     tempo: tempo,
+    //     calorias: calorias,
+    //   };
+    //   treinos.push(treino);
+    // }
+    // if (treinoD.length > 0) {
+    //   let tempo = calculoTempoTreino(treinoD);
+    //   let calorias = calcCaloriaTreino(tempo);
+    //   let treino = {
+    //     id: 4,
+    //     treino: treinoD[0].treino,
+    //     titulo: treinoD[0].titulo,
+    //     quant: treinoD.length,
+    //     tempo: tempo,
+    //     calorias: calorias,
+    //   };
+    //   treinos.push(treino);
+    // }
+    // if (treinoE.length > 0) {
+    //   let tempo = calculoTempoTreino(treinoE);
+    //   let calorias = calcCaloriaTreino(tempo);
+    //   let treino = {
+    //     id: 5,
+    //     treino: treinoE[0].treino,
+    //     titulo: treinoE[0].titulo,
+    //     quant: treinoE.length,
+    //     tempo: tempo,
+    //     calorias: calorias,
+    //   };
+    //   treinos.push(treino);
+    // }
+    // if (treinoF.length > 0) {
+    //   let tempo = calculoTempoTreino(treinoF);
+    //   let calorias = calcCaloriaTreino(tempo);
+    //   let treino = {
+    //     id: 6,
+    //     treino: treinoF[0].treino,
+    //     titulo: treinoF[0].titulo,
+    //     quant: treinoF.length,
+    //     tempo: tempo,
+    //     calorias: calorias,
+    //   };
+    //   treinos.push(treino);
+    // }
+    const realm = await getRaelm();
+    try {
+      let array = realm.objects(enumSchemas.TREINO).sorted('treino').toJSON();
+      array.forEach((item) => {
+        if(!item.treino.includes(stateUser.diasTreinos)){
+          dispatch({ type: 'addDiaTreinos', payload: item.treino });
+        }
+      });
+      setListaTreino([...array]);
+      // realm.close();
+    } catch (error) {
+      console.error(error);
+      toastError('Opa! Algo deu errado');
+      realm.close();
     }
-    if (treinoB.length > 0) {
-      let tempo = calculoTempoTreino(treinoB);
-      let calorias = calcCaloriaTreino(tempo);
-      let treino = {
-        id: 2,
-        treino: treinoB[0].treino,
-        titulo: treinoB[0].titulo,
-        quant: treinoB.length,
-        tempo: tempo,
-        calorias: calorias,
-      };
-      treinos.push(treino);
-    }
-    if (treinoC.length > 0) {
-      let tempo = calculoTempoTreino(treinoC);
-      let calorias = calcCaloriaTreino(tempo);
-      let treino = {
-        id: 3,
-        treino: treinoC[0].treino,
-        titulo: treinoC[0].titulo,
-        quant: treinoC.length,
-        tempo: tempo,
-        calorias: calorias,
-      };
-      treinos.push(treino);
-    }
-    if (treinoD.length > 0) {
-      let tempo = calculoTempoTreino(treinoD);
-      let calorias = calcCaloriaTreino(tempo);
-      let treino = {
-        id: 4,
-        treino: treinoD[0].treino,
-        titulo: treinoD[0].titulo,
-        quant: treinoD.length,
-        tempo: tempo,
-        calorias: calorias,
-      };
-      treinos.push(treino);
-    }
-    if (treinoE.length > 0) {
-      let tempo = calculoTempoTreino(treinoE);
-      let calorias = calcCaloriaTreino(tempo);
-      let treino = {
-        id: 5,
-        treino: treinoE[0].treino,
-        titulo: treinoE[0].titulo,
-        quant: treinoE.length,
-        tempo: tempo,
-        calorias: calorias,
-      };
-      treinos.push(treino);
-    }
-    if (treinoF.length > 0) {
-      let tempo = calculoTempoTreino(treinoF);
-      let calorias = calcCaloriaTreino(tempo);
-      let treino = {
-        id: 6,
-        treino: treinoF[0].treino,
-        titulo: treinoF[0].titulo,
-        quant: treinoF.length,
-        tempo: tempo,
-        calorias: calorias,
-      };
-      treinos.push(treino);
-    }
-    setListaTreino([...treinos]);
+    // setListaTreino([...treinos]);
   };
 
   useMemo(() => {

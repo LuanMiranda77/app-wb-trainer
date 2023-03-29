@@ -5,8 +5,9 @@ import { colorPrimary, colorSecondary, colorWhite } from '../../styles';
 import { Div } from './styles';
 
 export function Card({ ...props }) {
+
   const array = {
-    data: [0, ((props.feito / props.exercicio) * 100) / 100],
+    data: [0, props.exercicio > 0 ?((props.feito / props.exercicio) * 100) / 100 : 0],
   };
   const chartConfig = {
     backgroundGradientFrom: '#03185e',

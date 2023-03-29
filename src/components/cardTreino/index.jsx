@@ -20,7 +20,7 @@ export function CardTreino({ navigation }) {
     // console.warn(item.image);
     return (
       <>
-        <Container color={colorFooter} onPress={() => dispatch({ type: 'setTreinoAtual', playload: item.treino})}>
+        <Container color={colorFooter} onPress={() => dispatch({ type: 'setTreinoAtual', payload: item.treino})}>
           {item.treino == 'A' ? (
             <ContainerImage source={require('../../assets/h-1.jpg')} />
           ) : item.treino == 'B' ? (
@@ -56,7 +56,7 @@ export function CardTreino({ navigation }) {
               </ContainerDetalhes>
               <ContainerDetalhes color="#ffb400" background="#ffb30022">
                 <IconFire name="local-fire-department" size={12} color="#ffb400" />
-                <Text style={{ color: '#ffb400', fontWeight: 'bold', fontSize:12 }}>{item.calorias.toFixed(2)} cal</Text>
+                <Text style={{ color: '#ffb400', fontWeight: 'bold', fontSize:12 }}>{item.calorias.toFixed(2)} kcal</Text>
               </ContainerDetalhes>
               <ContainerDetalhes color={colorPrimary} background="#198fb522">
                 <Ionicons name="barbell-outline" size={20} color={colorPrimary} />
@@ -95,7 +95,7 @@ export function CardTreino({ navigation }) {
           />
         );
       }}
-      keyExtractor={(item) => item.id}
+      keyExtractor={(item) => item._id}
     />
   );
 }

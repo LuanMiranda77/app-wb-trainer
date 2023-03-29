@@ -1,56 +1,67 @@
 import React, { createContext, useContext, useReducer } from 'react';
-import { NivelUser } from '../../utils/enums';
-import arrayTreino from '../../__mooks/avancadoM.json';
 
 export const UserContext = createContext({});
+
 const initialState = {
-  id: 1,
-  nome: 'Silvia Maria da Costa',
-  dataNascimento: '23/05/1990',
-  genero: 'F',
+  nome: '',
+  dataNascimento: null,
+  genero: '',
   image: '',
-  diasTreinos: 'A-B-C-D',
-  objetivo: 'perder peso',
+  diasTreinos: '',
+  objetivo: '',
   tipoPlano: 'premium',
-  experiencia: NivelUser.AVANCADO,
-  altura: 175,
-  peso: 80,
-  bracoDireito: 35,
-  bracoEsquerdo: 34,
-  antebracoDireito: 35,
-  antebracoEsquerdo: 34,
-  pernaDireita: 60,
-  pernaEsquerda: 61,
-  cintura: 85,
-  quadril: 100,
-  peito: 100,
-  gorduraCorporal: 20,
-  treinoAtual: 'D',
-  exercicios: [...arrayTreino],
+  experiencia: '',
+  altura: 0,
+  peso: 0,
+  bracoDireito: 0,
+  bracoEsquerdo: 0,
+  antebracoDireito: 0,
+  antebracoEsquerdo: 0,
+  pernaDireita: 0,
+  pernaEsquerda: 0,
+  cintura: 0,
+  quadril: 0,
+  peito: 0,
+  gorduraCorporal: 0,
+  treinoAtual: '',
+  exercicios: [],
 };
+
+// const { toastError, toastSucess } = Toast();
 
 const actions = {
   new(state, action) {
-    // logica de adicionar
+    const user = action.payload;
+    Object.assign(state, user );
+    return state;
   },
   delete(state, action) {
     // logica de adicionar
   },
   update(state, action) {
-    // logia de adicinar
+    const user = action.payload;
+    Object.assign(state, user );
+    return state;
   },
   setTreinoAtual(state, action) {
-    const treino = action.playload;
+    const treino = action.payload;
     return {
       ...state,
       treinoAtual: treino,
     };
   },
   setTreinos(state, action) {
-    const exercicios = action.playload;
+    const exercicios = action.payload;
     return {
       ...state,
       exercicios: [...exercicios],
+    };
+  },
+  addDiaTreinos(state, action) {
+    const dia = action.payload;
+    return {
+      ...state,
+      diasTreinos: state.diasTreinos !== '' ? state.diasTreinos + '-' + dia : dia,
     };
   },
 };
