@@ -1,9 +1,8 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useColorMode } from 'native-base';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, useColorScheme } from 'react-native';
-import uuid from 'react-native-uuid';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Toast from '../components/toast';
 import { useUserContext } from '../context/useUserContext';
@@ -14,6 +13,10 @@ import { Evolute } from '../module/evolute';
 import { Exercise } from '../module/exercise';
 import { ListExercise } from '../module/exercise/lista';
 import { Home } from '../module/home';
+import { InitialAPP } from '../module/initialAPP';
+import { GeneroView } from '../module/initialAPP/genero';
+import { MedidasViewInferior } from '../module/initialAPP/medidaInferiores';
+import { MedidasViewSuperior } from '../module/initialAPP/medidaSuperior';
 import { Settings } from '../module/settings';
 import { Training } from '../module/training';
 import { TrainerDetalhes } from '../module/training/trainerdetalhes';
@@ -25,6 +28,7 @@ export function BottomTabNavigator() {
   const isDarkMode = useColorScheme() === 'dark';
   const { toastError, toastSucess } = Toast();
   const { stateUser, dispatch } = useUserContext();
+  const [isUserInicial, setIsUserInicial] = useState(false);
 
   async function inicio() {
     const realm = await getRaelm();
@@ -34,19 +38,21 @@ export function BottomTabNavigator() {
       const users = realm.objects(enumSchemas.USER_APLICATION).toJSON();
 
       if (users.length == 0) {
-        userNew = { ...stateUser };
-        delete userNew.exercicios;
-        realm.write(() => {
-          userNew._id = uuid.v4();
-          userNew.dataNascimento = new Date();
-          realm.create(enumSchemas.USER_APLICATION, userNew);
-        });
-        userNew.exercicios = [];
-        dispatch({ type: 'new', payload: userNew });
+        // userNew = { ...stateUser };
+        // delete userNew.exercicios;
+        // realm.write(() => {
+        //   userNew._id = uuid.v4();
+        //   userNew.dataNascimento = new Date();
+        //   realm.create(enumSchemas.USER_APLICATION, userNew);
+        // });
+        // userNew.exercicios = [];
+        // dispatch({ type: 'new', payload: userNew });
+        setIsUserInicial(true);
       } else {
         userNew = { ...users[0] };
         userNew.exercicios = realm.objects(enumSchemas.TREINO_EXERCIC).toJSON();
         dispatch({ type: 'update', payload: userNew });
+        setIsUserInicial(false);
       }
       // realm.close();
     } catch (error) {
@@ -118,7 +124,7 @@ export function BottomTabNavigator() {
 
   return (
     <>
-      {stateUser.exercicios.length == 0 ? (
+      {!isUserInicial ? (
         <Tab.Navigator
           initialRouteName="Home"
           screenOptions={({ route }) => ({
@@ -185,13 +191,15 @@ export function BottomTabNavigator() {
         </Tab.Navigator>
       ) : (
         <Stack.Navigator
-          initialRouteName="Exercicios"
+          initialRouteName="Inicio"
           screenOptions={({ route }) => ({
             headerShown: false,
           })}
         >
-          <Stack.Screen name="Exercicios" component={Exercise} />
-          <Stack.Screen name="Lista Exercicio" component={ListExercise} />
+          <Stack.Screen name="Inicio" component={InitialAPP} />
+          <Stack.Screen name="Genero" component={GeneroView} />
+          <Stack.Screen name="Medidas Superiores" component={MedidasViewSuperior} />
+          <Stack.Screen name="Medidas Inferiores" component={MedidasViewInferior} />
         </Stack.Navigator>
       )}
     </>

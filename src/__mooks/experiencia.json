@@ -1,0 +1,5 @@
+[
+  { "id": 1, "label": "INICIATE", "value": "IN" },
+  { "id": 2, "label": "INTERMEDIARIO", "value": "IT" },
+  { "id": 3, "label": "AVANÇADO", "value": "AV" }
+]

@@ -8,11 +8,11 @@ export default function ButtonIcon({ ...props }) {
   return (
     <TouchableOpacity
       style={{
-        borderRadius: 30,
-        backgroundColor: backgroundColor,
-        width: 50,
-        height: 50,
-        padding: 8,
+        borderRadius: props.borderRadius ? props.borderRadius : 30,
+        backgroundColor: props.backgroundColor ? props.backgroundColor : backgroundColor,
+        width: props.width ? props.width : 50,
+        height: props.height ? props.height : 50,
+        padding: props.padding ? props.padding : 8,
       }}
       onPress={props?.onPress}
     >
