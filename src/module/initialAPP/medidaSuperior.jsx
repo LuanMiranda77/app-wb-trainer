@@ -1,4 +1,4 @@
-import { Center, Flex, FormControl, ScrollView, Text, View } from 'native-base';
+import { Center, Flex, FormControl, Image, ScrollView, Text, View } from 'native-base';
 import React, { useState } from 'react';
 import ButtonIcon from '../../components/Buttons/ButtonIcon';
 import InputSimple from '../../components/inputs/inputSimple';

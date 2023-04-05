@@ -1,18 +1,18 @@
 import { Center, Flex, FormControl, ScrollView, Text, View } from 'native-base';
-import React, { useState } from 'react';
+import React from 'react';
+import RNRestart from 'react-native-restart';
 import ButtonIcon from '../../components/Buttons/ButtonIcon';
 import InputSimple from '../../components/inputs/inputSimple';
 import { useUserContext } from '../../context/useUserContext';
 import { useUserAplication } from '../../hooks/useUserAplication';
 import { backgroundColor, colorPrimary } from '../../styles';
-import RNRestart from 'react-native-restart';
 
 // import { Container } from './styles';
 
 export function MedidasViewInferior({ ...props }) {
-  const { user, setUser, saveNew } = useUserAplication();
   const { stateUser, dispatch } = useUserContext();
-  const [isSexo, setIsSexo] = useState(true);
+  const {saveNew} = useUserAplication();
+
   return (
     <View p="5" style={{ backgroundColor: backgroundColor, flex: 1 }}>
       <View mt="5" mb="10">
@@ -22,75 +22,93 @@ export function MedidasViewInferior({ ...props }) {
         </Center>
       </View>
       <FormControl>
-        <ScrollView contentInsetAdjustmentBehavior="automatic" style={{ marginBottom: 0, maxHeight:'100%' }}>
-        <Flex flexDirection="row">
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          style={{ marginBottom: 0, maxHeight: '100%' }}
+        >
+          <Flex flexDirection="row">
             <View style={{ width: '50%', marginRight: 20 }}>
-              <FormControl.Label>
-                Quadril <Text style={{ color: 'red' }}>*</Text>
-              </FormControl.Label>
+              <FormControl.Label>Quadril</FormControl.Label>
               <InputSimple
                 placeholder="Medida quadril"
-                value={user.quadril}
-                onChangeText={(e) => setUser({ ...user, quadril: parseFloat(e) })}
+                value={String(user.quadril)}
+                onChangeText={(e) =>
+                  dispatch({ type: 'update', payload: { ...stateUser, quadril: parseFloat(e) } })
+                }
                 keyboardType="numeric"
               />
             </View>
             <View style={{ width: '50%', marginRight: 20 }}>
-              <FormControl.Label>
-             % de Gordura corporal <Text style={{ color: 'red' }}>*</Text>
-              </FormControl.Label>
+              <FormControl.Label>% de Gordura corporal</FormControl.Label>
               <InputSimple
                 placeholder="Medida do antebraço esquerdo"
-                value={user.gorduraCorporal}
-                onChangeText={(e) => setUser({ ...user, gorduraCorporal: parseFloat(e) })}
+                value={String(user.gorduraCorporal)}
+                onChangeText={(e) =>
+                  dispatch({
+                    type: 'update',
+                    payload: { ...stateUser, gorduraCorporal: parseFloat(e) },
+                  })
+                }
                 keyboardType="numeric"
               />
             </View>
           </Flex>
           <Flex flexDirection="row">
             <View style={{ width: '50%', marginRight: 20 }}>
-              <FormControl.Label>
-                Coxa direito <Text style={{ color: 'red' }}>*</Text>
-              </FormControl.Label>
+              <FormControl.Label>Coxa direito</FormControl.Label>
               <InputSimple
                 placeholder="Medida coxa direito"
-                value={user.pernaDireita}
-                onChangeText={(e) => setUser({ ...user, pernaDireita: parseFloat(e) })}
+                value={String(user.pernaDireita)}
+                onChangeText={(e) =>
+                  dispatch({
+                    type: 'update',
+                    payload: { ...stateUser, pernaDireita: parseFloat(e) },
+                  })
+                }
                 keyboardType="numeric"
               />
             </View>
             <View style={{ width: '50%', marginRight: 20 }}>
-              <FormControl.Label>
-                Coxa esquerdo <Text style={{ color: 'red' }}>*</Text>
-              </FormControl.Label>
+              <FormControl.Label>Coxa esquerdo</FormControl.Label>
               <InputSimple
                 placeholder="Medida coxa esquerdo"
-                value={user.pernaEsquerda}
-                onChangeText={(e) => setUser({ ...user, pernaEsquerda: parseFloat(e) })}
+                value={String(user.pernaEsquerda)}
+                onChangeText={(e) =>
+                  dispatch({
+                    type: 'update',
+                    payload: { ...stateUser, pernaEsquerda: parseFloat(e) },
+                  })
+                }
                 keyboardType="numeric"
               />
             </View>
           </Flex>
           <Flex flexDirection="row">
             <View style={{ width: '50%', marginRight: 20 }}>
-              <FormControl.Label>
-              Panturilha direita <Text style={{ color: 'red' }}>*</Text>
-              </FormControl.Label>
+              <FormControl.Label>Panturilha direita</FormControl.Label>
               <InputSimple
                 placeholder="Medida do antebraço esquerdo"
-                value={user.panturilhaDireita}
-                onChangeText={(e) => setUser({ ...user, panturilhaDireita: parseFloat(e) })}
+                value={String(user.panturilhaDireita)}
+                onChangeText={(e) =>
+                  dispatch({
+                    type: 'update',
+                    payload: { ...stateUser, panturilhaDireita: parseFloat(e) },
+                  })
+                }
                 keyboardType="numeric"
               />
             </View>
             <View style={{ width: '50%', marginRight: 20 }}>
-              <FormControl.Label>
-              Panturilha esquerda <Text style={{ color: 'red' }}>*</Text>
-              </FormControl.Label>
+              <FormControl.Label>Panturilha esquerda</FormControl.Label>
               <InputSimple
                 placeholder="Medida do antebraço direito"
-                value={user.panturilhaEsquerda}
-                onChangeText={(e) => setUser({ ...user, panturilhaEsquerda: parseFloat(e) })}
+                value={String(user.panturilhaEsquerda)}
+                onChangeText={(e) =>
+                  dispatch({
+                    type: 'update',
+                    payload: { ...stateUser, panturilhaEsquerda: parseFloat(e) },
+                  })
+                }
                 keyboardType="numeric"
               />
             </View>
@@ -111,13 +129,11 @@ export function MedidasViewInferior({ ...props }) {
           onPress={() => {
             saveNew();
             setTimeout(
-              function() {
+              function () {
                 RNRestart.Restart();
-              }
-              .bind(this),
+              }.bind(this),
               500
             );
-            
           }}
         />
       </View>

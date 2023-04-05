@@ -40,8 +40,14 @@ const actions = {
   },
   update(state, action) {
     const user = action.payload;
-    Object.assign(state, user );
+    state = {...user};
     return state;
+  },
+  setGenero(state, action) {
+    return {
+      ...state,
+      genero: action.payload,
+    };
   },
   setTreinoAtual(state, action) {
     const treino = action.payload;

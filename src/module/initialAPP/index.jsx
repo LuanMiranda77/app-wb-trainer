@@ -1,24 +1,50 @@
-import { Flex, FormControl, Text, View } from 'native-base';
+import { Flex, FormControl, Image, Text, View } from 'native-base';
 import React from 'react';
 import ButtonIcon from '../../components/Buttons/ButtonIcon';
 import InputSimple from '../../components/inputs/inputSimple';
 import SelectSimple from '../../components/select';
+import Toast from '../../components/toast';
 import { useUserContext } from '../../context/useUserContext';
 import { useUserAplication } from '../../hooks/useUserAplication';
 import { backgroundColor, colorPrimary } from '../../styles';
+import { emunImage } from '../../utils/enums';
 import experiencias from '../../__mooks/experiencia.json';
 
 // import { Container } from './styles';
 
 export function InitialAPP({ ...props }) {
   const { dispatch } = useUserContext();
-  const { user, setUser, dia, setDia, mes, setMes, ano, setAno } = useUserAplication();
+  const { user, setUser, dia, setDia, mes, setMes, ano, setAno, isValidDate } = useUserAplication();
+  const { toastError } = Toast();
+  const createUserState = () => {
+    if (
+      user.nome == '' ||
+      user.dia == '' ||
+      user.mes == '' ||
+      user.ano == '' ||
+      user.experiencia == '' ||
+      user.altura == 0 ||
+      user.peso == 0
+    ) {
+      toastError("Existe campos em branco");
+      return;
+    }
 
+    if(!isValidDate(dia, mes, ano)){
+      toastError("Data de nascimento inválida");
+      return;
+    }
+
+    props.navigation.navigate('Genero');
+    setUser({ ...user, dataNascimento: new Date(`${ano}-${mes}-${dia}`) });
+    dispatch({ type: 'new', payload: user });
+  };
   return (
     <View p="5" style={{ backgroundColor: backgroundColor, flex: 1 }}>
       <View>
         <Text fontSize="lg">😎 Aplicativo para acompanhar seu treino.</Text>
         <Text fontSize="4xl">Cadastrando seus dados!</Text>
+        <Image source={emunImage['afundo-com-barra-reto']}></Image>
       </View>
       <View>
         <FormControl>
@@ -66,7 +92,7 @@ export function InitialAPP({ ...props }) {
             </View>
           </Flex>
           <FormControl.Label>
-            Experiência <Text style={{ color: 'red' }}>*</Text>
+            Experiência de treino <Text style={{ color: 'red' }}>*</Text>
           </FormControl.Label>
           <SelectSimple
             dataSource={experiencias}
@@ -80,7 +106,7 @@ export function InitialAPP({ ...props }) {
               </FormControl.Label>
               <InputSimple
                 placeholder="Medida do antebraço esquerdo"
-                value={user.altura}
+                value={String(user.altura)}
                 onChangeText={(e) => setUser({ ...user, altura: parseFloat(e) })}
                 keyboardType="numeric"
               />
@@ -91,7 +117,7 @@ export function InitialAPP({ ...props }) {
               </FormControl.Label>
               <InputSimple
                 placeholder="Medida do antebraço direito"
-                value={user.peso}
+                value={String(user.peso)}
                 onChangeText={(e) => setUser({ ...user, peso: parseFloat(e) })}
                 keyboardType="numeric"
               />
@@ -109,11 +135,7 @@ export function InitialAPP({ ...props }) {
           padding={20}
           borderRadius={80}
           size={40}
-          onPress={() => {
-            props.navigation.navigate('Genero', { params: { user: user, setUser: setUser } });
-            setUser({...user, dataNascimento: new Date(`${ano}-${mes}-${dia}`)});
-            dispatch({ type: 'new', payload: user });
-          }}
+          onPress={() => createUserState()}
         />
       </View>
     </View>
