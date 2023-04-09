@@ -85,6 +85,7 @@ export const useExercicioPage = () => {
 
   async function handlefindExercicios(grupoCorpo) {
     let exercicios = [];
+
     const realm = await getRaelm();
     try {
       if (
@@ -197,7 +198,7 @@ export const useExercicioPage = () => {
   }
 
   const calculoTempoExercicio = (treinoExercicio) => {
-    console.log(treinoExercicio);
+
     let tempoExercicio = 0;
     let descanso = 0;
 

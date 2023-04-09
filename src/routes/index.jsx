@@ -21,6 +21,8 @@ import { Settings } from '../module/settings';
 import { Training } from '../module/training';
 import { TrainerDetalhes } from '../module/training/trainerdetalhes';
 import { backgroundColor, colorFooter, colorIconFooter, colorPrimary } from '../styles';
+import arrayExercicios from '../__mooks/exercicios.json';
+import uuid from 'react-native-uuid';
 
 export function BottomTabNavigator() {
   const Stack = createNativeStackNavigator();
@@ -36,23 +38,27 @@ export function BottomTabNavigator() {
     try {
       let userNew = {};
       const users = realm.objects(enumSchemas.USER_APLICATION).toJSON();
+      const exercicios = realm.objects(enumSchemas.EXERCICIO).toJSON();
+
+      if(exercicios.length == 0){
+        realm.write( ()  => {
+          arrayExercicios.forEach(async exercicio =>{
+            exercicio._id = uuid.v4();
+            exercicio.titulo='';
+            await realm.create(enumSchemas.EXERCICIO, exercicio);
+          });
+        });
+      }
 
       if (users.length == 0) {
-        // userNew = { ...stateUser };
-        // delete userNew.exercicios;
-        // realm.write(() => {
-        //   userNew._id = uuid.v4();
-        //   userNew.dataNascimento = new Date();
-        //   realm.create(enumSchemas.USER_APLICATION, userNew);
-        // });
-        // userNew.exercicios = [];
-        // dispatch({ type: 'new', payload: userNew });
-        setIsUserInicial(true);
+        // setIsUserInicial(true);
+        dispatch({ type: 'setUserInicial', payload: true });
       } else {
         userNew = { ...users[0] };
         userNew.exercicios = realm.objects(enumSchemas.TREINO_EXERCIC).toJSON();
         dispatch({ type: 'update', payload: userNew });
-        setIsUserInicial(false);
+        // setIsUserInicial(false);
+        dispatch({ type: 'setUserInicial', payload: false });
       }
       // realm.close();
     } catch (error) {
@@ -124,7 +130,7 @@ export function BottomTabNavigator() {
 
   return (
     <>
-      {!isUserInicial ? (
+      {!stateUser.isUserInicial ? (
         <Tab.Navigator
           initialRouteName="Home"
           screenOptions={({ route }) => ({

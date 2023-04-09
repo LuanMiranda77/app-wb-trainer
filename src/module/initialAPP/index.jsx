@@ -1,20 +1,20 @@
-import { Flex, FormControl, Image, Text, View } from 'native-base';
+import { Flex, FormControl, Text, View } from 'native-base';
 import React from 'react';
 import ButtonIcon from '../../components/Buttons/ButtonIcon';
+import InputMask from '../../components/inputs/inputMask';
 import InputSimple from '../../components/inputs/inputSimple';
+import Loanding from '../../components/modal/loanding';
+import ModalSimple from '../../components/modal/modalSimple';
 import SelectSimple from '../../components/select';
 import Toast from '../../components/toast';
 import { useUserContext } from '../../context/useUserContext';
 import { useUserAplication } from '../../hooks/useUserAplication';
 import { backgroundColor, colorPrimary } from '../../styles';
-import { emunImage } from '../../utils/enums';
 import experiencias from '../../__mooks/experiencia.json';
-
-// import { Container } from './styles';
 
 export function InitialAPP({ ...props }) {
   const { dispatch } = useUserContext();
-  const { user, setUser, dia, setDia, mes, setMes, ano, setAno, isValidDate } = useUserAplication();
+  const { user, setUser, dia, setDia, mes, setMes, ano, setAno, isValidDate, } = useUserAplication();
   const { toastError } = Toast();
   const createUserState = () => {
     if (
@@ -26,12 +26,12 @@ export function InitialAPP({ ...props }) {
       user.altura == 0 ||
       user.peso == 0
     ) {
-      toastError("Existe campos em branco");
+      toastError('Existe campos em branco');
       return;
     }
 
-    if(!isValidDate(dia, mes, ano)){
-      toastError("Data de nascimento inválida");
+    if (!isValidDate(dia, mes, ano)) {
+      toastError('Data de nascimento inválida');
       return;
     }
 
@@ -39,12 +39,11 @@ export function InitialAPP({ ...props }) {
     setUser({ ...user, dataNascimento: new Date(`${ano}-${mes}-${dia}`) });
     dispatch({ type: 'new', payload: user });
   };
-  return (
+  return (<>
     <View p="5" style={{ backgroundColor: backgroundColor, flex: 1 }}>
       <View>
         <Text fontSize="lg">😎 Aplicativo para acompanhar seu treino.</Text>
         <Text fontSize="4xl">Cadastrando seus dados!</Text>
-        <Image source={emunImage['afundo-com-barra-reto']}></Image>
       </View>
       <View>
         <FormControl>
@@ -101,25 +100,25 @@ export function InitialAPP({ ...props }) {
           />
           <Flex flexDirection="row" mt="30">
             <View style={{ width: '50%', marginRight: 20 }}>
-              <FormControl.Label>
-                Altura <Text style={{ color: 'red' }}>*</Text>
-              </FormControl.Label>
-              <InputSimple
+              <InputMask
                 placeholder="Medida do antebraço esquerdo"
                 value={String(user.altura)}
                 onChangeText={(e) => setUser({ ...user, altura: parseFloat(e) })}
                 keyboardType="numeric"
+                label="Altura"
+                required
+                mask="altura"
               />
             </View>
-            <View style={{ width: '50%', marginRight: 20 }}>
-              <FormControl.Label>
-                Peso <Text style={{ color: 'red' }}>*</Text>
-              </FormControl.Label>
-              <InputSimple
+            <View style={{ width: '45%' }}>
+              <InputMask
                 placeholder="Medida do antebraço direito"
                 value={String(user.peso)}
                 onChangeText={(e) => setUser({ ...user, peso: parseFloat(e) })}
                 keyboardType="numeric"
+                label="Peso"
+                required
+                mask="peso"
               />
             </View>
           </Flex>
@@ -139,5 +138,6 @@ export function InitialAPP({ ...props }) {
         />
       </View>
     </View>
+    </>
   );
 }

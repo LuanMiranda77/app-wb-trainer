@@ -5,13 +5,15 @@ export const Treino_ExercicioSchema = {
   properties: {
     _id: 'string',
     treino: 'string',
-    idExercicio: 'string',
+    _idExercicio: 'string',
+    exercicio: 'string',
     series: 'int',
     repeticoes: 'string',
     tempo: 'int',
     calorias: 'float',
     descanso: 'int',
     status: 'string',
+    carga: 'float',
   },
   primaryKey: '_id',
 };

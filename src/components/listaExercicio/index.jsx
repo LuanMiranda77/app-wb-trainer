@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import useImageFind from '../../hooks/useImageFind';
 import { colorFooter, colorSecondary, colorSubtitle, stylesGlobal } from '../../styles';
+import { emunImage } from '../../utils/enums';
 import {
   ButtonDetalhes,
   ButtonEdit,
@@ -29,7 +30,7 @@ export function ListaExercicico({ ...props }) {
               onPress={() => (props.onClickItem ? props.onClickItem(item) : () => {})}
             >
               <ContainerImage
-                source={item.image == '' ? require(img) : findImageByName(item.image)}
+                source={item.image == '' ? require(img) : emunImage[item.image]}
               />
               <View style={{ marginTop: 10 }}>
                 <Text style={stylesGlobal.textSubTitle}>{item.nome}</Text>

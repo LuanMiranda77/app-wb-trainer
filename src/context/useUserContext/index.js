@@ -25,6 +25,7 @@ const initialState = {
   gorduraCorporal: 0,
   treinoAtual: '',
   exercicios: [],
+  isUserInicial:false,
 };
 
 // const { toastError, toastSucess } = Toast();
@@ -47,6 +48,12 @@ const actions = {
     return {
       ...state,
       genero: action.payload,
+    };
+  },
+  setUserInicial(state, action) {
+    return {
+      ...state,
+      isUserInicial: action.payload,
     };
   },
   setTreinoAtual(state, action) {

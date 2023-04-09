@@ -1,534 +1,850 @@
 [
-    {
-        "_id": 1,
-        "nome": "Flexões de braço",
-        "grupo": "Peitoral",
-        "info": "Exercício que trabalha o tronco superior do corpo",
-        "image":"flexao-de-bracos",
-        "linkvideo": "https://www.youtube.com/watch?v=IODxDxX7oi4"
-      },
-      {
-        "_id": 2,
-        "nome": "Supino reto",
-        "grupo": "Peitoral",
-        "info": "Exercício que trabalha o peitoral",
-        "image":"supino-reto",
-        "linkvideo": "https://www.youtube.com/watch?v=20-DoTgT1Fw"
-      },
-      {
-        "_id": 3,
-        "nome": "Supino inclinado",
-        "grupo": "Peitoral",
-        "info": "Exercício que trabalha o peitoral superior",
-        "image":"supino-inclinado-com-barra",
-        "linkvideo": "https://www.youtube.com/watch?v=FyFsuzaW4NY"
-      },
-      {
-        "_id": 4,
-        "nome": "Crucifixo",
-        "grupo": "Peitoral",
-        "info": "Exercício que trabalha o peitoral",
-        "image":"crusifixo-com-alteres",
-        "linkvideo": "https://www.youtube.com/watch?v=pPwEJik5OxE"
-      },
-      {
-        "_id": 5,
-        "nome": "Voador no aparelho",
-        "grupo": "Peitoral",
-        "info": "Exercício que trabalha o tronco superior e o tríceps",
-        "image":"voador-no-aparelho",
-        "linkvideo": "https://www.youtube.com/watch?v=9UZbLHJB1p4"
-      },
-      {
-        "_id": 6,
-        "nome": "Supino inclinado com alteres",
-        "grupo": "Peitoral",
-        "info": "Exercício que trabalha o peitoral",
-        "image":"supino-inclinado-com-halteres",
-        "linkvideo": "https://www.youtube.com/watch?v=XZzq3xUWwx0"
-      },
-      {
-        "_id": 7,
-        "nome": "Pullover",
-        "grupo": "Peitoral, costas, ombros",
-        "info": "Exercício que trabalha o peitoral inferior e o serrátil anterior",
-        "image":"Pullover-com-alteres",
-        "linkvideo": "https://www.youtube.com/watch?v=YtXu9cJZTt4"
-      },
-      {
-        "_id": 8,
-        "nome": "Supino reto com alteres",
-        "grupo": "Peitoral",
-        "info": "Exercício que trabalha o peitoral",
-        "image":"supino-reto-com-halteres",
-        "linkvideo": "https://www.youtube.com/watch?v=ZoG5LOwW8Cg"
-      },
-      {
-        "_id": 9,
-        "nome": "Crossover",
-        "grupo": "Peitoral",
-        "info": "Exercício que trabalha o peitoral",
-        "image":"crossover",
-        "linkvideo": "https://www.youtube.com/watch?v=B7Vbu4s0YnU"
-      },
-      {
-        "_id": 10,
-        "nome": "Remada baixa",
-        "grupo": "Dorsal",
-        "info": "Exercício que trabalha as costas e os ombros",
-        "image":"remada-baixa",
-        "linkvideo": "https://www.youtube.com/watch?v=yG1C_2QV8uE"
-      },
-      {
-        "_id": 11,
-        "nome": "Remada unilateral com halteres",
-        "grupo": "Dorsal",
-        "info": "Exercício que trabalha as costas e os bíceps",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=JyCGpVLYaFA"
-      },
-      {
-        "_id": 12,
-        "nome": "Puxada no pulley",
-        "grupo": "Dorsal",
-        "info": "Exercício que trabalha as costas e os ombros",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=kWRGz6xuUcM"
-      },
-      {
-        "_id": 13,
-        "nome": "Levantamento terra",
-        "grupo": "Glúteos, Pernas",
-        "info": "Exercício que trabalha as costas, glúteos e pernas",
-        "image":"afundo-com-barra-reto",
-        "linkvideo": "https://www.youtube.com/watch?v=ytGaGIn3SjE"
-      },
-      {
-        "_id": 14,
-        "nome": "Remada curvada com barra",
-        "grupo": "Dorsal",
-        "info": "Exercício que trabalha as costas e os bíceps",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=9efgcAjQe_I"
-      },
-      {
-        "_id": 15,
-        "nome": "Puxada alta na polia",
-        "grupo": "Dorsal",
-        "info": "Exercício que trabalha as costas e os ombros",
-        "image":"costas-puxada-com-barra-no-pulley-1",
-        "linkvideo": "https://www.youtube.com/watch?v=zQnsvfwKjD8"
-      },
-      {
-        "_id": 16,
-        "nome": "Puxada fechada na polia",
-        "grupo": "Dorsal",
-        "info": "Exercício que trabalha as costas e os bíceps",
-        "image":"costas-puxada-para-frente-no-pulley-corn-triangulo",
-        "linkvideo": "https://www.youtube.com/watch?v=6AVY1HFn0VY"
-      },
-      {
-        "_id": 17,
-        "nome": "Remada unilateral na máquina",
-        "grupo": "Dorsal",
-        "info": "Exercício que trabalha as costas e os bíceps",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=nnCtQmrvZyw"
-      },
-      {
-        "_id": 18,
-        "nome": "Desenvolvimento com Alteres",
-        "grupo": "Ombros",
-        "info": "Levante a barra até os ombros e estenda os braços para cima",
-        "image":"desenvolvimento-para-ombros-com-halteres",
-        "linkvideo": "https://www.youtube.com/watch?v=qEwKCR5JCog"
-      },
-      {
-        "_id": 19,
-        "nome": "Elevação Lateral",
-        "grupo": "Ombros",
-        "info": "Levante os halteres até a altura dos ombros",
-        "image":"elevacao-unilateral-alter",
-        "linkvideo": "https://www.youtube.com/watch?v=mHj6SguUFLw"
-      },
-      {
-        "_id": 20,
-        "nome": "Elevação Frontal",
-        "grupo": "Ombros",
-        "info": "Levante os halteres à frente do corpo até a altura dos ombros",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=Q2RuJ4XEY5Y"
-      },
-      {
-        "_id": 21,
-        "nome": "Elevação Frontal com Barra",
-        "grupo": "Ombros",
-        "info": "Levante a barra à frente do corpo até a altura dos ombros",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=-R0hbe8HznA"
-      },
-      {
-        "_id": 22,
-        "nome": "Remada Alta",
-        "grupo": "Trapézio",
-        "info": "Levante a barra até o queixo, mantendo os cotovelos elevados",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=XQh-lRkO_d8"
-      },
-      {
-        "_id": 23,
-        "nome": "Desenvolvimento com Halteres",
-        "grupo": "Ombros",
-        "info": "Levante os halteres até os ombros e estenda os braços para cima",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=1yQGAvf0m9k"
-      },
-      {
-        "_id": 24,
-        "nome": "Desenvolvimento Militar",
-        "grupo": "Ombros",
-        "info": "Levante os halteres até os ombros e estenda os braços para cima",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=0ef28Fd_mNg"
-      },
-      {
-        "_id": 25,
-        "nome": "Elevação Posterior",
-        "grupo": "Ombros",
-        "info": "Levante os halteres para trás, mantendo os cotovelos levemente dobrados",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=33B-jp7Zq8I"
-      },
-      {
-        "_id": 26,
-        "nome": "Remada Alta com Halteres",
-        "grupo": "Trapézio",
-        "info": "Levante os halteres até o queixo, mantendo os cotovelos elevados",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=XQh-lRkO_d8"
-      },
-      {
-        "_id": 27,
-        "nome": "Agachamento livre",
-        "grupo": "Pernas",
-        "info": "Posicione a barra no trapézio, em pé, com os pés afastados na largura dos ombros e desça até que as coxas fiquem paralelas ao chão.",
-        "link_video": "https://www.youtube.com/watch?v=t2b8UdqmlFs"
-      },
-      {
-        "_id": 28,
-        "nome": "Leg Press",
-        "grupo": "Pernas",
-        "info": "Sentado na máquina, empurre a plataforma com os pés até que as pernas estejam completamente estendidas, depois abaixe lentamente.",
-        "link_video": "https://www.youtube.com/watch?v=sp8JHbLwPmw"
-      },
-      {
-        "_id": 29,
-        "nome": "Cadeira Extensora",
-        "grupo": "Pernas",
-        "info": "Sentado na máquina, apoie os pés nas almofadas e empurre os pesos com as pernas até estender completamente os joelhos.",
-        "link_video": "https://www.youtube.com/watch?v=hmjg24n86aM"
-      },
-      {
-        "_id": 30,
-        "nome": "Cadeira Flexora",
-        "grupo": "Pernas",
-        "info": "Sentado na máquina, posicione as pernas sob a almofada e empurre-a para baixo com as pernas dobradas.",
-        "link_video": "https://www.youtube.com/watch?v=fCJ8-EHsTzM"
-      },
-      {
-        "_id": 31,
-        "nome": "Stiff",
-        "grupo": "Glúteos",
-        "info": "Em pé com as pernas afastadas na largura dos ombros, segure uma barra com as mãos afastadas e desça o tronco até sentir um alongamento nos músculos das costas das pernas. Retorne à posição inicial.",
-        "link_video": "https://www.youtube.com/watch?v=YSxWpE-Lskk"
-      },
-      {
-        "_id": 32,
-        "nome": "Mesa Flexora",
-        "grupo": "Isquiotibiais",
-        "info": "Deitado de barriga para baixo em uma mesa, prenda os pés no suporte e dobre as pernas até que os calcanhares toquem as nádegas.",
-        "link_video": "https://www.youtube.com/watch?v=ZfNXrDdOUEM"
-      },
-      {
-        "_id": 33,
-        "nome": "Afundo",
-        "grupo": "Pernas",
-        "info": "Em pé com um pé à frente do outro, desça o corpo até que a coxa da perna de trás esteja paralela ao chão.",
-        "link_video": "https://www.youtube.com/watch?v=vcv"
-      },   
-      {
-        "_id": 34,
-        "nome": "Panturrilha no leg press",
-        "grupo": "Panturrilhas",
-        "info": "Sentado na máquina de leg press, mantenha os calcanhares na plataforma e empurre-a com os pés até estender completamente as pernas, depois empurre a plataforma novamente apenas com as pontas dos pés.",
-        "link_video": "https://www.youtube.com/watch?v=vcv"
-      },   
-      {
-        "_id": 35,
-        "nome": "Rosca martelo",
-        "grupo": "Bíceps",
-        "info": "Em pé, com os braços estendidos ao lado do corpo, segure um haltere em cada mão com as palmas das mãos voltadas para dentro do corpo e levante-os até a altura dos ombros.",
-        "link_video": "https://www.youtube.com/watch?v=Pf36jJLGGLk"
-      },
-      {
-        "_id": 36,
-        "nome": "Rosca direta com barra",
-        "grupo": "Bíceps",
-        "info": "Em pé, com os pés afastados na largura dos ombros, segure uma barra com as mãos afastadas na largura dos ombros e levante-a até a altura dos ombros.",
-        "link_video": "https://www.youtube.com/watch?v=kwG2ipFRgfo"
-      },
-      {
-        "_id": 37,
-        "nome": "Rosca direta com halteres",
-        "grupo": "Bíceps",
-        "info": "Em pé, com os braços estendidos ao lado do corpo, segure um haltere em cada mão e levante-os até a altura dos ombros.",
-        "link_video": "https://www.youtube.com/watch?v=BYKScL2sgCs"
-      },
-      {
-        "_id": 38,
-        "nome": "Rosca concentrada",
-        "grupo": "Bíceps",
-        "info": "Sentado em um banco com um haltere entre as pernas, apoie o cotovelo do braço que vai trabalhar sobre o joelho e levante o haltere até o ombro.",
-        "link_video": "https://www.youtube.com/watch?v=C3qz9U_1fPU"
-      },
-      {
-        "_id": 39,
-        "nome": "Rosca inversa",
-        "grupo": "Bíceps",
-        "info": "Em pé, com os braços estendidos ao lado do corpo e as mãos segurando uma barra com as palmas voltadas para baixo, levante-a até a altura dos ombros.",
-        "link_video": "https://www.youtube.com/watch?v=3GwH06K1hDQ"
-      },
-      {
-        "_id": 40,
-        "nome": "Rosca concentrada no banco inclinado",
-        "grupo": "Bíceps",
-        "info": "Sentado em um banco inclinado, apoie o braço que vai trabalhar sobre o encosto e levante o haltere até o ombro.",
-        "link_video": "https://www.youtube.com/watch?v=WV7l2i5KCv8"
-      },
-      {
-        "_id": 41,
-        "nome": "Rosca spider",
-        "grupo": "Bíceps",
-        "info": "Em pé, com as pernas afastadas e as mãos segurando uma barra, flexione os braços e puxe a barra em direção à cabeça.",
-        "link_video": "https://www.youtube.com/watch?v"
-    },
-    {
-        "_id": 42,
-        "nome": "Extensão de tríceps com halteres",
-        "grupo": "Tríceps",
-        "info": "Em pé, com os braços estendidos acima da cabeça, segure um haltere com as duas mãos e abaixe-o lentamente até a altura das costas.",
-        "link_video": "https://www.youtube.com/watch?v=qEwKCR5JCog"
-      },
-      {
-        "_id": 43,
-        "nome": "Tríceps testa com halteres",
-        "grupo": "Tríceps",
-        "info": "Deitado em um banco, segure um haltere com as duas mãos acima da cabeça e abaixe-o até a testa.",
-        "link_video": "https://www.youtube.com/watch?v=0tFwHGlL-XY"
-      },
-      {
-        "_id": 44,
-        "nome": "Tríceps coice",
-        "grupo": "Tríceps",
-        "info": "Em pé, com o joelho e a mão opostos apoiados em um banco, segure um haltere com a outra mão e puxe-o para trás, estendendo o braço.",
-        "link_video": "https://www.youtube.com/watch?v=lSNN8LlEldU"
-      },
-      {
-        "_id": 45,
-        "nome": "Tríceps banco",
-        "grupo": "Tríceps",
-        "info": "Sentado em um banco com as mãos segurando a borda do banco, estenda as pernas e desça o corpo até que os cotovelos formem um ângulo de 90 graus.",
-        "link_video": "https://www.youtube.com/watch?v=WvGkLjDfXmg"
-      },
-      {
-        "_id": 46,
-        "nome": "Tríceps testa com barra",
-        "grupo": "Tríceps",
-        "info": "Deitado em um banco, segure uma barra com as mãos afastadas na largura dos ombros acima da cabeça e abaixe-a até a testa.",
-        "link_video": "https://www.youtube.com/watch?v=2-LAMcpzODU"
-      },
-      {
-        "_id": 47,
-        "nome": "Tríceps mergulho",
-        "grupo": "Tríceps",
-        "info": "Sentado em um banco, com as mãos apoiadas na borda do banco e as pernas estendidas à frente do corpo, abaixe o corpo até que os cotovelos formem um ângulo de 90 graus.",
-        "link_video": "https://www.youtube.com/watch?v=JYFzIv03EcA"
-      },
-      {
-        "_id": 48,
-        "nome": "Tríceps francês com halteres",
-        "grupo": "Tríceps",
-        "info": "Em pé, com os braços estendidos acima da cabeça segurando um haltere com as duas mãos, abaixe-o lentamente até a altura das costas.",
-        "link_video": "https://www.youtube.com/watch?v"
-    },
-    {
-        "_id": 49,
-        "nome": "Abdominal tradicional",
-        "grupo": "Abdominais",
-        "info": "Deitado com as costas no chão, flexione os joelhos e coloque as mãos atrás da cabeça. Levante o tronco até sentir a contração dos músculos abdominais e volte à posição inicial.",
-        "link_video": "https://www.youtube.com/watch?v=_M2EtMEiTXo"
-      },
-      {
-        "_id": 50,
-        "nome": "Abdominal com pernas elevadas",
-        "grupo": "Abdominais",
-        "info": "Deitado com as costas no chão, eleve as pernas e mantenha-as retas. Coloque as mãos atrás da cabeça e levante o tronco até sentir a contração dos músculos abdominais. Volte à posição inicial.",
-        "link_video": "https://www.youtube.com/watch?v=Z0w0ZMZVtVE"
-      },
-      {
-        "_id": 51,
-        "nome": "Abdominal oblíquo",
-        "grupo": "Abdominais",
-        "info": "Deitado com as costas no chão, flexione um joelho e mantenha a outra perna estendida. Coloque a mão do mesmo lado da perna estendida atrás da cabeça e levante o tronco até sentir a contração dos músculos abdominais. Volte à posição inicial e repita com a outra perna.",
-        "link_video": "https://www.youtube.com/watch?v=y1GqufCtkio"
-      },
-      {
-        "_id": 52,
-        "nome": "Abdominal com bola suíça",
-        "grupo": "Abdominais",
-        "info": "Sentado em uma bola suíça, cruze os braços na frente do corpo e incline-se para trás, mantendo as costas retas. Contraia os músculos abdominais e volte à posição inicial.",
-        "link_video": "https://www.youtube.com/watch?v=PRhQGmb-uuE"
-      },
-      {
-        "_id": 53,
-        "nome": "Prancha abdominal",
-        "grupo": "Abdominais",
-        "info": "Deitado com o rosto para baixo, apoie-se nos antebraços e nos dedos dos pés. Mantenha o corpo reto e contraia os músculos abdominais. Mantenha a posição por alguns segundos e volte à posição inicial.",
-        "link_video": "https://www.youtube.com/watch?v=pSHjTRCQxIw"
-      },
-      {
-        "_id": 54,
-        "nome": "Abdominal com rotação do tronco",
-        "grupo": "Abdominais",
-        "info": "Deitado com as costas no chão, flexione os joelhos e coloque as mãos atrás da cabeça. Levante o tronco e gire-o para um lado, mantendo os joelhos na mesma posição. Volte à posição inicial e repita do outro lado.",
-        "link_video": "https://www.youtube.com/watch?v=7n5"
-    },
-    {
-        "_id": 55,
-        "nome": "Corrida",
-        "grupo": "Cardío",
-        "info": "Um dos exercícios aeróbicos mais populares, a corrida ajuda a melhorar a saúde cardiovascular, queimar calorias e aumentar a resistência.",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=_nVHvTx-3xE"
-      },
-      {
-        "_id": 56,
-        "nome": "Caminhada",
-        "grupo": "Cardío",
-        "info": "Uma forma mais suave de exercício aeróbico, a caminhada pode ajudar a melhorar a saúde cardiovascular e reduzir o risco de doenças crônicas.",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=aUaInS6HIGo"
-      },
-      {
-        "_id": 57,
-        "nome": "Ciclismo",
-        "grupo": "Cardío",
-        "info": "Outra forma popular de exercício aeróbico, o ciclismo ajuda a melhorar a saúde cardiovascular, fortalecer as pernas e queimar calorias.",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=rVUcm94Z_60"
-      },
-      {
-        "_id": 58,
-        "nome": "Natação",
-        "grupo": "Cardío",
-        "info": "A natação é uma forma de exercício aeróbico de baixo impacto que pode ajudar a melhorar a saúde cardiovascular, fortalecer os músculos e reduzir o estresse.",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=zBtGj5n5yCU"
-      },
-      {
-        "_id": 59,
-        "nome": "Jump",
-        "grupo": "Cardío",
-        "info": "O jump é um exercício aeróbico de alta intensidade que pode ajudar a melhorar a saúde cardiovascular, queimar calorias e fortalecer as pernas.",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=8RvZf2Lghik"
-      },
-      {
-        "_id": 60,
-        "nome": "Zumba",
-        "grupo": "Cardío",
-        "info": "A zumba é uma dança aeróbica que pode ajudar a melhorar a saúde cardiovascular, queimar calorias e melhorar o humor.",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=FD0I6aW8Yv4"
-      },
-      {
-        "_id": 61,
-        "nome": "Remo",
-        "grupo": "Cardío",
-        "info": "O remo é um exercício aeróbico de baixo impacto que pode ajudar a melhorar a saúde cardiovascular, fortalecer as costas e os braços e queimar calorias.",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=oBu-pQG6sTY"
-      },
-      {
-        "_id": 62,
-        "nome": "Pular corda",
-        "grupo": "Cardío",
-        "info": "A caminhada é um exercício aeróbico de baixo impacto que ajuda a melhorar a saúde cardiovascular e a queimar calorias. Pode ser feita em qualquer lugar, como parques, ruas e esteiras.",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=T9Q5oEkf"
-      },
-      {
-        "_id": 62,
-        "nome": "Alongamento de pernas",
-        "grupo": "Alongar",
-        "info": "Melhora a flexibilidade e previne lesões musculares.",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=kl4wMuyuUpc"
-        },
-        {
-        "_id": 63,
-        "nome": "Alongamento de braços",
-        "grupo": "Alongar",
-        "info": "Aumenta a amplitude de movimento dos braços e previne lesões.",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=bMWfX9S0e1g"
-        },
-        {
-        "_id": 64,
-        "nome": "Alongamento de tronco",
-        "grupo": "Alongar",
-        "info": "Ajuda a aliviar a tensão muscular e a melhorar a postura.",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=-gOw5EJHrsM"
-        },
-        {
-        "_id": 65,
-        "nome": "Alongamento de panturrilhas",
-        "grupo": "Alongar",
-        "info": "Melhora a flexibilidade das panturrilhas e previne lesões.",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=byXy6aFvJUo"
-        },
-        {
-        "_id": 66,
-        "nome": "Alongamento de quadril",
-        "grupo": "Alongar",
-        "info": "Melhora a flexibilidade do quadril e previne lesões.",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=4yH4_jaW8HU"
-        },
-        {
-        "_id": 67,
-        "nome": "Alongamento de ombros",
-        "grupo": "Alongar",
-        "info": "Aumenta a amplitude de movimento dos ombros e previne lesões.",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=EW3qza5vXt8"
-        },
-        {
-        "_id": 68,
-        "nome": "Alongamento de glúteos",
-        "grupo": "Alongar",
-        "info": "Melhora a flexibilidade dos glúteos e previne lesões.",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=3Q2-8wJlpFE"
-        },
-        {
-        "_id": 69,
-        "nome": "Alongamento de pescoço",
-        "grupo": "Alongar",
-        "info": "Ajuda a aliviar a tensão muscular no pescoço e a melhorar a postura.",
-        "image":"",
-        "linkvideo": "https://www.youtube.com/watch?v=2l5dGBL5R5c"
-        }
+  {
+    "_id": 1,
+    "nome": "Flexões de braço",
+    "grupo": "Peitoral",
+    "info": "Exercício que trabalha o tronco superior do corpo",
+    "image": "flexao-de-bracos",
+    "linkVideo": "https://www.youtube.com/watch?v=IODxDxX7oi4"
+  },
+  {
+    "_id": 2,
+    "nome": "Supino reto",
+    "grupo": "Peitoral",
+    "info": "Exercício que trabalha o peitoral",
+    "image": "supino-reto",
+    "linkVideo": "https://www.youtube.com/watch?v=20-DoTgT1Fw"
+  },
+  {
+    "_id": 3,
+    "nome": "Supino inclinado",
+    "grupo": "Peitoral",
+    "info": "Exercício que trabalha o peitoral superior",
+    "image": "supino-inclinado-com-barra",
+    "linkVideo": "https://www.youtube.com/watch?v=FyFsuzaW4NY"
+  },
+  {
+    "_id": 4,
+    "nome": "Crucifixo",
+    "grupo": "Peitoral",
+    "info": "Exercício que trabalha o peitoral",
+    "image": "crusifixo-com-alteres",
+    "linkVideo": "https://www.youtube.com/watch?v=pPwEJik5OxE"
+  },
+  {
+    "_id": 5,
+    "nome": "Voador no aparelho",
+    "grupo": "Peitoral",
+    "info": "Exercício que trabalha o tronco superior e o tríceps",
+    "image": "voador-no-aparelho",
+    "linkVideo": "https://www.youtube.com/watch?v=9UZbLHJB1p4"
+  },
+  {
+    "_id": 6,
+    "nome": "Supino inclinado com alteres",
+    "grupo": "Peitoral",
+    "info": "Exercício que trabalha o peitoral",
+    "image": "supino-inclinado-com-halteres",
+    "linkVideo": "https://www.youtube.com/watch?v=XZzq3xUWwx0"
+  },
+  {
+    "_id": 7,
+    "nome": "Pullover",
+    "grupo": "Peitoral, costas, ombros",
+    "info": "Exercício que trabalha o peitoral inferior e o serrátil anterior",
+    "image": "Pullover-com-alteres",
+    "linkVideo": "https://www.youtube.com/watch?v=YtXu9cJZTt4"
+  },
+  {
+    "_id": 8,
+    "nome": "Supino reto com alteres",
+    "grupo": "Peitoral",
+    "info": "Exercício que trabalha o peitoral",
+    "image": "supino-reto-com-halteres",
+    "linkVideo": "https://www.youtube.com/watch?v=ZoG5LOwW8Cg"
+  },
+  {
+    "_id": 9,
+    "nome": "Crossover",
+    "grupo": "Peitoral",
+    "info": "Exercício que trabalha o peitoral",
+    "image": "crossover",
+    "linkVideo": "https://www.youtube.com/watch?v=B7Vbu4s0YnU"
+  },
+  {
+    "_id": 10,
+    "nome": "Remada baixa",
+    "grupo": "Dorsal",
+    "info": "Exercício que trabalha as costas e os ombros",
+    "image": "remada-baixa",
+    "linkVideo": "https://www.youtube.com/watch?v=yG1C_2QV8uE"
+  },
+  {
+    "_id": 11,
+    "nome": "Remada unilateral com halteres",
+    "grupo": "Dorsal",
+    "info": "Exercício que trabalha as costas e os bíceps",
+    "image": "",
+    "linkVideo": "https://www.youtube.com/watch?v=JyCGpVLYaFA"
+  },
+  {
+    "_id": 12,
+    "nome": "Puxada no pulley",
+    "grupo": "Dorsal",
+    "info": "Exercício que trabalha as costas e os ombros",
+    "image": "",
+    "linkVideo": "https://www.youtube.com/watch?v=kWRGz6xuUcM"
+  },
+  {
+    "_id": 13,
+    "nome": "Levantamento terra",
+    "grupo": "Glúteos, Pernas",
+    "info": "Exercício que trabalha as costas, glúteos e pernas",
+    "image": "afundo-com-barra-reto",
+    "linkVideo": "https://www.youtube.com/watch?v=ytGaGIn3SjE"
+  },
+  {
+    "_id": 14,
+    "nome": "Remada curvada com barra",
+    "grupo": "Dorsal",
+    "info": "Exercício que trabalha as costas e os bíceps",
+    "image": "",
+    "linkVideo": "https://www.youtube.com/watch?v=9efgcAjQe_I"
+  },
+  {
+    "_id": 15,
+    "nome": "Puxada alta na polia",
+    "grupo": "Dorsal",
+    "info": "Exercício que trabalha as costas e os ombros",
+    "image": "costas-puxada-com-barra-no-pulley-1",
+    "linkVideo": "https://www.youtube.com/watch?v=zQnsvfwKjD8"
+  },
+  {
+    "_id": 16,
+    "nome": "Puxada fechada na polia",
+    "grupo": "Dorsal",
+    "info": "Exercício que trabalha as costas e os bíceps",
+    "image": "costas-puxada-para-frente-no-pulley-com-triangulo",
+    "linkVideo": "https://www.youtube.com/watch?v=6AVY1HFn0VY"
+  },
+  {
+    "_id": 17,
+    "nome": "Remada unilateral na máquina",
+    "grupo": "Dorsal",
+    "info": "Exercício que trabalha as costas e os bíceps",
+    "image": "",
+    "linkVideo": "https://www.youtube.com/watch?v=nnCtQmrvZyw"
+  },
+  {
+    "_id": 18,
+    "nome": "Desenvolvimento com Alteres",
+    "grupo": "Ombros",
+    "info": "Levante a barra até os ombros e estenda os braços para cima",
+    "image": "desenvolvimento-para-ombros-com-halteres",
+    "linkVideo": "https://www.youtube.com/watch?v=qEwKCR5JCog"
+  },
+  {
+    "_id": 19,
+    "nome": "Voador invertido",
+    "grupo": "Ombros",
+    "info": "Levante os halteres até a altura dos ombros",
+    "image": "ombros-voador-invertido-na-maquinar",
+    "linkVideo": "https://www.youtube.com/watch?v=mHj6SguUFLw"
+  },
+  {
+    "_id": 20,
+    "nome": "Elevação Unilateral Polia",
+    "grupo": "Ombros",
+    "info": "Levante os halteres à frente do corpo até a altura dos ombros",
+    "image": "Elevacao-unilateral-na-polia",
+    "linkVideo": "https://www.youtube.com/watch?v=Q2RuJ4XEY5Y"
+  },
+  {
+    "_id": 21,
+    "nome": "Elevação Unilateral Alteres",
+    "grupo": "Ombros",
+    "info": "Levante a barra à frente do corpo até a altura dos ombros",
+    "image": "elevacao-unilateral-alter",
+    "linkVideo": "https://www.youtube.com/watch?v=-R0hbe8HznA"
+  },
+  {
+    "_id": 22,
+    "nome": "Remada Alta",
+    "grupo": "Trapézio",
+    "info": "Levante a barra até o queixo, mantendo os cotovelos elevados",
+    "image": "ombros-remada-alta-no-cabo",
+    "linkVideo": "https://www.youtube.com/watch?v=XQh-lRkO_d8"
+  },
+  {
+    "_id": 23,
+    "nome": "Desenvolvimento frontal com barra",
+    "grupo": "Ombros",
+    "info": "Levante os halteres até os ombros e estenda os braços para cima",
+    "image": "ombros-desenvolvimento-de-ombros-frontal-com-barra",
+    "linkVideo": "https://www.youtube.com/watch?v=1yQGAvf0m9k"
+  },
+  {
+    "_id": 24,
+    "nome": "Elevação bilateral alteres",
+    "grupo": "Ombros",
+    "info": "Levante os halteres até os ombros e estenda os braços para cima",
+    "image": "ombros-elevacao-lateral-de-ombros-com-halteres",
+    "linkVideo": "https://www.youtube.com/watch?v=0ef28Fd_mNg"
+  },
+  {
+    "_id": 25,
+    "nome": "Crucifixo invertido alteres",
+    "grupo": "Ombros",
+    "info": "Levante os halteres para trás, mantendo os cotovelos levemente dobrados",
+    "image": "ombros-crucifixo-invertido-com-halteres",
+    "linkVideo": "https://www.youtube.com/watch?v=33B-jp7Zq8I"
+  },
+  {
+    "_id": 26,
+    "nome": "Remada Alta com Halteres",
+    "grupo": "Trapézio",
+    "info": "Levante os halteres até o queixo, mantendo os cotovelos elevados",
+    "image": "ombros-remada-alta-em-pe-com-halteres",
+    "linkVideo": "https://www.youtube.com/watch?v=XQh-lRkO_d8"
+  },
+  {
+    "_id": 27,
+    "nome": "Agachamento livre",
+    "grupo": "Pernas",
+    "info": "Posicione a barra no trapézio, em pé, com os pés afastados na largura dos ombros e desça até que as coxas fiquem paralelas ao chão.",
+    "image": "isometria",
+    "linkVideo": "https://www.youtube.com/watch?v=t2b8UdqmlFs"
+  },
+  {
+    "_id": 28,
+    "nome": "Leg Press 45º",
+    "grupo": "Pernas",
+    "info": "Sentado na máquina, empurre a plataforma com os pés até que as pernas estejam completamente estendidas, depois abaixe lentamente.",
+    "image": "pernas-leg-press-45-tradicional",
+    "linkVideo": "https://www.youtube.com/watch?v=sp8JHbLwPmw"
+  },
+  {
+    "_id": 29,
+    "nome": "Cadeira Extensora",
+    "grupo": "Pernas",
+    "info": "Sentado na máquina, apoie os pés nas almofadas e empurre os pesos com as pernas até estender completamente os joelhos.",
+    "image": "cadeira-flexora",
+    "linkVideo": "https://www.youtube.com/watch?v=hmjg24n86aM"
+  },
+  {
+    "_id": 30,
+    "nome": "Cadeira Flexora",
+    "grupo": "Pernas",
+    "info": "Sentado na máquina, posicione as pernas sob a almofada e empurre-a para baixo com as pernas dobradas.",
+    "image": "pernas-flexao-de-pernas-na-maquina",
+    "linkVideo": "https://www.youtube.com/watch?v=fCJ8-EHsTzM"
+  },
+  {
+    "_id": 31,
+    "nome": "Stiff na barra",
+    "grupo": "Glúteos",
+    "info": "Em pé com as pernas afastadas na largura dos ombros, segure uma barra com as mãos afastadas e desça o tronco até sentir um alongamento nos músculos das costas das pernas. Retorne à posição inicial.",
+    "image": "stiff-com-barra-f",
+    "linkVideo": "https://www.youtube.com/watch?v=YSxWpE-Lskk"
+  },
+  {
+    "_id": 32,
+    "nome": "Agachamento afundo com halteres",
+    "grupo": "Isquiotibiais",
+    "info": "Deitado de barriga para baixo em uma mesa, prenda os pés no suporte e dobre as pernas até que os calcanhares toquem as nádegas.",
+    "image": "",
+    "linkVideo": "https://www.youtube.com/watch?v=ZfNXrDdOUEM"
+  },
+  {
+    "_id": 33,
+    "nome": "Afundo com barra",
+    "grupo": "Pernas",
+    "info": "Em pé com um pé à frente do outro, desça o corpo até que a coxa da perna de trás esteja paralela ao chão.",
+    "image": "afundo-com-barra-reto'",
+    "linkVideo": "https://www.youtube.com/watch?v=vcv"
+  },
+  {
+    "_id": 34,
+    "nome": "Panturrilha prancha",
+    "grupo": "Panturrilhas",
+    "info": "Sentado na máquina de leg press, mantenha os calcanhares na plataforma e empurre-a com os pés até estender completamente as pernas, depois empurre a plataforma novamente apenas com as pontas dos pés.",
+    "image": "paturrilha-prancha",
+    "linkVideo": "https://www.youtube.com/watch?v=vcv"
+  },
+  {
+    "_id": 35,
+    "nome": "Rosca martelo com halteres",
+    "grupo": "Bíceps",
+    "info": "Em pé, com os braços estendidos ao lado do corpo, segure um haltere em cada mão com as palmas das mãos voltadas para dentro do corpo e levante-os até a altura dos ombros.",
+    "image": "rosca-biceps-martelo-com-halteres",
+    "linkVideo": "https://www.youtube.com/watch?v=Pf36jJLGGLk"
+  },
+  {
+    "_id": 36,
+    "nome": "Rosca direta com barra",
+    "grupo": "Bíceps",
+    "info": "Em pé, com os pés afastados na largura dos ombros, segure uma barra com as mãos afastadas na largura dos ombros e levante-a até a altura dos ombros.",
+    "image": "rosca-direta-barra-reta",
+    "linkVideo": "https://www.youtube.com/watch?v=kwG2ipFRgfo"
+  },
+  {
+    "_id": 37,
+    "nome": "Rosca direta com halteres",
+    "grupo": "Bíceps",
+    "info": "Em pé, com os braços estendidos ao lado do corpo, segure um haltere em cada mão e levante-os até a altura dos ombros.",
+    "image": "rosca-biceps-direta-com-halteres",
+    "linkVideo": "https://www.youtube.com/watch?v=BYKScL2sgCs"
+  },
+  {
+    "_id": 38,
+    "nome": "Rosca concentrada",
+    "grupo": "Bíceps",
+    "info": "Sentado em um banco com um haltere entre as pernas, apoie o cotovelo do braço que vai trabalhar sobre o joelho e levante o haltere até o ombro.",
+    "image": "rosca-concentrada-unilateral-com-halter",
+    "linkVideo": "https://www.youtube.com/watch?v=C3qz9U_1fPU"
+  },
+  {
+    "_id": 39,
+    "nome": "Rosca martelo cabo",
+    "grupo": "Bíceps",
+    "info": "Em pé, com os braços estendidos ao lado do corpo e as mãos segurando uma barra com as palmas voltadas para baixo, levante-a até a altura dos ombros.",
+    "image": "rosca-biceps-no-cabo",
+    "linkVideo": "https://www.youtube.com/watch?v=3GwH06K1hDQ"
+  },
+  {
+    "_id": 40,
+    "nome": "Rosca concentrada no banco inclinado",
+    "grupo": "Bíceps",
+    "info": "Sentado em um banco inclinado, apoie o braço que vai trabalhar sobre o encosto e levante o haltere até o ombro.",
+    "image": "rosca-biceps-com-halteres-no-banco-inclinado",
+    "linkVideo": "https://www.youtube.com/watch?v=WV7l2i5KCv8"
+  },
+  {
+    "_id": 41,
+    "nome": "Rosca direta na barra W",
+    "grupo": "Bíceps",
+    "info": "Em pé, com as pernas afastadas e as mãos segurando uma barra, flexione os braços e puxe a barra em direção à cabeça.",
+    "image": "rosca-biceps-direta-na-barra-ez",
+    "linkVideo": "https://www.youtube.com/watch?v"
+  },
+  {
+    "_id": 42,
+    "nome": "Extensão de tríceps no banco",
+    "grupo": "Tríceps",
+    "info": "Em pé, com os braços estendidos acima da cabeça, segure um haltere com as duas mãos e abaixe-o lentamente até a altura das costas.",
+    "image": "extensao-de-triceps-com-halteres-no-banco",
+    "linkVideo": "https://www.youtube.com/watch?v=qEwKCR5JCog"
+  },
+  {
+    "_id": 43,
+    "nome": "Tríceps testa na barra",
+    "grupo": "Tríceps",
+    "info": "Deitado em um banco, segure um haltere com as duas mãos acima da cabeça e abaixe-o até a testa.",
+    "image": "rosca-triceps-testa-deitado-no-banco-com-barra-tradicional",
+    "linkVideo": "https://www.youtube.com/watch?v=0tFwHGlL-XY"
+  },
+  {
+    "_id": 44,
+    "nome": "Tríceps coice",
+    "grupo": "Tríceps",
+    "info": "Em pé, com o joelho e a mão opostos apoiados em um banco, segure um haltere com a outra mão e puxe-o para trás, estendendo o braço.",
+    "image": "",
+    "linkVideo": "https://www.youtube.com/watch?v=lSNN8LlEldU"
+  },
+  {
+    "_id": 45,
+    "nome": "Tríceps banco",
+    "grupo": "Tríceps",
+    "info": "Sentado em um banco com as mãos segurando a borda do banco, estenda as pernas e desça o corpo até que os cotovelos formem um ângulo de 90 graus.",
+    "image": "triceps-no-banco",
+    "linkVideo": "https://www.youtube.com/watch?v=WvGkLjDfXmg"
+  },
+  {
+    "_id": 46,
+    "nome": "Tríceps testa banco inclinado",
+    "grupo": "Tríceps",
+    "info": "Deitado em um banco, segure uma barra com as mãos afastadas na largura dos ombros acima da cabeça e abaixe-a até a testa.",
+    "image": "triceps-testa-no-banco-inclinado",
+    "linkVideo": "https://www.youtube.com/watch?v=2-LAMcpzODU"
+  },
+  {
+    "_id": 47,
+    "nome": "Tríceps pulley costa",
+    "grupo": "Tríceps",
+    "info": "Sentado em um banco, com as mãos apoiadas na borda do banco e as pernas estendidas à frente do corpo, abaixe o corpo até que os cotovelos formem um ângulo de 90 graus.",
+    "image": "triceps-no-pulley-atras-ca-cabeca",
+    "linkVideo": "https://www.youtube.com/watch?v=JYFzIv03EcA"
+  },
+  {
+    "_id": 48,
+    "nome": "Tríceps francês com halteres",
+    "grupo": "Tríceps",
+    "info": "Em pé, com os braços estendidos acima da cabeça segurando um haltere com as duas mãos, abaixe-o lentamente até a altura das costas.",
+    "image": "triceps-nuca-com-halter",
+    "linkVideo": "https://www.youtube.com/watch?v"
+  },
+  {
+    "_id": 49,
+    "nome": "Abdominal prancha com movimento",
+    "grupo": "Abdominais",
+    "info": "Deitado com as costas no chão, flexione os joelhos e coloque as mãos atrás da cabeça. Levante o tronco até sentir a contração dos músculos abdominais e volte à posição inicial.",
+    "image": "abdominal-prancha-com-movimento",
+    "linkVideo": "https://www.youtube.com/watch?v=_M2EtMEiTXo"
+  },
+  {
+    "_id": 50,
+    "nome": "Abdominal tradicional",
+    "grupo": "Abdominais",
+    "info": "Deitado com as costas no chão, eleve as pernas e mantenha-as retas. Coloque as mãos atrás da cabeça e levante o tronco até sentir a contração dos músculos abdominais. Volte à posição inicial.",
+    "image": "abdominal-tradicional",
+    "linkVideo": "https://www.youtube.com/watch?v=Z0w0ZMZVtVE"
+  },
+  {
+    "_id": 51,
+    "nome": "Abdominal em V na maquina",
+    "grupo": "Abdominais",
+    "info": "Deitado com as costas no chão, flexione um joelho e mantenha a outra perna estendida. Coloque a mão do mesmo lado da perna estendida atrás da cabeça e levante o tronco até sentir a contração dos músculos abdominais. Volte à posição inicial e repita com a outra perna.",
+    "image": "abdominal-em-V-na-maquina",
+    "linkVideo": "https://www.youtube.com/watch?v=y1GqufCtkio"
+  },
+  {
+    "_id": 52,
+    "nome": "Abdominal com eleveção de pernas",
+    "grupo": "Abdominais",
+    "info": "Sentado em uma bola suíça, cruze os braços na frente do corpo e incline-se para trás, mantendo as costas retas. Contraia os músculos abdominais e volte à posição inicial.",
+    "image": "abdominal-no-chao-com-elevacao-de-pernas",
+    "linkVideo": "https://www.youtube.com/watch?v=PRhQGmb-uuE"
+  },
+  {
+    "_id": 53,
+    "nome": "Abdominal na barra",
+    "grupo": "Abdominais",
+    "info": "Deitado com o rosto para baixo, apoie-se nos antebraços e nos dedos dos pés. Mantenha o corpo reto e contraia os músculos abdominais. Mantenha a posição por alguns segundos e volte à posição inicial.",
+    "image": "abdominal-na-barra",
+    "linkVideo": "https://www.youtube.com/watch?v=pSHjTRCQxIw"
+  },
+  {
+    "_id": 54,
+    "nome": "Abdominal elevacao de pernas no banco",
+    "grupo": "Abdominais",
+    "info": "Deitado com as costas no chão, flexione os joelhos e coloque as mãos atrás da cabeça. Levante o tronco e gire-o para um lado, mantendo os joelhos na mesma posição. Volte à posição inicial e repita do outro lado.",
+    "image": "abdominal-elevacao-de-pernas-no-banco",
+    "linkVideo": "https://www.youtube.com/watch?v=7n5"
+  },
+  {
+    "_id": 55,
+    "nome": "Corrida na esterira",
+    "grupo": "Cardío",
+    "info": "Um dos exercícios aeróbicos mais populares, a corrida ajuda a melhorar a saúde cardiovascular, queimar calorias e aumentar a resistência.",
+    "image": "corrida-na-esteira-inclinada-1",
+    "linkVideo": "https://www.youtube.com/watch?v=_nVHvTx-3xE"
+  },
+  {
+    "_id": 56,
+    "nome": "Pular corda",
+    "grupo": "Cardío",
+    "info": "A caminhada é um exercício aeróbico de baixo impacto que ajuda a melhorar a saúde cardiovascular e a queimar calorias. Pode ser feita em qualquer lugar, como parques, ruas e esteiras.",
+    "image": "pular-corda",
+    "linkVideo": "https://www.youtube.com/watch?v=T9Q5oEkf"
+  },
+  {
+    "_id": 57,
+    "nome": "Abdominal bicicleta",
+    "grupo": "Abdominais",
+    "info": "Fortalece a região abdominal e trabalha a coordenação motora. ",
+    "image": "abdominal-bicicleta",
+    "linkVideo": "https://www.youtube.com/watch?v=5V7OJm5KI5k"
+  },
+  {
+    "_id": 58,
+    "nome": "Abdominal em pé inclinado com halter",
+    "grupo": "Abdominais",
+    "info": "Exercício abdominal em pé com inclinação lateral e halter.",
+    "image": "abdominal-em-pe-com-inclinacao-lateral-e-halter",
+    "linkVideo": "https://www.youtube.com/watch?v=u5YwV2YlKFo"
+  },
+  {
+    "_id": 59,
+    "nome": "Abdominal obliquo inclinado com barra",
+    "grupo": "Abdominais",
+    "info": "Trabalha a região lateral do abdômen e fortalece a coluna.",
+    "image": "abdominal-obliquo-inclinacao-lateral-com-barra-apoiada-nos-ombros",
+    "linkVideo": "https://www.youtube.com/watch?v=zwWZimSgMCE"
+  },
+  {
+    "_id": 60,
+    "nome": "Abdominal obliquo solo",
+    "grupo": "Abdominais",
+    "info": "Fortalece a região abdominal lateral e melhora a postura.",
+    "image": "abdominal-obliquo-lateral-no-solo",
+    "linkVideo": "https://www.youtube.com/watch?v=AmEjGCaRjbk"
+  },
+  {
+    "_id": 61,
+    "nome": "Abdominal obliquo no banco inclinado",
+    "grupo": "Abdominais",
+    "info": "Fortalece a região lateral do abdômen e melhora a estabilidade.",
+    "image": "abdominal-obliquo-no-banco-inclinado-com-rotacao-de-tronco",
+    "linkVideo": "https://www.youtube.com/watch?v=2aCYRgJ6nno"
+  },
+  {
+    "_id": 62,
+    "nome": "Abdominal oblico rotação russa",
+    "grupo": "Abdominais",
+    "info": "Trabalha a região lateral do abdômen e os músculos do quadril.",
+    "image": "abdominal-obliquo-rotacao-russa-com-anilha-e-pernas-parra-cima",
+    "linkVideo": "https://www.youtube.com/watch?v=CAbcJOj0pPM"
+  },
+  {
+    "_id": 63,
+    "nome": "Agachamento afundo com halteres",
+    "grupo": "Pernas",
+    "info": "Fortalece as pernas e glúteos, melhora a postura e o equilíbrio.",
+    "image": "agachamento-afundo-com-halteres",
+    "linkVideo": "https://www.youtube.com/watch?v=3PlU6XQl6a8"
+  },
+  {
+    "_id": 64,
+    "nome": "Agachamento com barra frontal",
+    "grupo": "Pernas",
+    "info": "Trabalha as pernas e o core, exige boa mobilidade de punhos e ombros. Mantenha o tronco ereto e joelhos alinhados com os dedos dos pés.",
+    "image": "agachamento-com-barra-frontal",
+    "linkVideo": "https://www.youtube.com/watch?v=PbXlJz9nUPI"
+  },
+  {
+    "_id": 65,
+    "nome": "Agachamento com barra",
+    "grupo": "Pernas",
+    "info": "Um dos exercícios mais completos para as pernas, glúteos e core. Mantenha o tronco ereto e joelhos alinhados com os dedos dos pés.",
+    "image": "agachamento-com-barra",
+    "linkVideo": "https://www.youtube.com/watch?v=IzuHMyn3qYI"
+  },
+  {
+    "_id": 66,
+    "nome": "Agachamento no rack",
+    "grupo": "Pernas",
+    "info": "Ótimo exercício para construir força e massa muscular nas pernas. Utilize uma barra com suporte ou rack para garantir a segurança.",
+    "image": "agachamento-no-rack",
+    "linkVideo": "https://www.youtube.com/watch?v=0jU6L_BNo_g"
+  },
+  {
+    "_id": 67,
+    "nome": "Agachamento profundo halteres",
+    "grupo": "Pernas",
+    "info": "Variação do agachamento tradicional, requer maior amplitude de movimento e ajuda a fortalecer os músculos estabilizadores. Mantenha o tronco ereto e joelhos alinhados com os dedos dos pés.",
+    "image": "agachamento-profundo-com-alter",
+    "linkVideo": "https://www.youtube.com/watch?v=nwNf_GwY4Rs"
+  },
+  {
+    "_id": 68,
+    "nome": "Rosca no banco scott com barra W",
+    "grupo": "Bíceps",
+    "info": "Exercício isolado para o bíceps braquial. Mantenha os cotovelos fixos e faça o movimento com os braços.",
+    "image": "biceps-rosca-biceps-no-banco-scott-com-barra-W",
+    "linkVideo": "https://www.youtube.com/watch?v=VZoJOaIorFc"
+  },
+  {
+    "_id": 69,
+    "nome": "Bugaro com halteres",
+    "grupo": "Glúteos, Pernas",
+    "info": "Exercício composto que trabalha pernas, glúteos e core. Mantenha o tronco ereto e os joelhos alinhados com os dedos dos pés. Faça o movimento com os quadris, não com as costas.",
+    "image": "bugaro-alter",
+    "linkVideo": "https://www.youtube.com/watch?v=JnUIgY3q69E"
+  },
+  {
+    "_id": 70,
+    "nome": "Puxada aberta com barra no pulley",
+    "grupo": "Dorsal",
+    "info": "Exercício para trabalhar as costas e bíceps. Realize com postura correta e movimentos controlados.",
+    "image": "costas-puxada-aberta-com-barra-no-pulley-1",
+    "linkVideo": "https://www.youtube.com/watch?v=Kkz8tH5eq5w"
+  },
+  {
+    "_id": 71,
+    "nome": "Remada em pé com barra T",
+    "grupo": "Dorsal",
+    "info": "Exercício para desenvolver a musculatura das costas e do trapézio. Mantenha a postura correta e o movimento controlado.",
+    "image": "costas-remada-em-pe-com-barra-T",
+    "linkVideo": "https://www.youtube.com/watch?v=O9nb3qKtQVI"
+  },
+  {
+    "_id": 72,
+    "nome": "Remada martelo no banco inclinado com halteres",
+    "grupo": "Dorsal",
+    "info": "Exercício para fortalecer as costas e melhorar a postura. Realize o movimento com controle e use uma carga adequada.",
+    "image": "costas-remada-martelo-no-banco-inclinado-com-halteres",
+    "linkVideo": "https://www.youtube.com/watch?v=DNKndTFW7R8"
+  },
+  {
+    "_id": 73,
+    "nome": "Remada no smith com pegada invertida",
+    "grupo": "Dorsal",
+    "info": "Exercício para fortalecer as costas, bíceps e antebraços. Realize com movimentos controlados e mantenha a postura correta.",
+    "image": "costas-remada-no-smith-com-pegada-invertida",
+    "linkVideo": "https://www.youtube.com/watch?v=yvKeYPwABbY"
+  },
+  {
+    "_id": 74,
+    "nome": "Remada unilateral com halter serrote no banco",
+    "grupo": "Dorsal",
+    "info": "Exercício para desenvolver a musculatura das costas e dos braços. Mantenha a postura correta e realize o movimento com controle.",
+    "image": "costas-remada-unilateral-com-halter-serrote-no-banco",
+    "linkVideo": "https://www.youtube.com/watch?v=QjSgJcZhqC4"
+  },
+  {
+    "_id": 75,
+    "nome": "Crossover pegada baixa",
+    "grupo": "Peitoral",
+    "info": "Exercício para peitoral com crossover e pegada baixa",
+    "image": "crossover-pegada-baixa",
+    "linkVideo": "https://www.youtube.com/watch?v=H8XQ2XcUco0"
+  },
+  {
+    "_id": 76,
+    "nome": "Mesa Flexora",
+    "grupo": "Pernas",
+    "info": "Exercício para pernas que fortalece a musculatura da coxa",
+    "image": "pernas-flexao-de-pernas-na-maquina",
+    "linkVideo": "https://www.youtube.com/watch?v=1pRpDzKj9P8"
+  },
+  {
+    "_id": 77,
+    "nome": "Barra paralelas",
+    "grupo": "Peitoral",
+    "info": "Exercício para peitoral que usa o peso corporal",
+    "image": "paralelas",
+    "linkVideo": "https://www.youtube.com/watch?v=PWgYYE-13JI"
+  },
+  {
+    "_id": 78,
+    "nome": "Paturilha unilateral",
+    "grupo": "Panturrilhas",
+    "info": "Exercício para panturrilhas que trabalha um lado de cada vez",
+    "image": "paturilha-unilateral",
+    "linkVideo": "https://www.youtube.com/watch?v=ZYbnaT-pRmU"
+  },
+  {
+    "_id": 79,
+    "nome": "Panturrilha em pé no aparelho",
+    "grupo": "Panturrilhas",
+    "info": "Exercício para panturrilhas feito em pé em um aparelho específico",
+    "image": "Panturrilha-em-pe-no-aparelho",
+    "linkVideo": "https://www.youtube.com/watch?v=J4ctBjZTRFU"
+  },
+  {
+    "_id": 80,
+    "nome": "Panturrilha no leg press",
+    "grupo": "Panturrilhas",
+    "info": "Exercício para panturrilhas realizado no leg press",
+    "image": "Panturrilha-no-leg-press",
+    "linkVideo": "https://www.youtube.com/watch?v=9Osc8WQjKx0"
+  },
+  {
+    "_id": 81,
+    "nome": "Panturrilha sentado",
+    "grupo": "Panturrilhas",
+    "info": "Exercício para panturrilhas feito sentado em um aparelho específico",
+    "image": "panturrilha-sentado",
+    "linkVideo": "https://www.youtube.com/watch?v=c9q1Nc6N5Zw"
+  },
+  {
+    "_id": 82,
+    "nome": "Abdução na máquina com cabos",
+    "grupo": "Pernas",
+    "info": "Exercício para pernas que trabalha a abdução com cabos",
+    "image": "pernas-abducao-de-pernas-na-maquina-com-cabos",
+    "linkVideo": "https://www.youtube.com/watch?v=RVHwCiknVtI"
+  },
+  {
+    "_id": 83,
+    "nome": "Cadeira abdutora",
+    "grupo": "Pernas",
+    "info": "Fortalece os músculos da parte externa da coxa. ",
+    "image": "pernas-abducao-de-pernas-na-maquina",
+    "linkVideo": "https://www.youtube.com/watch?v=hgxrVoZLtvo"
+  },
+  {
+    "_id": 84,
+    "nome": "Adução na máquina com cabo",
+    "grupo": "Pernas",
+    "info": "Fortalece os músculos da parte interna da coxa. ",
+    "image": "pernas-aducao-de-pernas-na-maquina-com-cabo",
+    "linkVideo": "https://www.youtube.com/watch?v=dQjzpiTYI8k"
+  },
+  {
+    "_id": 85,
+    "nome": "Adução de pernas na máquina",
+    "grupo": "Pernas",
+    "info": "Fortalece os músculos da parte interna da coxa. ",
+    "image": "pernas-aducao-de-pernas-na-maquina",
+    "linkVideo": "https://www.youtube.com/watch?v=jz81V7EYsfY"
+  },
+  {
+    "_id": 86,
+    "nome": "Levantamento terra deadlift",
+    "grupo": "Pernas",
+    "info": "Exercício de força para pernas e glúteos. Utiliza a barra para levantar o peso do chão até a posição ereta.",
+    "image": "pernas-e-costas-levantamento-terra-deadlift",
+    "linkVideo": "https://www.youtube.com/watch?v=op9kVnSso6Q"
+  },
+  {
+    "_id": 87,
+    "nome": "Levantamento terra deadlift stiff com halteres",
+    "grupo": "Pernas",
+    "info": "Exercício de força para pernas e glúteos. Utiliza halteres para levantar o peso do chão até a posição ereta.",
+    "image": "pernas-levantamento-terra-deadlift-stiff-com-halteres",
+    "linkVideo": "https://www.youtube.com/watch?v=0JfYxMRBXow"
+  },
+  {
+    "_id": 88,
+    "nome": "Pullday",
+    "grupo": "Dorsal",
+    "info": "Treino de costas que inclui puxadas com barra e exercícios de remada para fortalecer os músculos das costas.",
+    "image": "Pulday",
+    "linkVideo": "https://www.youtube.com/watch?v=1sgb2xawrMU"
+  },
+  {
+    "_id": 89,
+    "nome": "Puxada latissimus naquina de cabos",
+    "grupo": "Dorsal",
+    "info": "Exercício para fortalecer os músculos das costas e do braço, usando a máquina de puxada latissimus com cabos.",
+    "image": "Puxada-lat-latissimus-dorsi-na-maquina-de-cabos",
+    "linkVideo": "https://www.youtube.com/watch?v=lS5wdME_4gQ"
+  },
+  {
+    "_id": 90,
+    "nome": "Remada invertida usando o smith-machine",
+    "grupo": "Dorsal",
+    "info": "Exercício para fortalecer os músculos das costas e dos braços, usando o smith-machine para realizar a remada invertida.",
+    "image": "remada-invertida-usando-o-smith-machine",
+    "linkVideo": "https://www.youtube.com/watch?v=13m21VeZJfc"
+  },
+  {
+    "_id": 91,
+    "nome": "Remada sentado triangulo",
+    "grupo": "Dorsal",
+    "info": "Exercício para fortalecer os músculos das costas e dos braços, usando o aparelho de remada sentado com triangulo.",
+    "image": "remada-sentado-com-cabos-e-triangulo-para-costas",
+    "linkVideo": "https://www.youtube.com/watch?v=rP5S5H5VUUw"
+  },
+  {
+    "_id": 92,
+    "nome": "Rosca martelo com halteres",
+    "grupo": "Bíceps",
+    "info": "Ótimo exercício para trabalhar os músculos do braço, além de ajudar a fortalecer os antebraços.",
+    "image": "rosca-biceps-martelo-com-halteres",
+    "linkVideo": "https://www.youtube.com/watch?v=uKquZNsYv58"
+  },
+  {
+    "_id": 93,
+    "nome": "Smith single-Leg",
+    "grupo": "Pernas",
+    "info": "Excelente exercício para trabalhar o equilíbrio e fortalecer os músculos das pernas e glúteos.",
+    "image": "Smith-Single-Leg",
+    "linkVideo": "https://www.youtube.com/watch?v=bM7SZ5SBzyY"
+  },
+  {
+    "_id": 94,
+    "nome": "Puxada no pulley com corda",
+    "grupo": "Tríceps",
+    "info": "Este exercício é ótimo para trabalhar a musculatura do tríceps e fortalecer os braços.",
+    "image": "triceps-puxada-no-pulley-com-corda",
+    "linkVideo": "https://www.youtube.com/watch?v=wsGBlv1_FsM"
+  },
+  {
+    "_id": 95,
+    "nome": "Puxada no pulley",
+    "grupo": "Trapézio",
+    "info": "Ótimo exercício para fortalecer os músculos do trapézio, além de ajudar a melhorar a postura.",
+    "image": "triceps-puxada-no-pulley",
+    "linkVideo": "https://www.youtube.com/watch?v=_MVOrCQyCgE"
+  },
+  {
+    "_id": 97,
+    "nome": "Triceps supino com triceps-coice pegada fechada na barra",
+    "grupo": "Tríceps",
+    "info": "Exercício para o tríceps com barra e pegada fechada. Fortalece os músculos tríceps braquial, peitoral maior, deltoides anterior e posterior.",
+    "image": "triceps-supino-com-pegada-fechada-barra",
+    "linkVideo": "https://www.youtube.com/watch?v=UUEy8nJF5e"
+  },
+  {
+    "_id": 98,
+    "nome": "Triceps coice",
+    "grupo": "Tríceps",
+    "info": "Exercício para o tríceps com halteres. Trabalha principalmente os músculos tríceps braquial, mas também recruta os músculos do ombro e das costas.",
+    "image": "triceps-coice",
+    "linkVideo": "https://www.youtube.com/watch?v=OZlVTVc9H6o"
+  },
+  {
+    "_id": 99,
+    "nome": "Voador cabo banco inclinado",
+    "grupo": "Peitoral",
+    "info": "Exercício para o peitoral com o uso de cabos. Fortalece principalmente o músculo peitoral maior, mas também trabalha os músculos do ombro e dos braços.",
+    "image": "voador-cabo-banco-inclinado",
+    "linkVideo": "https://www.youtube.com/watch?v=LRXq3rHrpfM"
+  },
+  {
+    "_id": 100,
+    "nome": "Rosca martelo barra-H",
+    "grupo": "Bíceps",
+    "info": "Exercício para o bíceps com a barra-H. Fortalece principalmente o músculo bíceps braquial, mas também trabalha os músculos do antebraço e dos ombros.",
+    "image": "rosca-martelo-barra-h",
+    "linkVideo": "https://www.youtube.com/watch?v=K6U9VoMUdJk"
+  },
+  {
+    "_id": 101,
+    "nome": "Barra-fixa chin-up",
+    "grupo": "Bíceps",
+    "info": "Exercício para o bíceps e as costas com o uso de uma barra. Trabalha principalmente o músculo bíceps braquial, mas também fortalece os músculos das costas e dos ombros.",
+    "image": "barra-fixa-chinup",
+    "linkVideo": "https://www.youtube.com/watch?v=CVaEhXotL7M"
+  },
+  {
+    "_id": 102,
+    "nome": "Corrida estacionada",
+    "grupo": "Cardío",
+    "info": "Exercício de cardio intenso que consiste em correr parado sem sair do lugar, ótimo para queimar gordura e melhorar a resistência física.",
+    "image": "corrida-estacionada",
+    "linkVideo": "https://www.youtube.com/watch?v=Jh6yMCzrK3U"
+  },
+  {
+    "_id": 103,
+    "nome": "Agachamento com salto",
+    "grupo": "Cardío",
+    "info": "Exercício que combina o agachamento com um salto, excelente para fortalecer as pernas e melhorar a capacidade cardiorrespiratória.",
+    "image": "agachamento-com-salto",
+    "linkVideo": "https://www.youtube.com/watch?v=CVaEhXotL7M"
+  },
+  {
+    "_id": 104,
+    "nome": "Alpinista",
+    "grupo": "Cardío",
+    "info": "Exercício que simula a escalada de uma montanha, trabalha diversos músculos do corpo e ainda melhora a resistência cardiorrespiratória.",
+    "image": "alpinista",
+    "linkVideo": "https://www.youtube.com/watch?v=ZqwJ-GUoF6A"
+  },
+  {
+    "_id": 105,
+    "nome": "Snap jump",
+    "grupo": "Cardío",
+    "info": "Exercício que combina o agachamento com um salto, excelente para fortalecer as pernas e melhorar a capacidade cardiorrespiratória.",
+    "image": "snap-jump",
+    "linkVideo": "https://www.youtube.com/watch?v=Cn33W6zvUy4"
+  },
+  {
+    "_id": 106,
+    "nome": "Burpees",
+    "grupo": "Cardío",
+    "info": "Exercício que combina agachamento, flexão de braço e salto, excelente para fortalecer o corpo e melhorar a capacidade cardiorrespiratória.",
+    "image": "burpees",
+    "linkVideo": "https://www.youtube.com/watch?v=KjETx3xwPn0"
+  },
+  {
+    "_id": 107,
+    "nome": "Patinador",
+    "grupo": "Cardío",
+    "info": "Exercício que simula os movimentos de patinação no gelo, ótimo para trabalhar a parte inferior do corpo e melhorar a resistência física.",
+    "image": "patinador",
+    "linkVideo": "https://www.youtube.com/watch?v=QnZ6zI0YUvM"
+  }
 ]

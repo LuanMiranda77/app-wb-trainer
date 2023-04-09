@@ -30,6 +30,8 @@
     "react-native-svg": "^12.1.1",
     "react-native-uuid": "^2.0.1",
     "react-native-vector-icons": "^9.2.0",
+    "react-native-video": "^5.2.1",
+    "react-native-webview": "^12.0.2",
     "realm": "^11.5.2",
     "styled-components": "^5.3.8"
   },

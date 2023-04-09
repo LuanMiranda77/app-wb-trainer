@@ -94,7 +94,7 @@ export const arrayF = [
     value: 'Glúteos',
     info: 'Trabalhar a musculatura do bumbum',
   },
-  { id: 6, image: 'cardio-f', label: 'Cardío', value: 'Peitoral', info: 'Exercicios misto' },
+  { id: 6, image: 'cardio-f', label: 'Cardío', value: 'Cardío', info: 'Exercicios misto' },
   {
     id: 8,
     image: 'abdomen-f',

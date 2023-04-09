@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import ButtonIcon from '../../components/Buttons/ButtonIcon';
 import { useUserContext } from '../../context/useUserContext';
-import { useUserAplication } from '../../hooks/useUserAplication';
 import { backgroundColor, colorIconFooter, colorPrimary, colorSecondary } from '../../styles';
 import { ButtonSex } from './styles';
 
@@ -13,12 +12,11 @@ export function GeneroView({ ...props }) {
   // const { user, setUser } = useUserAplication();
   const { stateUser, dispatch } = useUserContext();
   const [isSexo, setIsSexo] = useState(true);
-  console.log(props.route.params);
   return (
     <View p="5" style={{ backgroundColor: backgroundColor, flex: 1 }}>
       <View mt="5" mb="100">
-        <Text fontSize="3xl">👋 Olá! {stateUser.nome}{stateUser.genero} </Text>
-        <Center mt='10'>
+        <Text fontSize="3xl">👋 Olá! {stateUser.nome}</Text>
+        <Center mt="10">
           <Text fontSize="4xl">Escolha seu gênero</Text>
         </Center>
       </View>
@@ -83,8 +81,7 @@ export function GeneroView({ ...props }) {
           borderRadius={80}
           size={40}
           onPress={() => {
-            props.navigation.navigate('Medidas Superiores', {image:'/src/assets/exercise/supino-inclinado-com-barra.gif'});
-            // dispatch({type:'update', payload:props.route.params.data.user});
+            props.navigation.navigate('Medidas Superiores');
           }}
         />
       </View>

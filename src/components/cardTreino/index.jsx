@@ -17,7 +17,7 @@ export function CardTreino({ navigation }) {
   };
   const renderItem = (data) => {
     const { item } = data;
-    // console.warn(item.image);
+
     return (
       <>
         <Container color={colorFooter} onPress={() => dispatch({ type: 'setTreinoAtual', payload: item.treino})}>

@@ -9,9 +9,7 @@ import { backgroundColor, colorPrimary } from '../../styles';
 // import { Container } from './styles';
 
 export function MedidasViewSuperior({ ...props }) {
-  const { user, setUser } = useUserAplication();
   const { stateUser, dispatch } = useUserContext();
-  const [isSexo, setIsSexo] = useState(true);
   return (
     <View p="5" style={{ backgroundColor: backgroundColor, flex: 1 }}>
       <View mt="5" mb="10">
@@ -24,73 +22,61 @@ export function MedidasViewSuperior({ ...props }) {
         <ScrollView contentInsetAdjustmentBehavior="automatic" style={{ marginBottom: 0, maxHeight:'100%' }}>
           <Flex flexDirection="row">
             <View style={{ width: '50%', marginRight: 20 }}>
-              <FormControl.Label>
-                Braço direito <Text style={{ color: 'red' }}>*</Text>
-              </FormControl.Label>
               <InputSimple
                 placeholder="Medida do braço direito"
-                value={user.bracoDireito}
-                onChangeText={(e) => setUser({ ...user, bracoDireito: parseFloat(e) })}
+                value={String(stateUser.bracoDireito)}
+                onChangeText={(e) => dispatch({ type: 'update', payload: { ...stateUser, bracoDireito: parseFloat(e) }})}
                 keyboardType="numeric"
+                label=' Braço direito'
               />
             </View>
             <View style={{ width: '50%', marginRight: 20 }}>
-              <FormControl.Label>
-                Braço esquerdo <Text style={{ color: 'red' }}>*</Text>
-              </FormControl.Label>
               <InputSimple
                 placeholder="Medida do braço esquerdo"
-                value={user.bracoEsquerdo}
-                onChangeText={(e) => setUser({ ...user, bracoEsquerdo: parseFloat(e) })}
+                value={String(stateUser.bracoEsquerdo)}
+                onChangeText={(e) =>  dispatch({ type: 'update', payload: { ...stateUser, bracoEsquerdo: parseFloat(e) } })}
                 keyboardType="numeric"
+                label='Braço esquerdo'
               />
             </View>
           </Flex>
           <Flex flexDirection="row">
             <View style={{ width: '50%', marginRight: 20 }}>
-              <FormControl.Label>
-                Antebraço direito <Text style={{ color: 'red' }}>*</Text>
-              </FormControl.Label>
               <InputSimple
                 placeholder="Medida do antebraço direito"
-                value={user.antebracoDireito}
-                onChangeText={(e) => setUser({ ...user, antebracoDireito: parseFloat(e) })}
+                value={String(stateUser.antebracoDireito)}
+                onChangeText={(e) => dispatch({ type: 'update', payload: { ...stateUser, antebracoDireito: parseFloat(e) }})}
                 keyboardType="numeric"
+                label='Antebraço direito'
               />
             </View>
             <View style={{ width: '50%', marginRight: 20 }}>
-              <FormControl.Label>
-              Antebraço esquerdo <Text style={{ color: 'red' }}>*</Text>
-              </FormControl.Label>
               <InputSimple
                 placeholder="Medida do antebraço esquerdo"
-                value={user.antebracoEsquerdo}
-                onChangeText={(e) => setUser({ ...user, antebracoEsquerdo: parseFloat(e) })}
+                value={String(stateUser.antebracoEsquerdo)}
+                onChangeText={(e) => dispatch({ type: 'update', payload: { ...stateUser, antebracoEsquerdo: parseFloat(e) }})}
                 keyboardType="numeric"
+                label='Antebraço esquerdo'
               />
             </View>
           </Flex>
           <Flex flexDirection="row">
             <View style={{ width: '50%', marginRight: 20 }}>
-              <FormControl.Label>
-              Peitoral <Text style={{ color: 'red' }}>*</Text>
-              </FormControl.Label>
               <InputSimple
                 placeholder="Medida do antebraço esquerdo"
-                value={user.peito}
-                onChangeText={(e) => setUser({ ...user, peito: parseFloat(e) })}
+                value={String(stateUser.peito)}
+                onChangeText={(e) => dispatch({ type: 'update', payload: { ...stateUser, peito: parseFloat(e) }})}
                 keyboardType="numeric"
+                label='Peitoral'
               />
             </View>
             <View style={{ width: '50%', marginRight: 20 }}>
-              <FormControl.Label>
-                Cintura <Text style={{ color: 'red' }}>*</Text>
-              </FormControl.Label>
               <InputSimple
                 placeholder="Medida do antebraço direito"
-                value={user.antebracoDireito}
-                onChangeText={(e) => setUser({ ...user, cintura: parseFloat(e) })}
+                value={String(stateUser.cintura)}
+                onChangeText={(e) => dispatch({ type: 'update', payload: { ...stateUser, cintura: parseFloat(e) }})}
                 keyboardType="numeric"
+                label='Cintura'
               />
             </View>
           </Flex>
@@ -109,7 +95,6 @@ export function MedidasViewSuperior({ ...props }) {
           size={40}
           onPress={() => {
             props.navigation.navigate('Medidas Inferiores');
-            // dispatch({type:'new', payload:user});
           }}
         />
       </View>

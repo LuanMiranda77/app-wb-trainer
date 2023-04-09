@@ -48,12 +48,7 @@ function App() {
     backgroundColor: isDarkMode ? Colors.darck : Colors.lighter,
     flex: 1,
   };
-
-  // useEffect(() => {
-  //   const realm = getRaelm();
-  //   realm.close();
-  //   console.log('Migration completed successfully.');
-  // }, []);
+  
   const theme = extendTheme({
     components: {
       Heading: {
