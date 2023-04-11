@@ -15,7 +15,7 @@ export function MedidasViewInferior({ ...props }) {
 
   return (
     <>
-      <Loanding showLoading={show} closeLoading={() => setShow(false)} />
+      <Loanding showLoading={show} closeLoading={() => setShow(false)} text='Aguarde, montando seu treino...' />
       <View p="5" style={{ backgroundColor: backgroundColor, flex: 1 }}>
         <View mt="5" mb="10">
           <Text fontSize="2xl"> 🥳 Chegamos! etapa final</Text>

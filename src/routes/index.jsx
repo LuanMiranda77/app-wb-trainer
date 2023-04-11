@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useColorMode } from 'native-base';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, useColorScheme } from 'react-native';
+import uuid from 'react-native-uuid';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Toast from '../components/toast';
 import { useUserContext } from '../context/useUserContext';
@@ -22,15 +23,13 @@ import { Training } from '../module/training';
 import { TrainerDetalhes } from '../module/training/trainerdetalhes';
 import { backgroundColor, colorFooter, colorIconFooter, colorPrimary } from '../styles';
 import arrayExercicios from '../__mooks/exercicios.json';
-import uuid from 'react-native-uuid';
 
 export function BottomTabNavigator() {
   const Stack = createNativeStackNavigator();
   const { colorMode, toggleColorMode } = useColorMode();
   const isDarkMode = useColorScheme() === 'dark';
-  const { toastError, toastSucess } = Toast();
+  const { toastError} = Toast();
   const { stateUser, dispatch } = useUserContext();
-  const [isUserInicial, setIsUserInicial] = useState(false);
 
   async function inicio() {
     const realm = await getRaelm();
@@ -40,27 +39,50 @@ export function BottomTabNavigator() {
       const users = realm.objects(enumSchemas.USER_APLICATION).toJSON();
       const exercicios = realm.objects(enumSchemas.EXERCICIO).toJSON();
 
-      if(exercicios.length == 0){
-        realm.write( ()  => {
-          arrayExercicios.forEach(async exercicio =>{
+      if (exercicios.length == 0) {
+        realm.write(() => {
+          arrayExercicios.forEach(async (exercicio) => {
             exercicio._id = uuid.v4();
-            exercicio.titulo='';
+            exercicio.titulo = '';
             await realm.create(enumSchemas.EXERCICIO, exercicio);
           });
         });
       }
 
       if (users.length == 0) {
-        // setIsUserInicial(true);
         dispatch({ type: 'setUserInicial', payload: true });
       } else {
         userNew = { ...users[0] };
         userNew.exercicios = realm.objects(enumSchemas.TREINO_EXERCIC).toJSON();
+        userNew.isUserInicial = false;
         dispatch({ type: 'update', payload: userNew });
-        // setIsUserInicial(false);
-        dispatch({ type: 'setUserInicial', payload: false });
+        // dispatch({
+        //   type: 'update',
+        //   payload: { ...stateUser, 
+        //     nome: userNew.nome,
+        //     dataNascimento: userNew.dataNascimento,
+        //     genero: userNew.genero,
+        //     image: userNew.image,
+        //     diasTreinos: userNew.diasTreinos,
+        //     experiencia: userNew.experiencia,
+        //     altura: userNew.altura,
+        //     peso: userNew.peso,
+        //     bracoDireito: userNew.bracoDireito,
+        //     bracoEsquerdo: userNew.bracoEsquerdo,
+        //     antebracoDireito: userNew.antebracoDireito,
+        //     antebracoEsquerdo: userNew.antebracoEsquerdo,
+        //     pernaDireita: userNew.pernaDireita,
+        //     pernaEsquerda: userNew.pernaEsquerda,
+        //     cintura: userNew.cintura,
+        //     quadril: userNew.quadril,
+        //     peito: userNew.peito,
+        //     gorduraCorporal: userNew.gorduraCorporal,
+        //     treinoAtual: userNew.treinoAtual,
+        //     exercicios: userNew.exercicios, 
+        //     isUserInicial: userNew.isUserInicial
+        //   },
+        // })
       }
-      // realm.close();
     } catch (error) {
       console.error(error);
       toastError('Algo deu errado ao salvar');
@@ -71,6 +93,7 @@ export function BottomTabNavigator() {
   useEffect(() => {
     isDarkMode ? toggleColorMode() : () => {};
     inicio();
+    console.log('teste');
   }, []);
 
   const Tab = createBottomTabNavigator();

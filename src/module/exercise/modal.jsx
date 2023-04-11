@@ -1,12 +1,14 @@
-import { FormControl, Text } from 'native-base';
+import { FormControl, Image, Text } from 'native-base';
 import React from 'react';
 import InputSimple from '../../components/inputs/inputSimple';
 import ModalSimple from '../../components/modal/modalSimple';
 import SelectSimple from '../../components/select';
+import { emunImage } from '../../utils/enums';
 import grupoMuscular from '../../__mooks/grupoMuscular.json';
 
 export default function Modal(props) {
   // const { exercicio, setExercicio, gruposCorpo } = useExercicioPage();
+  const img = '../../assets/h-1.jpg';
   return (
     <ModalSimple
       showModal={props.showModal}
@@ -17,6 +19,12 @@ export default function Modal(props) {
       // safeAreaTop={true}
     >
       <FormControl mt="5">
+        <Image
+          h='300'
+          w='full'
+          alt='image'
+          source={props.exercicio.image == '' ? require(img) : emunImage[props.exercicio.image]}
+        />
         <FormControl.Label>
           Nome <Text style={{ color: 'red' }}>*</Text>
         </FormControl.Label>

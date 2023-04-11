@@ -136,11 +136,11 @@ export const useCardTreino = () => {
     const realm = await getRaelm();
     try {
       let array = realm.objects(enumSchemas.TREINO).sorted('treino').toJSON();
-      array.forEach((item) => {
-        if(!item.treino.includes(stateUser.diasTreinos)){
-          dispatch({ type: 'addDiaTreinos', payload: item.treino });
-        }
-      });
+      // array.forEach((item) => {
+      //   if(!item.treino.includes(stateUser.diasTreinos)){
+      //     dispatch({ type: 'addDiaTreinos', payload: item.treino });
+      //   }
+      // });
       setListaTreino([...array]);
       // realm.close();
     } catch (error) {

@@ -24,6 +24,7 @@ export default function InputSearch(props) {
         size="lg"
         color="#fff"
         cursorColor={colorWhite}
+        selectionColor={colorSecondary}
         focusOutlineColor={colorSecondary}
         w={{ base: '90%', md: '50%' }}
         placeholder="Pesquisar"

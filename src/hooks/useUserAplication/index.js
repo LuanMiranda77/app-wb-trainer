@@ -173,14 +173,14 @@ export function useUserAplication() {
         });
         delete user.isUserInicial;
         await realm.create(enumSchemas.USER_APLICATION, user);
-        setShow(false);
-        dispatch({ type: 'setUserInicial', payload: false });
-        // setTimeout(
-        //   function () {
-        //     RNRestart.Restart();
-        //   }.bind(this),
-        //   5000
-        // );
+        setTimeout(
+          function () {
+            setShow(false);
+            dispatch({ type: 'setUserInicial', payload: false });
+            // RNRestart.Restart();
+          }.bind(this),
+          5000
+        );
 
       });
 
