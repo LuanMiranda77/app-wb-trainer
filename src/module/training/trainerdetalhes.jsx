@@ -1,15 +1,24 @@
-import { Fab, Flex, Text, View } from 'native-base';
+import { Fab, Flex, Menu, ScrollView, Text, View } from 'native-base';
 import React, { useMemo, useState } from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import IconFire from 'react-native-vector-icons/MaterialIcons';
+import { ButtonDropdown } from '../../components/Buttons/ButtonDropdown';
 import ModalSimple from '../../components/modal/modalSimple';
 import { useUserContext } from '../../context/useUserContext';
 import { useTreinoPage } from '../../hooks/useTreinoPage';
 import { HeaderNavBar } from '../../layout/headerNavBar';
-import { backgroundColor, colorFooter, colorPrimary, stylesGlobal } from '../../styles';
+import {
+  backgroundColor,
+  colorFooter,
+  colorPrimary,
+  colorSecondary,
+  colorSuccess,
+  stylesGlobal,
+} from '../../styles';
+import { emunImage } from '../../utils/enums';
 import { Exercise } from '../exercise';
-import { ContainerDetalhes } from './styles';
+import { ButtonDetalhes, ContainerDetalhes, ContainerImage } from './styles';
 
 export function TrainerDetalhes({ ...props }) {
   let obj = props.route?.params?.obj;
@@ -20,13 +29,16 @@ export function TrainerDetalhes({ ...props }) {
     showModalAdd,
     setShowModalAdd,
   } = useTreinoPage();
+
   const { stateUser } = useUserContext();
   useMemo(() => {
     handleListExercicioByTrainer(obj.treino);
   }, [stateUser.exercicio]);
+
   const [propsPass, setPropsPass] = useState({ ...props });
+  const img = '../../assets/h-1.jpg';
   let route = props.route;
-  route.name='Exercicios';
+  route.name = 'Exercicios';
   return (
     <>
       <View style={{ backgroundColor: backgroundColor, flex: 1 }}>
@@ -77,13 +89,76 @@ export function TrainerDetalhes({ ...props }) {
           }}
         >
           <Text style={stylesGlobal.textTitle}>Lista de exercícios</Text>
-          <View>
-            {listaTreinoExercicio.map((item, index) => (
-              <View key={index}>
-                <Text style={stylesGlobal.textSubTitle}>{item.idExercicio}</Text>
-              </View>
-            ))}
-          </View>
+          <ScrollView contentInsetAdjustmentBehavior="automatic" style={{ marginBottom: 0 }}>
+            {listaTreinoExercicio.map((item) => {
+              return (
+                <Flex key={item._id} flexDirection="row" alignItems="center" onPress={() => {}}>
+                  <ContainerImage
+                    source={item.obj.image == '' ? require(img) : emunImage[item.obj.image]}
+                  />
+                  <View style={{ marginTop: 10 }}>
+                    <Text style={stylesGlobal.textSubTitle}>{item.exercicio}</Text>
+                    <Text style={stylesGlobal.textSubTitle}>{item.obj.image}</Text>
+                    <View w="100%" mr="2">
+                      <Text>
+                        <Text style={{ color: colorSuccess }}>
+                          <Icon name="arrowsalt" size={15} /> Séries: {item.series}{' '}
+                        </Text>{' '}
+                        <Icon name="close" />{' '}
+                        <Text style={{ color: colorSecondary }}> {item.repeticoes}</Text>
+                        {'  '}
+                        <Icon name="arrowright" />
+                        {'  '}
+                        <Text style={{ color: colorPrimary }}>
+                          <Ionicons
+                            name="barbell-outline"
+                            size={15}
+                            // color={(color = colorPrimary)}
+                            style={{ marginRight: 10 }}
+                          />{' '}
+                          {item.carga}kg
+                        </Text>
+                      </Text>
+                      {/* <Text style={{color: colorWarning}}>Descanso: {item.descanso}sg</Text> */}
+                    </View>
+                  </View>
+                  <ButtonDetalhes color={'#959e9f6f'}>
+                    <ButtonDropdown
+                      icon="ellipsis-vertical-sharp"
+                      style={{ backgroundColor: 'transparent' }}
+                    >
+                      <Menu.Item
+                        mb="3"
+                        onPress={() =>
+                          props.navigation.navigate('Detalhes do treino', { obj: item })
+                        }
+                      >
+                        <Text style={stylesGlobal.textTitle}>Abrir</Text>
+                      </Menu.Item>
+                      <Menu.Item
+                        mb="3"
+                        onPress={() => {
+                          setShowModal(true);
+                          setTreino({ ...item });
+                          setTypeModal('edit');
+                        }}
+                      >
+                        <Text style={stylesGlobal.textTitle}>Editar</Text>
+                      </Menu.Item>
+                      <Menu.Item
+                        onPress={() => {
+                          setShowModaExcluir(true);
+                          setTreino({ ...item });
+                        }}
+                      >
+                        <Text style={stylesGlobal.textTitle}>Excluir</Text>
+                      </Menu.Item>
+                    </ButtonDropdown>
+                  </ButtonDetalhes>
+                </Flex>
+              );
+            })}
+          </ScrollView>
         </View>
         <Fab
           renderInPortal={false}

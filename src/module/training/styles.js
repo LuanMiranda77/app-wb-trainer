@@ -33,6 +33,7 @@ export const ContainerImage = styled.Image`
   max-height: 60px;
   border-radius: 8px;
   margin-right: 10px;
+  margin-top: 17px;
 `;
 
 export const ContainerDetalhes = styled.View`
@@ -92,6 +93,16 @@ export const DiaSemana = styled.View`
   align-items:center;
   justify-content:center;
   border-radius: 50px;
+  margin-right: 10px;
+`;
+
+export const CardSeries = styled.View`
+  background-color: ${(props) => props.color ? props.color:colorIconFooter};  
+  width: 50px;
+  height: 50px;
+  align-items:center;
+  justify-content:center;
+  border-radius: 8px;
   margin-right: 10px;
 `;
 

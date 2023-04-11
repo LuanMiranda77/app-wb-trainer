@@ -112,7 +112,14 @@ export function useTreinoPage() {
       .filtered(`treino == '${treino}'`)
       // .sorted('nome')
       .toJSON();
-    setListaTreinoExercicio([...array]);
+      let lista = array.map((item)=>{
+       let exercicio = realm.objects(enumSchemas.EXERCICIO).filtered(`_id == '${item._idExercicio}'`).toJSON();
+       item.obj = exercicio[0];
+       return item;
+      })
+      console.log(lista);
+    setListaTreinoExercicio([...lista]);
+    // realm.close();
   };
 
   return {
