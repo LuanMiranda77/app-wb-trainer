@@ -124,7 +124,7 @@ export const useExercicioPage = () => {
           .toJSON();
       }
       setListaExercicio([...exercicios]);
-      realm.close();
+      // realm.close();
     } catch (error) {
       console.error(error);
       toastError('Algo deu errado...');
@@ -158,6 +158,9 @@ export const useExercicioPage = () => {
     } else if (treinoExercicio.descanso === 0) {
       toastError('Selecione o tempo de descanso!');
       return;
+    }else if (treinoExercicio.carga === 0) {
+      toastError('Digite o número da carga kg');
+      return;
     }
     const tempo = calculoTempoExercicio(treinoExercicio);
     const calorias = calculoCaloriasExercicio(tempo);
@@ -186,11 +189,11 @@ export const useExercicioPage = () => {
         });
       }
 
-      realm.close();
+      // realm.close();
       setShowModalAdd(false);
       toastSucess('Exercicio adicionado com sucesso.');
     } catch (error) {
-      realm.close();
+      // realm.close();
       setShowModalAdd(false);
       console.error(error);
       toastError('Algo deu errado ao salvar');

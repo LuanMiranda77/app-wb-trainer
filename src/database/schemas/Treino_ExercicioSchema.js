@@ -21,11 +21,12 @@ export const Treino_ExercicioSchema = {
 export const TreinoExercicioInitial = {
   // _id: uuid.v4(),
   treino: '',
-  idExercicio: '',
+  _idExercicio: '',
   series: 0,
   repeticoes: '',
   tempo: 0,
   calorias: 0,
   descanso: 0,
   status:'',
+  carga: 0.00
 };

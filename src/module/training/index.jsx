@@ -85,7 +85,7 @@ export function Training({ ...props }) {
                         color="#32ad0c"
                         style={{ marginRight: 5 }}
                       />
-                      <Text style={{ color: '#32ad0c', fontWeight: 'bold' }}>{item.tempo} tem</Text>
+                      <Text style={{ color: '#32ad0c', fontWeight: 'bold' }}>{item.tempo} min</Text>
                     </ContainerDetalhes>
                     <ContainerDetalhes>
                       <IconFire
@@ -95,7 +95,7 @@ export function Training({ ...props }) {
                         style={{ marginRight: 5 }}
                       />
                       <Text style={{ color: '#ffb400', fontWeight: 'bold' }}>
-                        {item.calorias} cal
+                        {item.calorias.toFixed(2)} kcal
                       </Text>
                     </ContainerDetalhes>
                     <ContainerDetalhes>

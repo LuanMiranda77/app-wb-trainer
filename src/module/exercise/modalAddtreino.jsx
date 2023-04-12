@@ -1,4 +1,4 @@
-import { FormControl } from 'native-base';
+import { Flex, FormControl } from 'native-base';
 import React, { useState } from 'react';
 import { Text, View } from 'react-native';
 import InputIncrement from '../../components/inputs/inputIncrement';
@@ -21,7 +21,7 @@ function ModalAddTreino({ exercicio, showModal, onCloseModal }) {
   const [colorTreinoE, setColorTreinoE] = useState(false);
   const [colorTreinoF, setColorTreinoF] = useState(false);
 
-  const { treinoExercicio, setTreinoExercicio, handleAddExercicioByTreino } = useExercicioPage();
+  const { treinoExercicio, setTreinoExercicio, handleAddExercicioByTreino } = useExercicioPage(exercicio, showModal, onCloseModal);
   const { stateUser } = useUserContext();
 
   const onAtivedTreino = (treino) => {
@@ -77,7 +77,8 @@ function ModalAddTreino({ exercicio, showModal, onCloseModal }) {
     }
     setTreinoExercicio({
       ...treinoExercicio,
-      idExercicio: ""+exercicio.id,
+      exercicio: exercicio.nome,
+      _idExercicio: ""+exercicio._id,
       treino: treino,
     });
   };
@@ -103,26 +104,37 @@ function ModalAddTreino({ exercicio, showModal, onCloseModal }) {
         </View>
         <FormControl.Label style={{ marginTop: 10 }}>Informações:</FormControl.Label>
         <Text style={stylesGlobal.textTitle}>{exercicio.info}</Text>
-        <View style={{ display: 'flex', flexDirection: 'row', marginTop: 10 }}>
-          <View style={{ width: '20%', marginRight: 20 }}>
-            <FormControl.Label>
-              Series <Text style={{ color: 'red' }}>*</Text>
-            </FormControl.Label>
+        <Flex  direction='row' style={{ marginTop: 10 }}>
+          <View style={{ width: '30%', marginRight: 20 }}>
             <InputSimple
+              label='Series'
               placeholder="0"
-              value={treinoExercicio.series}
+              value={String(treinoExercicio.series)}
               keyboardType="numeric"
               onChangeText={(e) => setTreinoExercicio({ ...treinoExercicio, series: parseInt(e) })}
+              required
             />
           </View>
-          <View style={{ width: '30%', marginRight: 20 }}>
-            <FormControl.Label>
-              Repetições <Text style={{ color: 'red' }}>*</Text>
-            </FormControl.Label>
+          <View style={{ width: '65%', marginRight: 20 }}>
             <InputSimple
+              label='Repetições: (drops,super-set, etcs)'
               placeholder="drop 0-0"
               value={treinoExercicio.repeticoes}
               onChangeText={(e) => setTreinoExercicio({ ...treinoExercicio, repeticoes: e })}
+              required
+            />
+          </View>
+        </Flex>
+
+        <Flex direction='row'>
+        <View style={{ width: '30%', marginRight: 20 }}>
+            <InputSimple
+              label='Carga kg:'
+              placeholder="0"
+              value={String(treinoExercicio.carga)}
+              keyboardType="numeric"
+              onChangeText={(e) => setTreinoExercicio({ ...treinoExercicio, carga: parseFloat(e) })}
+              required
             />
           </View>
           <View style={{ marginRight: 20 }}>
@@ -130,15 +142,15 @@ function ModalAddTreino({ exercicio, showModal, onCloseModal }) {
               Descanso <Text style={{ color: 'red' }}>*</Text>
             </FormControl.Label>
             <SelectSimple
-              w="150"
+              w="245"
               defaultValue={'5'}
               keyboardType="numeric"
               dataSource={temposDescansos}
               onChange={(e) => setTreinoExercicio({ ...treinoExercicio, descanso: e })}
-              value={treinoExercicio.descanso}
+              value={String(treinoExercicio.descanso)}
             />
           </View>
-        </View>
+        </Flex>
         <Text style={{ marginTop: 30 }}>Treinos disponiveis:</Text>
         <View style={{ display: 'flex', flexDirection: 'row', marginLeft: '20%', marginTop: 20 }}>
           {stateUser.diasTreinos.includes('A') && (

@@ -29,11 +29,11 @@ export const Container = styled.TouchableOpacity`
 `;
 
 export const ContainerImage = styled.Image`
-  max-width: 60px;
-  max-height: 60px;
+  max-width: 75px;
+  max-height: 75px;
   border-radius: 8px;
   margin-right: 10px;
-  margin-top: 17px;
+  margin-top: 10px;
 `;
 
 export const ContainerDetalhes = styled.View`
@@ -82,8 +82,8 @@ export const ButtonTreino = styled.TouchableOpacity`
 
 export const ButtonDetalhes = styled.View`
   position: absolute;
-  left: 92%;
-  top: -98%;
+  left: 89%;
+  top: -85%;
 `;
 
 export const DiaSemana = styled.View`
@@ -104,5 +104,25 @@ export const CardSeries = styled.View`
   justify-content:center;
   border-radius: 8px;
   margin-right: 10px;
+`;
+
+export const ObsExercicioTreino = styled.View`
+  display: flex;
+  flex-direction: row;
+  background-color: ${(props) => props.background};
+  border-width: 1px;
+  border-color: ${(props) => props.color};
+  border-radius: 50px;
+  width: 75%;
+  padding-left: 5%;
+  padding-top: -20px;
+  height: 14px;
+  align-items: center;
+`;
+
+export const ButtonDetalhesExercicio = styled.View`
+  /* position: absolute;
+  left: 100%;
+  top: -85%; */
 `;
 
