@@ -7,8 +7,9 @@ import { useExercicioPage } from '../../hooks/useExercicioPage';
 import useImageFind from '../../hooks/useImageFind';
 import { HeaderNavBar } from '../../layout/headerNavBar';
 import { backgroundColor, colorFooter, colorSubtitle, stylesGlobal } from '../../styles';
+import ModalExercicio from '../training/modalExercicio';
 import Modal from './modal';
-import ModalAddTreino from './modalAddtreino';
+import { ModalListaExercicio } from './modalListaExercicio';
 import { ButtonPlay, Container, ContainerDetalhes, ContainerImage } from './styles';
 
 export function Exercise({ ...props }) {
@@ -26,28 +27,45 @@ export function Exercise({ ...props }) {
     handleDeleteExercicio,
     handlefindExerciciosSearch,
     handleSave,
+    showModalLista,
+    setShowModalLista,
+    grupoCorpo,
+    setGrupoCorpo,
   } = useExercicioPage();
+
   const { findImageByName } = useImageFind();
   const [search, setSearch] = useState('');
-  
+
+  const onChangeGrupoCorp = (grupo) => {
+    setGrupoCorpo(grupo);
+    setShowModalLista(true);
+  };
   return (
-   
-    <View style={{ backgroundColor: backgroundColor, flex: 1 }}>
-      <HeaderNavBar route={props.route} buttonRigth={handleNew} />
+    <View style={{ backgroundColor: backgroundColor, flex: 1, paddingTop: props.route ? 0 : 20 }}>
+      {props.route && <HeaderNavBar route={props.route} buttonRigth={handleNew} />}
       <InputSearch
         value={search}
         onChangeText={(e) => {
           setSearch(e);
-          // if (e.length >= 3) {
-            handlefindExerciciosSearch(e);
-          // }
+          handlefindExerciciosSearch(e);
         }}
       />
       {search === '' ? (
-        <ScrollView contentInsetAdjustmentBehavior="automatic" style={{ marginBottom: 5 }}>
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          style={{ marginBottom: props.route ? 5 : 60 }}
+        >
           {gruposCorpo.map((item) => {
             return (
-              <Container key={item.id} color={colorFooter}>
+              <Container
+                key={item.id}
+                color={colorFooter}
+                onPress={() =>
+                  props.navigation
+                    ? props.navigation.navigate('Lista Exercicio', { grupo: item.value })
+                    : onChangeGrupoCorp(item.value)
+                }
+              >
                 <ContainerImage source={findImageByName(item.image)} />
                 <View style={{ marginTop: 10 }}>
                   <Text style={stylesGlobal.textTitle}>{item.label}</Text>
@@ -72,7 +90,9 @@ export function Exercise({ ...props }) {
                     </ContainerDetalhes>
                     <ButtonPlay
                       onPress={() =>
-                        props.navigation.navigate('Lista Exercicio', { grupo: item.value })
+                        props.navigation
+                          ? props.navigation.navigate('Lista Exercicio', { grupo: item.value })
+                          : onChangeGrupoCorp(item.value)
                       }
                     >
                       <Ionicons
@@ -98,7 +118,7 @@ export function Exercise({ ...props }) {
               setShowModalAdd(true);
             }}
             actionButton={(item) => {
-              setExercicio({...item});
+              setExercicio({ ...item });
               setTypeModal('edit');
               setShowModal(true);
             }}
@@ -114,11 +134,18 @@ export function Exercise({ ...props }) {
         actionButton={handleSave}
         type="new"
       />
-      
-      <ModalAddTreino
+
+      <ModalExercicio
         showModal={showModalAdd}
         onCloseModal={() => setShowModalAdd(false)}
         exercicio={exercicio}
+      />
+
+      <ModalListaExercicio
+        showModal={showModalLista}
+        onCloseModal={() => setShowModalLista(false)}
+        grupo={grupoCorpo}
+        onActionNew={handleNew}
       />
     </View>
   );

@@ -1,4 +1,4 @@
-import { FormControl, Image, Text } from 'native-base';
+import { Center, FormControl, Image, Text } from 'native-base';
 import React from 'react';
 import InputSimple from '../../components/inputs/inputSimple';
 import ModalSimple from '../../components/modal/modalSimple';
@@ -19,12 +19,14 @@ export default function Modal(props) {
       // safeAreaTop={true}
     >
       <FormControl mt="5">
-        <Image
-          h='300'
-          w='full'
-          alt='image'
-          source={props.exercicio.image == '' ? require(img) : emunImage[props.exercicio.image]}
-        />
+        <Center mb='5'>
+          <Image
+            h="300"
+            w="300"
+            alt="image"
+            source={props.exercicio.image == '' ? require(img) : emunImage[props.exercicio.image]}
+          />
+        </Center>
         <FormControl.Label>
           Nome <Text style={{ color: 'red' }}>*</Text>
         </FormControl.Label>

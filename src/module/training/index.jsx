@@ -53,7 +53,7 @@ export function Training({ ...props }) {
                 color={colorFooter}
                 onPress={() => props.navigation.navigate('Detalhes do treino', { obj: item })}
               >
-                <DiaSemana color={stateUser.treinoAtual != item.treino ? colorSecondary : ''}>
+                <DiaSemana color={item.status != '' ? colorSecondary : ''}>
                   <Text style={stylesGlobal.textTitle}>
                     {item.treino == 'A'
                       ? 'Seg'
@@ -69,7 +69,12 @@ export function Training({ ...props }) {
                   </Text>
                 </DiaSemana>
                 <View style={{ marginTop: 10 }}>
-                  <Text style={stylesGlobal.textTitle}>Treino - {item.treino}</Text>
+                  <Text style={stylesGlobal.textTitle}>
+                    Treino - {item.treino}{' '}
+                    {stateUser.treinoAtual == item.treino && (
+                      <Text style={{ fontSize: 12, color: colorSecondary }}> → Treino de hoje</Text>
+                    )}
+                  </Text>
                   <Text style={{ marginTop: 5 }}>{item.titulo}</Text>
                   <View
                     style={{
@@ -81,20 +86,20 @@ export function Training({ ...props }) {
                     <ContainerDetalhes>
                       <Icon
                         name="clockcircleo"
-                        size={15}
+                        size={12}
                         color="#32ad0c"
                         style={{ marginRight: 5 }}
                       />
-                      <Text style={{ color: '#32ad0c', fontWeight: 'bold' }}>{item.tempo} min</Text>
+                      <Text style={{ color: '#32ad0c', fontWeight: 'bold',fontSize: 12 }}>{item.tempo} min</Text>
                     </ContainerDetalhes>
                     <ContainerDetalhes>
                       <IconFire
                         name="local-fire-department"
-                        size={15}
+                        size={12}
                         color="#ffb400"
                         style={{ marginRight: 5 }}
                       />
-                      <Text style={{ color: '#ffb400', fontWeight: 'bold' }}>
+                      <Text style={{ color: '#ffb400', fontWeight: 'bold', fontSize: 12 }}>
                         {item.calorias.toFixed(2)} kcal
                       </Text>
                     </ContainerDetalhes>
@@ -105,8 +110,8 @@ export function Training({ ...props }) {
                         color={(color = colorPrimary)}
                         style={{ marginRight: 5 }}
                       />
-                      <Text style={{ color: colorPrimary, fontWeight: 'bold' }}>
-                        {item.quant} exe.
+                      <Text style={{ color: colorPrimary, fontWeight: 'bold',fontSize: 12 }}>
+                        {item.quant} exe
                       </Text>
                     </ContainerDetalhes>
                     <ButtonDetalhes>
@@ -171,7 +176,8 @@ export function Training({ ...props }) {
         showModal={showModal}
         onCloseModal={() => setShowModal(false)}
         title={typeModal === 'new' ? 'Cadastro de Treino' : 'Editar Treino'}
-        labelButton={'Salvar'}
+        labelButton={'Salvar treino'}
+        icon="checkcircleo"
         actionButton={handleSave}
       >
         <FormControl>

@@ -1,7 +1,14 @@
 import { FormControl, Input, Text, View } from 'native-base';
-import React from 'react';
+import React, {useState} from 'react';
+import { TextInput } from 'react-native';
+import { colorPrimary, colorSecondary, colorWhite } from '../../../styles';
 
 export default function InputSimple(props) {
+  const [isFocused, setIsFocused] = useState();
+
+  handleFocus = () => setIsFocused(true);
+ 
+  handleBlur = () => setIsFocused(false);
   
   return (
     <View style={{ marginBottom: 20 }}>
@@ -10,12 +17,13 @@ export default function InputSimple(props) {
           {props.label} {props.required && <Text style={{ color: 'red' }}>*</Text>}
       </FormControl.Label>
       }
-      <Input
+      <TextInput
         variant="underlined"
-        color="#fff"
-        cursorColor="#F8753D"
-        selectionColor="#F8753D"
-        borderBottomColor="red"
+        color={colorWhite}
+        selectionColor={colorSecondary}
+        style={{width:'100%', borderBottomWidth:1, borderColor: isFocused ? colorPrimary : "#454444"}}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
         {...props}
       />
     </View>

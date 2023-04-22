@@ -10,6 +10,7 @@ export const TreinoSchema = {
     tempo: 'int',
     calorias: 'float',
     grupo:'string',
+    status:'string',
   },
   primaryKey: '_id',
 };
@@ -22,4 +23,5 @@ export const TreinoInitial = {
   tempo: 0,
   calorias: 0,
   grupo:'',
+  status:'',
 };

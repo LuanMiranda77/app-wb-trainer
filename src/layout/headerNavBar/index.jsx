@@ -41,12 +41,14 @@ export function HeaderNavBar({ ...props }) {
           {/* <ContainerImage source={imge} /> */}
 
           <TituloScreen>{props.route?.name}</TituloScreen>
-          <ButtonIcon
-            icon="plus"
-            color={colorSecondary}
-            size={30}
-            onPress={() => props.buttonRigth()}
-          />
+          {props.buttonRigth && (
+            <ButtonIcon
+              icon="plus"
+              color={colorSecondary}
+              size={30}
+              onPress={() => props.buttonRigth()}
+            />
+          )}
         </>
       ) : props.route?.name == 'Evolução' ? (
         <>

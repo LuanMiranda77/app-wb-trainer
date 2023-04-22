@@ -1,6 +1,5 @@
-import { ScrollView } from 'native-base';
+import { ScrollView, Text, View } from 'native-base';
 import React from 'react';
-import { Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import useImageFind from '../../hooks/useImageFind';
@@ -29,11 +28,11 @@ export function ListaExercicico({ ...props }) {
               color={colorFooter}
               onPress={() => (props.onClickItem ? props.onClickItem(item) : () => {})}
             >
-              <ContainerImage
-                source={item.image == '' ? require(img) : emunImage[item.image]}
-              />
+              <ContainerImage source={item.image == '' ? require(img) : emunImage[item.image]} />
               <View style={{ marginTop: 10 }}>
-                <Text style={stylesGlobal.textSubTitle}>{item.nome}</Text>
+                <View w='70%'>
+                  <Text style={stylesGlobal.textSubTitle}>{item.nome}</Text>
+                </View>
                 <View
                   style={{
                     display: 'flex',
@@ -91,7 +90,7 @@ export function ListaExercicico({ ...props }) {
                           name="edit"
                           size={30}
                           color={colorSecondary}
-                          style={{ marginTop: -20, marginLeft: 1 }}
+                          style={{marginTop: -20, marginLeft: 0 }}
                           onPress={() => props.actionButton(item)}
                         />
                       </ButtonEdit>

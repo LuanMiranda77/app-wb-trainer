@@ -1,4 +1,4 @@
-import { Button, Modal, Text, View } from 'native-base';
+import { Button, Flex, Modal, Text, View } from 'native-base';
 import React from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
 import { colorFooter, colorPrimary, colorWhite, stylesGlobal } from '../../../styles';
@@ -7,6 +7,16 @@ import { ButtonSet } from './styles';
 export default function ModalSimple(props) {
   // const initialRef = React.useRef(null);
   // const finalRef = React.useRef(null);
+  const styles = {
+    bottom: {
+      marginBottom: -2,
+      marginTop: props.mt ? props.mt : '18%',
+      background: colorFooter,
+      width: '100%',
+      height: '90%',
+    },
+  };
+
   return (
     <>
       <Modal isOpen={props.showModal} onClose={props.onCloseModal} size="full" style={{ flex: 1 }}>
@@ -30,14 +40,17 @@ export default function ModalSimple(props) {
           {props.labelButton ? (
             <Modal.Body>{props.children}</Modal.Body>
           ) : (
-            <View h='100%'>{props.children}</View>
+            <View h="100%">{props.children}</View>
           )}
           {props.labelButton && (
             <View style={{ padding: 20 }}>
               <Button style={{ borderRadius: 50 }} onPress={() => props.actionButton()}>
-                <Text style={{ color: '#fff', fontSize: 16, fontWeight: 'bold' }}>
-                  {props.labelButton}
-                </Text>
+                <Flex direction='row'>
+                  {props.icon && <Icon name={props.icon} size={20} color={colorWhite} style={{marginRight:10}}/>}
+                  <Text style={{ color: '#fff', fontSize: 16, fontWeight: 'bold' }}>
+                    {props.labelButton}
+                  </Text>
+                </Flex>
               </Button>
             </View>
           )}
@@ -46,13 +59,3 @@ export default function ModalSimple(props) {
     </>
   );
 }
-
-const styles = {
-  bottom: {
-    marginBottom: -2,
-    marginTop: '18%',
-    background: colorFooter,
-    width: '100%',
-    height: '90%',
-  },
-};

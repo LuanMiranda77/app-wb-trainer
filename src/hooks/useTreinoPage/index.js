@@ -18,9 +18,10 @@ export function useTreinoPage() {
   const [showModalAdd, setShowModalAdd] = useState(false);
   const [showModalExcluir, setShowModaExcluir] = useState(false);
   const { stateUser, dispatch } = useUserContext();
-  const { toastError, toastSucess } = Toast();
+  const { toastError, toastSucess, toastWarning } = Toast();
   const [totlTime, setTotalTime] = useState(0);
   const [totalCal, setTotalCal] = useState(0);
+  const [modalExercicio, setModalExercicio] = useState(false);
 
   const options = [{ id: 1, label: '', onPress: () => setShowModal(true) }];
 
@@ -29,6 +30,10 @@ export function useTreinoPage() {
   }, []);
 
   const handleNew = () => {
+    if(listaTreino.length == 6){
+      toastWarning("Limite de dias de treino atingido.");
+      return false;
+    }
     let treinonew = { ...TreinoInitial };
     if (listaTreino.length == 0) {
       treinonew.treino = 'A';
@@ -59,7 +64,7 @@ export function useTreinoPage() {
         });
         toastSucess('Cadastrado com sucesso.');
         dispatch({ type: 'addDiaTreinos', payload: treinoNew.treino });
-        realm.close();
+        // realm.close();
       } else {
         let object = realm.objectForPrimaryKey(enumSchemas.TREINO, treino._id);
         realm.write(() => {
@@ -111,8 +116,8 @@ export function useTreinoPage() {
       realm.write(() => {
         realm.delete(object);
       });
-      let index = listaTreinoExercicio.findIndex(item => item._id == treinoExercicio._id);
-      listaTreinoExercicio.splice(index,1);
+      let index = listaTreinoExercicio.findIndex((item) => item._id == treinoExercicio._id);
+      listaTreinoExercicio.splice(index, 1);
       setListaTreinoExercicio([...listaTreinoExercicio]);
       setLoading(false);
       setShowModaExcluir(false);
@@ -158,7 +163,7 @@ export function useTreinoPage() {
   };
 
   return {
-    loading, 
+    loading,
     setLoading,
     showModal,
     setShowModal,
@@ -177,7 +182,9 @@ export function useTreinoPage() {
     setTotalTime,
     totalCal,
     setTotalCal,
-    treinoExercicio, 
+    treinoExercicio,
+    modalExercicio,
+    setModalExercicio,
     setTreinoExercicio,
     setListaTreinoExercicio,
     handleNew,

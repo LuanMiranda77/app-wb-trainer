@@ -14,6 +14,7 @@ export const Treino_ExercicioSchema = {
     descanso: 'int',
     status: 'string',
     carga: 'float',
+    obs: 'string',
   },
   primaryKey: '_id',
 };
@@ -28,5 +29,6 @@ export const TreinoExercicioInitial = {
   calorias: 0,
   descanso: 0,
   status:'',
-  carga: 0.00
+  carga: 0.00,
+  obs: '',
 };

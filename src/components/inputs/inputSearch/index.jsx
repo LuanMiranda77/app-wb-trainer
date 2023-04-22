@@ -22,8 +22,7 @@ export default function InputSearch(props) {
       <Input
         variant="unstyled"
         size="lg"
-        color="#fff"
-        cursorColor={colorWhite}
+        color={colorWhite}
         selectionColor={colorSecondary}
         focusOutlineColor={colorSecondary}
         w={{ base: '90%', md: '50%' }}

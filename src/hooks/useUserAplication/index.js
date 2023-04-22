@@ -8,6 +8,7 @@ import { UsuarioInitial } from '../../database/schemas/UsuarioSchema';
 import { NivelUser } from '../../utils/enums';
 import grupoMuscular from '../../__mooks/grupoMuscular.json';
 import RNRestart from 'react-native-restart';
+import { TreinoInitial } from '../../database/schemas/TreinoSchema';
 
 export function useUserAplication() {
   const [user, setUser] = useState(UsuarioInitial);
@@ -41,49 +42,34 @@ export function useUserAplication() {
         switch (stateUser.experiencia) {
           case NivelUser.INICIATE:
             userNew.diasTreinos = 'A-B-C-D';
-            await iniciateUser(userNew);
+            await inicianteUser(userNew);
             break;
           case NivelUser.INTERMEDIARIO:
             userNew.diasTreinos = 'A-B-C-D-E';
+            await inicianteUser(userNew);
             break;
           case NivelUser.AVANCADO:
             userNew.diasTreinos = 'A-B-C-D-E-F';
+            await avancadoUser(userNew);
             break;
         }
     } catch (error) {
-      console.log(error);
+      console.error(error);
       toastError(error.message);
     }
   };
 
-  async function iniciateUser(user) {
+  async function inicianteUser(user) {
     const realm = await getRaelm();
+    
     let treinos = [];
     let treinoExercicios = [];
 
     let dias = user.diasTreinos.split('-');
     for (let i = 0; i < dias.length; i++) {
-      let treino = {
-        treino: dias[i],
-        titulo: '',
-        quant: 0,
-        tempo: 0,
-        calorias: 0,
-        grupo: 'string',
-      };
-
-      let treinoExercicio = {
-        treino: dias[i],
-        _idExercicio: '',
-        exercicio: '',
-        series: 3,
-        repeticoes: '10',
-        tempo: 0,
-        calorias: 0.0,
-        descanso: 60,
-        status: '',
-        carga: 0.0,
-      };
+      
+      let treino = {... TreinoInitial}
+      treino.treino=dias[i];
 
       switch (user.genero) {
         case 'M':
@@ -139,11 +125,27 @@ export function useUserAplication() {
               )
               .toJSON();
             listExercicio.forEach((exercicio) => {
+
+              let treinoExercicio = {
+                treino: dias[i],
+                _idExercicio: '',
+                exercicio: '',
+                series: 3,
+                repeticoes: '10',
+                tempo: 0,
+                calorias: 0.0,
+                descanso: 60,
+                status: '',
+                carga: 0.0,
+                obs:'',
+              };
+              
               treinoExercicio._idExercicio = exercicio._id;
               treinoExercicio.exercicio = exercicio.nome;
               // treinoExercicio.carga=15.00
-              let minuto = 1 * 200 + (treinoExercicio.series * treinoExercicio.descanso) / 60;
-              let calorias = user.peso * 6.0 * (minuto.toFixed(0) / 60);
+              let tempDescanso = treinoExercicio.series * treinoExercicio.descanso;
+              let minuto =(1 * 200 + tempDescanso) / 60;
+              let calorias = user.peso * 6.0 * (minuto / 60);
               treinoExercicio.tempo = minuto;
               treinoExercicio.calorias = calorias;
               treinoExercicios.push(treinoExercicio);
@@ -158,7 +160,7 @@ export function useUserAplication() {
 
       treinos.push(treino);
     }
-
+    
     try {
       realm.write(async () => {
 
@@ -173,6 +175,7 @@ export function useUserAplication() {
         });
         delete user.isUserInicial;
         await realm.create(enumSchemas.USER_APLICATION, user);
+
         setTimeout(
           function () {
             setShow(false);
@@ -188,7 +191,94 @@ export function useUserAplication() {
 
      
     } catch (error) {
-      console.log(error);
+      console.error(error);
+      toastError(error.message);
+    }
+  }
+
+  async function intermediarioUser(user) {
+    
+    const realm = await getRaelm();
+
+    let treinos = [];
+    let treinoExercicios = [];
+
+    let dias = user.diasTreinos.split('-');
+    
+    
+    try {
+      realm.write(async () => {
+
+        treinos.forEach((treino) => {
+          treino._id = uuid.v4();
+          realm.create(enumSchemas.TREINO, treino);
+        });
+
+        treinoExercicios.forEach((treino) => {
+          treino._id = uuid.v4();
+          realm.create(enumSchemas.TREINO_EXERCIC, treino);
+        });
+        delete user.isUserInicial;
+        await realm.create(enumSchemas.USER_APLICATION, user);
+
+        setTimeout(
+          function () {
+            setShow(false);
+            dispatch({ type: 'setUserInicial', payload: false });
+            // RNRestart.Restart();
+          }.bind(this),
+          5000
+        );
+
+      });
+
+      
+
+     
+    } catch (error) {
+      console.error(error);
+      toastError(error.message);
+    }
+  }
+
+  async function avancadoUser(user) {
+    
+    const realm = await getRaelm();
+    
+    let treinos = [];
+    let treinoExercicios = [];
+
+    let dias = user.diasTreinos.split('-');
+    
+    
+    try {
+      realm.write(async () => {
+
+        treinos.forEach((treino) => {
+          treino._id = uuid.v4();
+          realm.create(enumSchemas.TREINO, treino);
+        });
+
+        treinoExercicios.forEach((treino) => {
+          treino._id = uuid.v4();
+          realm.create(enumSchemas.TREINO_EXERCIC, treino);
+        });
+        delete user.isUserInicial;
+        await realm.create(enumSchemas.USER_APLICATION, user);
+
+        setTimeout(
+          function () {
+            setShow(false);
+            dispatch({ type: 'setUserInicial', payload: false });
+            // RNRestart.Restart();
+          }.bind(this),
+          5000
+        );
+
+      });
+     
+    } catch (error) {
+      console.error(error);
       toastError(error.message);
     }
   }

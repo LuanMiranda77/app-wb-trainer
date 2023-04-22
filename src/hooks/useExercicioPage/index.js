@@ -18,9 +18,11 @@ export const useExercicioPage = () => {
   const [treinoExercicio, setTreinoExercicio] = useState(TreinoExercicioInitial);
   const [listaExercicio, setListaExercicio] = useState([]);
   const [gruposCorpo, setGruposCorpo] = useState(stateUser.sexo === 'M' ? arrayM : arrayF);
+  const [grupoCorpo, setGrupoCorpo] = useState();
   const [showModal, setShowModal] = useState(false);
   const [typeModal, setTypeModal] = useState('new');
   const [showModalAdd, setShowModalAdd] = useState(false);
+  const [showModalLista, setShowModalLista] = useState(false);
   const { toastError, toastSucess } = Toast();
 
   const handleNew = () => {
@@ -49,7 +51,7 @@ export const useExercicioPage = () => {
           realm.create(enumSchemas.EXERCICIO, exercicioNew);
         });
         toastSucess('Cadastrado com sucesso.');
-        realm.close();
+        // realm.close();
       } else {
         let object = realm.objectForPrimaryKey(enumSchemas.EXERCICIO, exercicio._id);
         realm.write(() => {
@@ -85,9 +87,12 @@ export const useExercicioPage = () => {
 
   async function handlefindExercicios(grupoCorpo) {
     let exercicios = [];
-
+    if(!grupoCorpo){
+      return
+    }
     const realm = await getRaelm();
     try {
+      
       if (
         grupoCorpo === 'Braço' ||
         grupoCorpo === 'Bíceps' ||
@@ -107,7 +112,7 @@ export const useExercicioPage = () => {
       ) {
         exercicios = realm
           .objects(enumSchemas.EXERCICIO)
-          .filtered('grupo == "Quadríceps" OR grupo == "Posterior" OR grupo == "Panturilha"')
+          .filtered('grupo == "Quadríceps" OR grupo == "Posterior" OR grupo == "Panturilhas" OR grupo == "Pernas"')
           .sorted('nome')
           .toJSON();
       } else if (grupoCorpo === 'Dorsal' || grupoCorpo === 'Dorsal' || grupoCorpo === 'Trapézio') {
@@ -125,6 +130,7 @@ export const useExercicioPage = () => {
       }
       setListaExercicio([...exercicios]);
       // realm.close();
+      //Glúteos, Pernas
     } catch (error) {
       console.error(error);
       toastError('Algo deu errado...');
@@ -141,7 +147,7 @@ export const useExercicioPage = () => {
       )
       .sorted('nome')
       .toJSON();
-    realm.close();
+    // realm.close();
     setListaExercicio([...array]);
   }
 
@@ -166,15 +172,29 @@ export const useExercicioPage = () => {
     const calorias = calculoCaloriasExercicio(tempo);
 
     let exercicioSalvo = { ...treinoExercicio };
-
-    exercicioSalvo._id = uuid.v4();
+  
     exercicioSalvo.tempo = parseInt(tempo);
     exercicioSalvo.calorias = parseFloat(calorias);
 
     const realm = await getRaelm();
     try {
+      let isEdit=false;
       realm.write(() => {
-        realm.create(enumSchemas.TREINO_EXERCIC, exercicioSalvo);
+        if(!exercicioSalvo._id){
+          exercicioSalvo._id =  uuid.v4();
+          realm.create(enumSchemas.TREINO_EXERCIC, exercicioSalvo);
+        }else{
+          let object = realm.objectForPrimaryKey(enumSchemas.TREINO_EXERCIC, exercicioSalvo._id);
+          object.treino= exercicioSalvo.treino;
+          object.series= exercicioSalvo.series;
+          object.repeticoes= exercicioSalvo.repeticoes;
+          object.tempo= exercicioSalvo.tempo;
+          object.calorias= exercicioSalvo.calorias;
+          object.descanso= exercicioSalvo.descanso;
+          object.carga= exercicioSalvo.carga;
+          object.obs= exercicioSalvo.obs;
+          isEdit=true;
+        }
       });
       let treino = realm
         .objects(enumSchemas.TREINO)
@@ -191,7 +211,7 @@ export const useExercicioPage = () => {
 
       // realm.close();
       setShowModalAdd(false);
-      toastSucess('Exercicio adicionado com sucesso.');
+      toastSucess(isEdit ? 'Exercicio editado com sucesso.':'Exercicio adicionado com sucesso.');
     } catch (error) {
       // realm.close();
       setShowModalAdd(false);
@@ -244,5 +264,9 @@ export const useExercicioPage = () => {
     handleDeleteExercicio,
     handlefindExerciciosSearch,
     handleAddExercicioByTreino,
+    showModalLista, 
+    setShowModalLista,
+    grupoCorpo, 
+    setGrupoCorpo,
   };
 };

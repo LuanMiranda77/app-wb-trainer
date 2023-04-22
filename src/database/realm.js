@@ -44,12 +44,18 @@ const migration = (oldRealm, newRealm) => {
   }
 };
 
-export const getRaelm = async () =>
-  await Realm.open({
-    path: 'wbtrainer-app',
-    schemaVersion,
-    schema: [ExercicioSchema, TreinoSchema, Treino_ExercicioSchema, EvolucaoSchema, UsuarioSchema],
-    // migration,
-    // deleteRealmIfMigrationNeeded: true,
-  });
+let realmInstance = null;
+
+export const getRaelm = async () =>{
+  if (!realmInstance) {
+    realmInstance = await Realm.open({
+        path: 'wbtrainer-app',
+        schemaVersion,
+        schema: [ExercicioSchema, TreinoSchema, Treino_ExercicioSchema, EvolucaoSchema, UsuarioSchema],
+        // migration,
+        // deleteRealmIfMigrationNeeded: true,
+      });
+  }
+  return realmInstance;
+}
 // await Realm.open({ schema: [ExercicioSchema,TreinoSchema], deleteRealmIfMigrationNeeded: true, })

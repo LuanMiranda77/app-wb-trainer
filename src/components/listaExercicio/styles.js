@@ -62,7 +62,7 @@ export const ButtonDetalhes = styled.TouchableOpacity`
 
 export const ButtonEdit = styled.TouchableOpacity`
   position: absolute;
-  left: 100%;
+  left: 95%;
   height: 50px;
   width: 50px;
   padding: 11px;

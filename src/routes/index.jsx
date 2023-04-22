@@ -93,7 +93,6 @@ export function BottomTabNavigator() {
   useEffect(() => {
     isDarkMode ? toggleColorMode() : () => {};
     inicio();
-    console.log('teste');
   }, []);
 
   const Tab = createBottomTabNavigator();

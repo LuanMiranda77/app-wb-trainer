@@ -43,7 +43,7 @@ export const ContainerDetalhes = styled.View`
   height: 40px;
   padding-left: 0px;
   align-items: center;
-  width: 25%;
+  width: 26%;
 `;
 
 export const EditeExercicio = styled.View`
@@ -124,5 +124,14 @@ export const ButtonDetalhesExercicio = styled.View`
   /* position: absolute;
   left: 100%;
   top: -85%; */
+  margin-top: -20px;
 `;
+
+export const ImageTreino = styled.Image`
+  max-width: 60px;
+  max-height: 60px;
+  border-radius: 8px;
+  margin-right: 10px;
+`;
+
 

@@ -7,6 +7,7 @@ import 'react-native-gesture-handler';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { UserProvider } from './context/useUserContext';
 import { BottomTabNavigator } from './routes';
+import { colorPrimary } from './styles';
 
 // type SectionProps = PropsWithChildren<{
 //   title: string,
@@ -45,7 +46,7 @@ function App() {
 
   const backgroundStyle = {
     // backgroundColor: colorPrimary,
-    backgroundColor: isDarkMode ? Colors.darck : Colors.lighter,
+    backgroundColor: isDarkMode ? colorPrimary : Colors.lighter,
     flex: 1,
   };
   

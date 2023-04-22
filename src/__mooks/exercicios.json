@@ -80,27 +80,19 @@
     "linkVideo": "https://www.youtube.com/watch?v=yG1C_2QV8uE"
   },
   {
-    "_id": 11,
-    "nome": "Remada unilateral com halteres",
-    "grupo": "Dorsal",
-    "info": "Exercício que trabalha as costas e os bíceps",
-    "image": "",
-    "linkVideo": "https://www.youtube.com/watch?v=JyCGpVLYaFA"
-  },
-  {
     "_id": 12,
-    "nome": "Puxada no pulley",
+    "nome": "Remada no banco inclinado com halteres",
     "grupo": "Dorsal",
     "info": "Exercício que trabalha as costas e os ombros",
-    "image": "",
+    "image": "costas-remada-no-banco-inclinado-com-halteres",
     "linkVideo": "https://www.youtube.com/watch?v=kWRGz6xuUcM"
   },
   {
     "_id": 13,
     "nome": "Levantamento terra",
-    "grupo": "Glúteos, Pernas",
+    "grupo": "Glúteos",
     "info": "Exercício que trabalha as costas, glúteos e pernas",
-    "image": "afundo-com-barra-reto",
+    "image": "barbell-sumo-deadlift",
     "linkVideo": "https://www.youtube.com/watch?v=ytGaGIn3SjE"
   },
   {
@@ -108,7 +100,7 @@
     "nome": "Remada curvada com barra",
     "grupo": "Dorsal",
     "info": "Exercício que trabalha as costas e os bíceps",
-    "image": "",
+    "image": "costas-remada-curvada",
     "linkVideo": "https://www.youtube.com/watch?v=9efgcAjQe_I"
   },
   {
@@ -132,7 +124,7 @@
     "nome": "Remada unilateral na máquina",
     "grupo": "Dorsal",
     "info": "Exercício que trabalha as costas e os bíceps",
-    "image": "",
+    "image": "remada-unilateral-máquina",
     "linkVideo": "https://www.youtube.com/watch?v=nnCtQmrvZyw"
   },
   {
@@ -249,10 +241,10 @@
   },
   {
     "_id": 32,
-    "nome": "Agachamento afundo com halteres",
+    "nome": "Agachamento afundo halteres no step",
     "grupo": "Isquiotibiais",
     "info": "Deitado de barriga para baixo em uma mesa, prenda os pés no suporte e dobre as pernas até que os calcanhares toquem as nádegas.",
-    "image": "",
+    "image": "agachamento-afundo-no-step",
     "linkVideo": "https://www.youtube.com/watch?v=ZfNXrDdOUEM"
   },
   {
@@ -260,13 +252,13 @@
     "nome": "Afundo com barra",
     "grupo": "Pernas",
     "info": "Em pé com um pé à frente do outro, desça o corpo até que a coxa da perna de trás esteja paralela ao chão.",
-    "image": "afundo-com-barra-reto'",
+    "image": "afundo-com-barra-reto",
     "linkVideo": "https://www.youtube.com/watch?v=vcv"
   },
   {
     "_id": 34,
     "nome": "Panturrilha prancha",
-    "grupo": "Panturrilhas",
+    "grupo": "Panturilhas",
     "info": "Sentado na máquina de leg press, mantenha os calcanhares na plataforma e empurre-a com os pés até estender completamente as pernas, depois empurre a plataforma novamente apenas com as pontas dos pés.",
     "image": "paturrilha-prancha",
     "linkVideo": "https://www.youtube.com/watch?v=vcv"
@@ -348,7 +340,7 @@
     "nome": "Tríceps coice",
     "grupo": "Tríceps",
     "info": "Em pé, com o joelho e a mão opostos apoiados em um banco, segure um haltere com a outra mão e puxe-o para trás, estendendo o braço.",
-    "image": "",
+    "image": "triceps-coice",
     "linkVideo": "https://www.youtube.com/watch?v=lSNN8LlEldU"
   },
   {
@@ -546,7 +538,7 @@
   {
     "_id": 69,
     "nome": "Bugaro com halteres",
-    "grupo": "Glúteos, Pernas",
+    "grupo": "Glúteos",
     "info": "Exercício composto que trabalha pernas, glúteos e core. Mantenha o tronco ereto e os joelhos alinhados com os dedos dos pés. Faça o movimento com os quadris, não com as costas.",
     "image": "bugaro-alter",
     "linkVideo": "https://www.youtube.com/watch?v=JnUIgY3q69E"
@@ -618,7 +610,7 @@
   {
     "_id": 78,
     "nome": "Paturilha unilateral",
-    "grupo": "Panturrilhas",
+    "grupo": "Panturilhas",
     "info": "Exercício para panturrilhas que trabalha um lado de cada vez",
     "image": "paturilha-unilateral",
     "linkVideo": "https://www.youtube.com/watch?v=ZYbnaT-pRmU"
@@ -626,7 +618,7 @@
   {
     "_id": 79,
     "nome": "Panturrilha em pé no aparelho",
-    "grupo": "Panturrilhas",
+    "grupo": "Panturilhas",
     "info": "Exercício para panturrilhas feito em pé em um aparelho específico",
     "image": "Panturrilha-em-pe-no-aparelho",
     "linkVideo": "https://www.youtube.com/watch?v=J4ctBjZTRFU"
@@ -634,7 +626,7 @@
   {
     "_id": 80,
     "nome": "Panturrilha no leg press",
-    "grupo": "Panturrilhas",
+    "grupo": "Panturilhas",
     "info": "Exercício para panturrilhas realizado no leg press",
     "image": "Panturrilha-no-leg-press",
     "linkVideo": "https://www.youtube.com/watch?v=9Osc8WQjKx0"
@@ -642,7 +634,7 @@
   {
     "_id": 81,
     "nome": "Panturrilha sentado",
-    "grupo": "Panturrilhas",
+    "grupo": "Panturilhas",
     "info": "Exercício para panturrilhas feito sentado em um aparelho específico",
     "image": "panturrilha-sentado",
     "linkVideo": "https://www.youtube.com/watch?v=c9q1Nc6N5Zw"
@@ -689,7 +681,7 @@
   },
   {
     "_id": 87,
-    "nome": "Levantamento terra deadlift stiff com halteres",
+    "nome": "Levantamento terra deadlift halteres",
     "grupo": "Pernas",
     "info": "Exercício de força para pernas e glúteos. Utiliza halteres para levantar o peso do chão até a posição ereta.",
     "image": "pernas-levantamento-terra-deadlift-stiff-com-halteres",
@@ -761,7 +753,7 @@
   },
   {
     "_id": 97,
-    "nome": "Triceps supino com triceps-coice pegada fechada na barra",
+    "nome": "Triceps supino pegada fechada na barra",
     "grupo": "Tríceps",
     "info": "Exercício para o tríceps com barra e pegada fechada. Fortalece os músculos tríceps braquial, peitoral maior, deltoides anterior e posterior.",
     "image": "triceps-supino-com-pegada-fechada-barra",
@@ -769,14 +761,6 @@
   },
   {
     "_id": 98,
-    "nome": "Triceps coice",
-    "grupo": "Tríceps",
-    "info": "Exercício para o tríceps com halteres. Trabalha principalmente os músculos tríceps braquial, mas também recruta os músculos do ombro e das costas.",
-    "image": "triceps-coice",
-    "linkVideo": "https://www.youtube.com/watch?v=OZlVTVc9H6o"
-  },
-  {
-    "_id": 99,
     "nome": "Voador cabo banco inclinado",
     "grupo": "Peitoral",
     "info": "Exercício para o peitoral com o uso de cabos. Fortalece principalmente o músculo peitoral maior, mas também trabalha os músculos do ombro e dos braços.",

@@ -47,56 +47,55 @@ export function InitialAPP({ ...props }) {
       </View>
       <View>
         <FormControl>
-          <FormControl.Label>
-            Nome <Text style={{ color: 'red' }}>*</Text>
-          </FormControl.Label>
           <InputSimple
             placeholder="Digite o seu nome"
             value={user.nome}
             onChangeText={(e) => setUser({ ...user, nome: e })}
+            autoFocus={true}
+            label="Nome"
+            required
           />
           <FormControl.Label>
             Data nascimento <Text style={{ color: 'red' }}>*</Text>
           </FormControl.Label>
           <Flex flexDirection="row">
             <View style={{ width: '30%', marginRight: 20 }}>
-              <FormControl.Label>Dia</FormControl.Label>
               <InputSimple
                 placeholder="31"
                 value={dia}
                 onChangeText={(e) => setDia(e)}
                 keyboardType="numeric"
                 maxLength={2}
+                label="Dia"
               />
             </View>
             <View style={{ width: '30%', marginRight: 20 }}>
-              <FormControl.Label>Mês</FormControl.Label>
               <InputSimple
                 placeholder="12"
                 value={mes}
                 onChangeText={(e) => setMes(e)}
                 keyboardType="numeric"
                 maxLength={2}
+                label="Mês"
               />
             </View>
             <View style={{ width: '30%', marginRight: 20 }}>
-              <FormControl.Label>Ano</FormControl.Label>
               <InputSimple
                 placeholder="1990"
                 value={ano}
                 onChangeText={(e) => setAno(e)}
                 keyboardType="numeric"
                 maxLength={4}
+                label="Ano"
               />
             </View>
           </Flex>
-          <FormControl.Label>
-            Experiência de treino <Text style={{ color: 'red' }}>*</Text>
-          </FormControl.Label>
           <SelectSimple
             dataSource={experiencias}
             onChange={(e) => setUser({ ...user, experiencia: e })}
             value={user.experiencia}
+            label=" Experiência de treino"
+            required
           />
           <Flex flexDirection="row" mt="30">
             <View style={{ width: '50%', marginRight: 20 }}>
