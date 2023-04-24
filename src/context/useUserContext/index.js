@@ -5,7 +5,7 @@ export const UserContext = createContext({});
 const initialState = {
   nome: '',
   dataNascimento: null,
-  genero: '',
+  genero: 'M',
   image: '',
   diasTreinos: '',
   objetivo: '',
@@ -19,6 +19,8 @@ const initialState = {
   antebracoEsquerdo: 0,
   pernaDireita: 0,
   pernaEsquerda: 0,
+  panturilhaDireita:0,
+  panturilhaEsquerda:0,
   cintura: 0,
   quadril: 0,
   peito: 0,

@@ -16,11 +16,12 @@ export default function Toast() {
       placement: 'top-right',
     });
   };
+
   const toastError = (message) => {
     toast.show({
       render: () => {
         return (
-          <Box px="4" py="4" rounded="sm" mb={5} style={{ backgroundColor: colorError }}>
+          <Box px="4" py="4" rounded="sm" mb={5} style={{ backgroundColor: colorError,}}>
             <Text style={{ color: '#fff', fontSize: 18, fontWeight: 'bold' }}> 😔 {message}</Text>
           </Box>
         );
@@ -28,6 +29,7 @@ export default function Toast() {
       placement: 'top-right',
     });
   };
+
   const toastInfo = (message) => {
     toast.show({
       render: () => {
@@ -40,6 +42,7 @@ export default function Toast() {
       placement: 'top-right',
     });
   };
+
   const toastWarning = (message) => {
     toast.show({
       render: () => {
@@ -52,5 +55,6 @@ export default function Toast() {
       placement: 'top-right',
     });
   };
+
   return { toastSucess, toastInfo, toastError, toastWarning };
 }

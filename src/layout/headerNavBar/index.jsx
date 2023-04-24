@@ -22,7 +22,11 @@ export function HeaderNavBar({ ...props }) {
             <Text style={{ fontSize: 15, color: colorIconFooter }}>Ola! Vamos treinar 👋</Text>
             <Text style={{ fontSize: 25, color: colorWhite }}>{stateUser.nome}</Text>
           </View>
-          <PerfilUser source={require('../../assets/menina.jpeg')} />
+          {stateUser.genero == 'M' ? (
+            <PerfilUser source={require('../../assets/perfil-m.png')} />
+          ) : (
+            <PerfilUser source={require('../../assets/perfil-f.png')} />
+          )}
         </>
       ) : props.route?.name == 'Exercicios' ? (
         <>
@@ -64,15 +68,13 @@ export function HeaderNavBar({ ...props }) {
         </>
       ) : props.route?.name == 'Config' ? (
         <>
-          {/* <ContainerImage source={imge} /> */}
-
-          <TituloScreen>{props.route?.name}</TituloScreen>
-          <ButtonIcon
-            icon="plus"
-            color={colorSecondary}
+          {/* <ButtonIcon
+            icon="arrowleft"
             size={30}
-            onPress={() => props.buttonRigth()}
-          />
+            color="white"
+            onPress={() => props.navigation.goBack()}
+          /> */}
+          <TituloScreen>Ajustes</TituloScreen>
         </>
       ) : props.route?.name == 'Lista Exercicio' ? (
         <>

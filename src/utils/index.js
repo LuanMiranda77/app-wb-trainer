@@ -29,7 +29,8 @@ export const  isValidDate = (dia, mes, ano) => {
   return parseInt(dia) > 31 ||
     parseInt(mes) > 12 ||
     parseInt(ano) < 1950 ||
-    (parseInt(dia) > 29 && parseInt(mes) == 2)
+    (parseInt(dia) > 29 && parseInt(mes) == 2) ||
+    ano >= new Date().getFullYear()
     ? false
     : true;
 }
